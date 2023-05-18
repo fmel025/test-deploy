@@ -1,10 +1,9 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom'
 import Home from '../Home/Home'
 import AssistedEvents from '../AttendedEvents/AttendedEvents'
-import NavBar from '../../components/Navbar/Navbar'
-import './App.css'
 import FutureEvents from '../FutureEvents/FutureEvents'
 import EventDetails from '../EventDetails/EventDetails'
+import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -22,7 +21,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppRoutes/>
-      <NavBar/>
+      <ImprovedNavbar />
     </BrowserRouter>
   )
 }
