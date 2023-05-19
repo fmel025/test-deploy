@@ -12,6 +12,7 @@ import Login from '../Login/Login'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Transaction from '../Transaction/Transaction'
 import CreateEvent from '../CreateEvent/CreateEvent'
+import EditEvent from '../EditEvent/EditEvent'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -26,7 +27,8 @@ const AppRoutes = () => {
       { path: '/login', element: <Login/>},
       {path: '/change_password',element: <ChangePassword/>},
       { path: '/transaction', element: <Transaction />},
-      { path: '/create_event', element: <CreateEvent />}
+      { path: '/create_event', element: <CreateEvent />},
+      { path: '/edit_event', element: <EditEvent />}
     ]
     )
     return routes
