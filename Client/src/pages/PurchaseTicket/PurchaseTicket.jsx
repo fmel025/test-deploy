@@ -16,7 +16,7 @@ function PurchaseTicket() {
             <PurchaseTicketCard/>
             <PurchaseTicketCard/>
           </div>
-          <div className="w-full flex justify-center gap-16 m-5">
+          <div className="w-full flex justify-center gap-16 ">
             <AcceptButton/>
             <CancelButton/>
           </div>

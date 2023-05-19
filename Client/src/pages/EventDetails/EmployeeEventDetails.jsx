@@ -1,6 +1,7 @@
 
 import TierCard from "../../components/TierCard/TierCard"
 import Layout from "../../components/Layout/Layout"
+import EventDetailControl from "../../components/EventDetailControl/EventDetailControl"
 
 
 function EventDetails() {
@@ -26,7 +27,8 @@ function EventDetails() {
           <TierCard/>
         
           </div>
-          
+
+          <EventDetailControl/>
         </Layout>
     )
   }
