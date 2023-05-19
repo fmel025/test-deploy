@@ -1,4 +1,4 @@
-import EventCard from "../../components/EventCard/EventCard"
+
 import FutureEventCard from "../../components/FutureEventCard/FutureEventCard"
 import Layout from "../../components/Layout/Layout"
 

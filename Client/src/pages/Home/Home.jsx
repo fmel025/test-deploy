@@ -4,7 +4,7 @@ import Layout from "../../components/Layout/Layout"
 import SearchBar from "../../components/SearchBar/SearchBar"
 
 
-function MyOrder() {
+function Home() {
  
     return (
         <Layout>
@@ -36,5 +36,5 @@ function MyOrder() {
     )
   }
   
-  export default MyOrder
+  export default Home
   
