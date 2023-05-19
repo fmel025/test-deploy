@@ -8,6 +8,9 @@ import Transactions from '../Transactions/Transactions'
 import AllTickets from '../AllTickets/AllTickets'
 import Profile from '../Profile/Profile'
 import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar'
+import Login from '../Login/Login'
+import ChangePassword from '../ChangePassword/ChangePassword'
+import Transaction from '../Transaction/Transaction'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -19,6 +22,9 @@ const AppRoutes = () => {
       { path: '/transactions', element: <Transactions /> },
       { path: '/all_tickets', element: <AllTickets /> },
       {path: '/profile',element: <Profile/>},
+      { path: '/login', element: <Login/>},
+      {path: '/change_password',element: <ChangePassword/>},
+      { path: '/transaction', element: <Transaction />}
     ]
     )
     return routes
