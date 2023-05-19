@@ -11,6 +11,7 @@ import Profile from '../Profile/Profile'
 import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar'
 import EmployeeHome from '../Home/EmployeeHome'
 import ManageEvents from '../ManageEvents/ManageEvents'
+import EventStatistics from '../EventStatistics/EventStatistics'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -20,6 +21,7 @@ const AppRoutes = () => {
       { path: '/future_events', element: <FutureEvents /> },
       { path: '/event_details', element: <EventDetails /> },
       { path: '/employee_event_details', element: <EmployeeEventDetails /> },
+      { path: '/event_statistics', element: <EventStatistics /> },
       { path: '/manage_events', element: <ManageEvents /> },
       { path: '/purchase_ticket', element: <PurchaseTicket /> },
       { path: '/transactions', element: <Transactions /> },
