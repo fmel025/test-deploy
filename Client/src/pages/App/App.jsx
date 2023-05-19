@@ -12,6 +12,9 @@ import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar'
 import EmployeeHome from '../Home/EmployeeHome'
 import ManageEvents from '../ManageEvents/ManageEvents'
 import EventStatistics from '../EventStatistics/EventStatistics'
+import Login from '../Login/Login'
+import ChangePassword from '../ChangePassword/ChangePassword'
+import Transaction from '../Transaction/Transaction'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -27,6 +30,9 @@ const AppRoutes = () => {
       { path: '/transactions', element: <Transactions /> },
       { path: '/all_tickets', element: <AllTickets /> },
       {path: '/profile',element: <Profile/>},
+      { path: '/login', element: <Login/>},
+      {path: '/change_password',element: <ChangePassword/>},
+      { path: '/transaction', element: <Transaction />}
     ]
     )
     return routes
