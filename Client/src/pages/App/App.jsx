@@ -6,6 +6,8 @@ import EventDetails from '../EventDetails/EventDetails'
 import PurchaseTicket from '../PurchaseTicket/PurchaseTicket'
 import Transactions from '../Transactions/Transactions'
 import AllTickets from '../AllTickets/AllTickets'
+import Profile from '../Profile/Profile'
+import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -16,6 +18,7 @@ const AppRoutes = () => {
       { path: '/purchase_ticket', element: <PurchaseTicket /> },
       { path: '/transactions', element: <Transactions /> },
       { path: '/all_tickets', element: <AllTickets /> },
+      {path: '/profile',element: <Profile/>},
     ]
     )
     return routes
