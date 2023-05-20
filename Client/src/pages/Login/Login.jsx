@@ -1,8 +1,11 @@
-import React from 'react'
+
 import Layout from '../../components/Layout/Layout'
 import { UimGoogle } from '@iconscout/react-unicons-monochrome'
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
+
   return (
     <Layout>
     
@@ -19,7 +22,7 @@ function Login() {
         </div>
         {/* Google login button */}
         <div className='flex flex-col justify-center items-center'>
-            <button className='btn btn-outline'>
+            <button  className='btn btn-outline' onClick={() => navigate('/')}>
               <UimGoogle className='mr-2 text-main'/>
               Iniciar sesion con Google
             </button>
