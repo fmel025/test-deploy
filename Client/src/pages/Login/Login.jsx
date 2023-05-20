@@ -17,7 +17,7 @@ function Login() {
         <p className='font-semibold'>Contraseña:</p>
         <input type='password' className='input w-full input-sm bg-slate-200' placeholder='********'></input>
         <div className='flex flex-col justify-center items-center my-5'>
-        <div className='btn bg-main hover:bg-darker-main'>Iniciar sesion</div> 
+        <div onClick={() => navigate('/')} className='btn bg-main hover:bg-darker-main'>Iniciar sesion</div> 
         <div className='divider'>o</div>         
         </div>
         {/* Google login button */}

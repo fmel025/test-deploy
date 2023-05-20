@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 
 import Layout from "../../components/Layout/Layout"
 
 export default function Profile() {
+  const navigate = useNavigate();
   return (
     <>
     <Layout >
@@ -23,7 +25,7 @@ export default function Profile() {
             </h2>
           </div>
           <div className="flex justify-center items-cente space-x-6 mt-20 ">
-              <button
+              <button onClick={() => navigate('/change_password')} 
                 className="bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
           text-white font-bold font-sans ui-sans-serif  py-2 px-4 rounded"
               >
