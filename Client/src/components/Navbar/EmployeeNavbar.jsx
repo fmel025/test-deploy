@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ImprovedNavbar = () => {
+const EmployeeNavbar = () => {
   let Links = [
-    { name: "My events", link: "/attended_events" },
-    { name: "Future events", link: "/future_events" },
-    { name: "Tickets", link: "/all_tickets" },
-    { name: "Transactions", link: "/transactions" },
+    { name: "Events", link: "/manage_events" },
+    { name: "Statistics", link: "/event_statistics_selection" },
+    { name: "Authorizations", link: "/manage_authorizations" },
+    { name: "Manage users", link: "/manage_users" },
     { name: "Profile", link: "/profile" },
     { name: "Logout", link: "/login" },
   ];
@@ -17,7 +17,7 @@ const ImprovedNavbar = () => {
       
       <nav className='shadow-md bg-white w-full fixed top-0 left-0 mb-10'>
       <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
-      <Link to='/' className='font-bold text-2xl cursor-pointer flex items-center font-[Aleo] 
+      <Link to='/home' className='font-bold text-2xl cursor-pointer flex items-center font-[Aleo] 
       text-[#605DEC]'>
         EventMate
       </Link>
@@ -42,4 +42,4 @@ const ImprovedNavbar = () => {
   );
 };
 
-export default ImprovedNavbar;
+export default EmployeeNavbar;

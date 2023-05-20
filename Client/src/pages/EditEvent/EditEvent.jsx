@@ -1,9 +1,12 @@
 import React from 'react'
 import Layout from '../../components/Layout/Layout'
 import { UilTimes } from '@iconscout/react-unicons'
+import { useNavigate } from 'react-router-dom';
 
 
 function EditEvent() {
+    
+ const navigate = useNavigate();
   return (
     <Layout>
         <div className="rounded w-2/4 flex-col justify-center p-10 mt-32 mb-14 bg-white">
@@ -59,8 +62,10 @@ function EditEvent() {
                 </div>
             </div>
             <div className='flex flex-row justify-start items-center my-5 gap-10'>
-                <button className='btn btn-md bg-main hover:bg-darker-main'>Guardar cambios</button>
-                <button className='btn btn-secondary'>Cancelar</button>
+                <button onClick={() => navigate('/employee_event_details')}
+                className='btn btn-md bg-main hover:bg-darker-main'>Guardar cambios</button>
+                <button  onClick={() => navigate('/employee_event_details')}
+                className='btn btn-secondary'>Cancelar</button>
             </div>
 
         </div>
