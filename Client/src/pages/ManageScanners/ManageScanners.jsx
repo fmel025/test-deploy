@@ -1,15 +1,14 @@
 import Layout from "../../components/Layout/Layout"
 import SearchBar from "../../components/SearchBar/SearchBar"
-import UserStatusTable from "../../components/UserStatusTable/UserStatusTable"
-
+import ScannersTable from "../../components/ScannersTable/ScannersTable"
 
 function ManageScanners() {
  
     return (
         <Layout>
-          <h1 className="text-5xl font-bold text-main mt-5 mb-10">Administrador de usuarios</h1>
+          <h1 className="text-5xl font-bold text-main mt-5 mb-10">Asignar validadores</h1>
           <SearchBar/>
-          <UserStatusTable/>
+          <ScannersTable />
           
         </Layout>
     )

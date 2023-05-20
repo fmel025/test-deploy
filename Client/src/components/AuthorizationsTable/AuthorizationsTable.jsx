@@ -1,6 +1,6 @@
 import AuthorizationControl from "../AuthorizationControl/AuthorizationControl";
 
-export default function UserStatusTable() {
+export default function AuthorizationsTable() {
     return (
         <div className="overflow-x-auto w-4/6">
         <table className="table w-full">
