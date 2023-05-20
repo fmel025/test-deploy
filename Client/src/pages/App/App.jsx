@@ -17,6 +17,9 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import Transaction from '../Transaction/Transaction'
 import CreateEvent from '../CreateEvent/CreateEvent'
 import EditEvent from '../EditEvent/EditEvent'
+import ManageUsers from '../ManageUsers/ManageUsers'
+import ManageScanners from '../ManageScanners/ManageScanners'
+import ManageAuthorizations from '../ManageAuthorizations/ManageAuthorizations'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -31,6 +34,9 @@ const AppRoutes = () => {
       { path: '/purchase_ticket', element: <PurchaseTicket /> },
       { path: '/transactions', element: <Transactions /> },
       { path: '/all_tickets', element: <AllTickets /> },
+      { path: '/manage_users', element: <ManageUsers /> },
+      { path: '/manage_scanners', element: <ManageScanners /> },
+      { path: '/manage_authorizations', element: <ManageAuthorizations /> },
       {path: '/profile',element: <Profile/>},
       { path: '/login', element: <Login/>},
       {path: '/change_password',element: <ChangePassword/>},
