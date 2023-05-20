@@ -1,4 +1,3 @@
-import DetailsButton from "../CounterButtons/CounterButtons"
 
 const EventCard = () => {
     return(

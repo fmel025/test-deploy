@@ -12,6 +12,7 @@ import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar'
 import EmployeeHome from '../Home/EmployeeHome'
 import ManageEvents from '../ManageEvents/ManageEvents'
 import EventStatistics from '../EventStatistics/EventStatistics'
+import EventStatisticsSelection from '../EventStatisticsSelection/EventStatisticsSelection'
 import Login from '../Login/Login'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Transaction from '../Transaction/Transaction'
@@ -29,6 +30,7 @@ const AppRoutes = () => {
       { path: '/future_events', element: <FutureEvents /> },
       { path: '/event_details', element: <EventDetails /> },
       { path: '/employee_event_details', element: <EmployeeEventDetails /> },
+      { path: '/event_statistics_selection', element: <EventStatisticsSelection /> },
       { path: '/event_statistics', element: <EventStatistics /> },
       { path: '/manage_events', element: <ManageEvents /> },
       { path: '/purchase_ticket', element: <PurchaseTicket /> },
