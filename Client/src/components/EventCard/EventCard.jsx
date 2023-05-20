@@ -14,7 +14,6 @@ const EventCard = () => {
           <p className='ml-5 text-sm font-light'>69 de mayo</p>
           <p className='mt-2 text-sm font-medium'>Cupos disponibles:</p>
           <p className='ml-5 text-sm font-light'>50</p>
-          
         </div>
       </Link>
     )
