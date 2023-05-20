@@ -4,14 +4,15 @@ import Layout from '../../components/Layout/Layout'
 function ChangePassword() {
   return (
     <Layout>
-        <div className="rounded w-2/5 flex-col justify-center p-10 mt-60  bg-white">
+      <div className="rounded w-3/5 md:w-3/5 lg:w-2/5 flex-col justify-center p-10 mt-40 bg-white">
+        <h1 className='font-semibold text-3xl text-center mb-10'>Cambiar contraseña</h1>
         <p className='font-semibold'>Nueva Contraseña:</p>
-        <input type='password' className='rounded-md border-2 border-gray-300 w-full p-2 my-2 bg-slate-200' placeholder='********'></input>
+        <input type='password' className='input w-full input-sm bg-slate-200' placeholder='********'></input>
         <p className='font-semibold'>Confirmar contraseña:</p>
-        <input type='password' className='rounded-md border-2 border-gray-300 w-full p-2 my-2 bg-slate-200' placeholder='********'></input>
-        <div className='flex flex-row justify-center items-center my-5 gap-32'>
-            <button className='rounded-md border-2 border-gray-300 w-2/3 p-2 my-2 bg-main text-white font-semibold'>Confirmar</button>
-            <button className='rounded-md border-2 border-gray-300 w-2/3 p-2 my-2 bg-rose-600 text-white font-semibold'>Cancelar</button>
+        <input type='password' className='input w-full input-sm bg-slate-200' placeholder='********'></input>
+        <div className='flex flex-row justify-center items-center my-5 gap-5 md:gap-14 lg:gap-28'>
+            <button className='btn bg-main'>Confirmar</button>
+            <button className='btn btn-secondary'>Cancelar</button>
         </div>
     </div>
     </Layout>
