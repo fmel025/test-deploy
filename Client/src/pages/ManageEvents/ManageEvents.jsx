@@ -1,5 +1,5 @@
 import AddButton from "../../components/AddButton/AddButton"
-import EventCard from "../../components/EventCard/EventCard"
+import EmployeeEventCard from "../../components/EventCard/EmployeeEventCard"
 import Layout from "../../components/Layout/Layout"
 import SearchBar from "../../components/SearchBar/SearchBar"
 
@@ -13,13 +13,13 @@ function ManageEvents() {
                 <AddButton />
             </div>
           <div className="grid grid-cols-3 gap-16 mb-5 ">
-          <EventCard/>
-          <EventCard/>
-          <EventCard/>
-          <EventCard/>
-          <EventCard/>
-          <EventCard/>
-          <EventCard/>
+          <EmployeeEventCard />
+          <EmployeeEventCard />
+          <EmployeeEventCard />
+          <EmployeeEventCard />
+          <EmployeeEventCard />
+          <EmployeeEventCard />
+          <EmployeeEventCard />
           </div>
           
         </Layout>

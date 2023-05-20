@@ -1,24 +1,22 @@
+import { Link } from "react-router-dom";
+
 const StatsCard = () => {
     return(
-        <div className='flex bg-white cursor-pointer h-3/6 w-4/6 rounded-lg shadow-lg p-2'>
-            <figure className=" w-5/12 flex flex-col items-center">
-                <h1 className='mt-1 text-xl font-bold'>Titulo del evento</h1>
-                <img className="mb-1 object-scale-down h-48 w-96" src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shoes" />
-            </figure>
-            <div className="flex w-7/12">
-                <div className="p-3 w-1/2 flex flex-col justify-center ">
-                    <h1 className='mt-1 text-xl font-bold'>Asientos vendidos</h1>
-                    <p className='mt-2 text-lg font-medium '>Tier 1</p>
-                    <p className='mt-1 text-lg font-medium '>Tier 2</p>
-                    <p className='mt-1 text-lg font-medium '>Tier 3</p>
-                </div>
-                <div className="p-3 w-1/2 flex flex-col justify-center ">
-                    <p className='mt-2 text-lg font-medium '>Ganancia total:</p>
-                    <p className='mt-1 text-lg font-medium '>Nada</p>
-                </div>
-            </div>
-            
-      </div>
+        <Link to='/event_statistics' className='bg-white cursor-pointer w-64 h-92 rounded-lg shadow-lg hover:shadow-2xlBlack'>
+        <figure className='relative m-3 w-90 h-2/5'>
+          <img className='w-full h-full object-cover rounded-lg' src='https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='headphones' />
+        </figure>
+        <div className='m-4'>
+          <h1 className='mt-1 text-2xl font-bold'>Fiesta del sexo</h1>
+          <p className='mt-2 text-sm font-medium'>Lugar</p>
+          <p className='ml-5 text-sm font-light'>Casa de pupa</p>
+          <p className='mt-1 text-sm font-medium'>Fecha</p>
+          <p className='ml-5 text-sm font-light'>69 de mayo</p>
+          <p className='mt-2 text-sm font-medium'>Cupos disponibles:</p>
+          <p className='ml-5 text-sm font-light'>50</p>
+          
+        </div>
+      </Link>
     );
 };
 

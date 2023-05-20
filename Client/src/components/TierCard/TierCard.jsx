@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom"
+
 const EventCard = () => {
     return(
-        <div className='bg-white cursor-pointer w-64 h-48 rounded-lg shadow-lg hover:shadow-2xlBlack'>
+        <Link to='/purchase_ticket' className='bg-white cursor-pointer w-64 h-48 rounded-lg shadow-lg hover:shadow-2xlBlack'>
         
           <div className='m-4 p-2'>
             <h1 className='text-2xl font-bold'>Tipo de localidad</h1>
@@ -10,7 +12,7 @@ const EventCard = () => {
             <p className='ml-5 text-base font-medium'>69</p>
             
           </div>
-      </div>
+      </Link>
     )
 }
 

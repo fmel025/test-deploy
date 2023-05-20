@@ -21,6 +21,7 @@ import EditEvent from '../EditEvent/EditEvent'
 import ManageUsers from '../ManageUsers/ManageUsers'
 import ManageScanners from '../ManageScanners/ManageScanners'
 import ManageAuthorizations from '../ManageAuthorizations/ManageAuthorizations'
+import EmployeeNavbar from '../../components/Navbar/EmployeeNavbar'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -55,7 +56,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppRoutes/>
-      <ImprovedNavbar />
+      <EmployeeNavbar />
     </BrowserRouter>
   )
 }
