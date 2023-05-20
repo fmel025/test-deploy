@@ -4,8 +4,8 @@ const ImprovedNavbar = () => {
   let Links = [
     { name: "Home", link: "/" },
     { name: "Events", link: "/" },
-    { name: "Tickets", link: "/" },
-    { name: "Profile", link: "/" },
+    { name: "Tickets", link: "/all_tickets" },
+    { name: "Profile", link: "/profile" },
     { name: "Logout", link: "/" },
   ];
 

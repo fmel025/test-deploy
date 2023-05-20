@@ -1,10 +1,11 @@
+
+import Layout from "../../components/Layout/Layout"
+
 export default function Profile() {
   return (
     <>
-      <div className=" h-screen w-screen bg-gray-200">
-        
-
-        <div className="flex flex-col justify-center items-center mt-16">
+    <Layout >
+       <div className="flex flex-col justify-center h-full items-center ">
           <h1 className="text-5xl font-bold text-indigo-500">Perfil</h1>
 
           <div className="flex flex-col justify-start mt-14">
@@ -21,22 +22,24 @@ export default function Profile() {
               adonayortiz96@gmail.com
             </h2>
           </div>
+          <div className="flex justify-center items-cente space-x-6 mt-20 ">
+              <button
+                className="bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
+          text-white font-bold font-sans ui-sans-serif  py-2 px-4 rounded"
+              >
+                Cambiar contraseña
+              </button>
+              <button
+                className="bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
+          text-white font-bold font-sans ui-sans-serif  py-2 px-4 rounded"
+              >
+                Generar código
+              </button>
         </div>
-        <div className="flex justify-center  space-x-6 mt-36 ">
-          <button
-            className="bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
-       text-white font-bold font-sans ui-sans-serif  py-2 px-4 rounded"
-          >
-            Cambiar contraseña
-          </button>
-          <button
-            className="bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
-       text-white font-bold font-sans ui-sans-serif  py-2 px-4 rounded"
-          >
-            Generar código
-          </button>
         </div>
-      </div>
+       
+    </Layout>
+     
     </>
   );
 }
