@@ -8,6 +8,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 public class CodeQR {
+    //foreign key : private String ticketId;
     private String id;
     private Date creationDate;
     private Date expirationDate;

@@ -7,7 +7,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 public class Purchase {
-
+    //foreign key  : private String userId;
     private String id;
     private String total;
     private Date date;

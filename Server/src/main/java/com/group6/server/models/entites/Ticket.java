@@ -8,6 +8,9 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 public class Ticket {
+    //foreign key: private String userId;
+    //foreign key: private String tierId;
+    //foreign key: private String purchaseId;
     private String id;
     private String temporaryCode;
     private String state;
