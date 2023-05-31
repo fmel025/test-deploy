@@ -11,7 +11,7 @@ public class Event {
 
     String id;
 
-    String name;
+    String title;
 
     String organizer;
 
