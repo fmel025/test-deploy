@@ -10,8 +10,7 @@ public class User {
 
     private String username;
     private String email;
-
     @JsonIgnore
     private String password;
-
+    //foreign key : private String authorizationCode;
 }
