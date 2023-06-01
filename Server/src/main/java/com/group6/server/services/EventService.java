@@ -6,4 +6,6 @@ public interface EventService {
     //create event
     Event createEvent(EventDTO eventDTO);
 
+    //update event
+    Event updateEvent(EventDTO eventDTO); // should be the same method as createEvent
 }
