@@ -14,4 +14,7 @@ public interface UserService {
 
     //find by one username o email method
     User findByUsernameOrEmail(String identifier); // identifier is username or email
+
+    //update password method
+    User updatePassword(updatePasswordDTO updatePasswordDTO);
 }
