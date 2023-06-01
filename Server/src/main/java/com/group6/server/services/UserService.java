@@ -2,6 +2,8 @@ package com.group6.server.services;
 
 import com.group6.server.models.entites.User;
 
+import java.util.List;
+
 public interface UserService {
     //Register method
     User register(RegisterDTO registerDTO);
@@ -17,4 +19,7 @@ public interface UserService {
 
     //update password method
     User updatePassword(updatePasswordDTO updatePasswordDTO, User user);
+
+    //get all users
+    List<User> getAllUsers();
 }
