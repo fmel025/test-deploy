@@ -19,4 +19,7 @@ public interface EventService {
 
     //find  event by title
     Event findEventByTitle(String title);
+
+    //toggle visibility of event
+    Event toggleVisibility(String id);
 }
