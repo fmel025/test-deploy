@@ -11,4 +11,7 @@ public interface UserService {
 
     //find by one id method
     User findById(String id);  //the id is the code of the user
+
+    //find by one username o email method
+    User findByUsernameOrEmail(String identifier); // identifier is username or email
 }
