@@ -8,4 +8,7 @@ public interface UserService {
 
     //compare password method
     boolean comparePassword(String password, String hashedPassword);
+
+    //find by one id method
+    User findById(String id);  //the id is the code of the user
 }
