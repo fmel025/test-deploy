@@ -9,8 +9,8 @@ const ActiveTicket = () => {
             </figure>
             <div className="p-3 w-7/12">
                 <h1 className='mt-1 text-xl font-bold'>Titulo del evento</h1>
-                <p className='mt-2 text-lg font-medium text-gray-400'>Fecha: 69 de mayo</p>
-                <p className='mt-1 text-lg font-medium text-gray-400'>Pedido: 666</p>
+                <p className='mt-2 text-lg font-medium text-gray-400'>Fecha: 23 de mayo</p>
+                <p className='mt-1 text-lg font-medium text-gray-400'>Pedido: 626</p>
                 <ScanButton/>
                 <TransferButton/>
             </div>

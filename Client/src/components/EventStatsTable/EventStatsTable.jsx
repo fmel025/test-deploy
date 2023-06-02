@@ -10,8 +10,8 @@ const EventStatsTable= () => {
             
             <div className="stat">
                 <div className="stat-title text-white">Asistencia total</div>
-                <div className="stat-value text-white">69%</div>
-                <div className="stat-desc text-white">69 de 100</div>
+                <div className="stat-value text-white">70%</div>
+                <div className="stat-desc text-white">70 de 100</div>
             </div>
             
             <div className="stat">
@@ -22,7 +22,7 @@ const EventStatsTable= () => {
 
             <div className="stat">
                 <div className="stat-title text-white">Localidad mas popular</div>
-                <div className="stat-value text-2xl text-white">Casa de pupa</div>
+                <div className="stat-value text-2xl text-white">Asiento VIP</div>
                 <div className="stat-desc text-white">58 de 100</div>
             </div>
             

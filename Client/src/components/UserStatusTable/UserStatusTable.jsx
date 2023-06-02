@@ -15,8 +15,8 @@ export default function UserStatusTable() {
             {/* row 1 */}
             <tr>
               <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
+              <td>Chris</td>
+              <td>Chris@gmail.com</td>
               <td>
                 <label className="swap">
                 <input type="checkbox" />
@@ -28,8 +28,8 @@ export default function UserStatusTable() {
             {/* row 2 */}
             <tr className="">
               <th>2</th>
-              <td>Hart Hagerty</td>
-              <td>Desktop Support Technician</td>
+              <td>Samuel</td>
+              <td>Samuel@gmail.com</td>
               <td>
               <label className="swap">
                 <input type="checkbox" />
@@ -41,8 +41,8 @@ export default function UserStatusTable() {
             {/* row 3 */}
             <tr>
               <th>3</th>
-              <td>Brice Swyre</td>
-              <td>Tax Accountant</td>
+              <td>Marcos</td>
+              <td>Benjamin@gmail.com</td>
               <td>
               <label className="swap">
                 <input type="checkbox" />

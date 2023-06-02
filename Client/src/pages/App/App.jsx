@@ -56,7 +56,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppRoutes/>
-      <EmployeeNavbar />
+      <ImprovedNavbar />
     </BrowserRouter>
   )
 }

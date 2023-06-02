@@ -11,8 +11,9 @@ const EventCard = () => {
           <img className='w-full h-full object-cover rounded-lg' src='https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='headphones' />
         </figure>
         <div className='m-4'>
+
           <h1 className='mt-1 text-xl font-bold'>
-            Concierto Ferxxxo
+            Titulo
           </h1>
           <div className="flex flex-row items-center gap-1">
             <IconMapPin size={15} className="mt-1"/>
@@ -23,6 +24,7 @@ const EventCard = () => {
             <IconCalendarEvent size={15} />
             <p className='mt-1 text-sm font-medium'>Fecha</p>
           </div>
+
           
           <p className='ml-5 text-sm  text-slate-500'>10 de mayo</p>
           <div className="flex flex-row items-center gap-1">
