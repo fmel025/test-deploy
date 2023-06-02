@@ -22,6 +22,8 @@ import ManageUsers from '../ManageUsers/ManageUsers'
 import ManageScanners from '../ManageScanners/ManageScanners'
 import ManageAuthorizations from '../ManageAuthorizations/ManageAuthorizations'
 import EmployeeNavbar from '../../components/Navbar/EmployeeNavbar'
+import PurchaseList from '../PurchaseList/PurchaseList'
+import OrderDetails from '../OrderDetails/OrderDetails'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -35,6 +37,8 @@ const AppRoutes = () => {
       { path: '/event_statistics', element: <EventStatistics /> },
       { path: '/manage_events', element: <ManageEvents /> },
       { path: '/purchase_ticket', element: <PurchaseTicket /> },
+      { path: '/purchase_list', element: <PurchaseList /> },
+      { path: '/order_details', element: <OrderDetails /> },
       { path: '/transactions', element: <Transactions /> },
       { path: '/all_tickets', element: <AllTickets /> },
       { path: '/manage_users', element: <ManageUsers /> },
