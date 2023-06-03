@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 import Layout from "../../components/Layout/Layout"
+import UserQRButton from '../../components/UserQRButton/UserQRButton';
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -26,17 +27,14 @@ export default function Profile() {
           </div>
           <div className="flex justify-center items-cente space-x-6 mt-20 ">
               <button onClick={() => navigate('/change_password')} 
-                className="bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
-          text-white font-bold font-sans ui-sans-serif  py-2 px-4 rounded"
+                className="btn bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
+          text-white font-bold font-sans ui-sans-serif  py-2 px-4 "
               >
                 Cambiar contraseña
               </button>
-              <button
-                className="bg-indigo-500 hover:bg-indigo-600  active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
-          text-white font-bold font-sans ui-sans-serif  py-2 px-4 rounded"
-              >
-                Generar código
-              </button>
+             
+              
+              <UserQRButton/>
         </div>
         </div>
        
