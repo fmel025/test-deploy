@@ -5,7 +5,7 @@ const ImprovedNavbar = () => {
   let Links = [
     { name: "My events", link: "/attended_events" },
     { name: "Future events", link: "/future_events" },
-    { name: "Tickets", link: "/all_tickets" },
+    { name: "Purchases", link: "/purchase_list" },
     { name: "Transactions", link: "/transactions" },
     { name: "Profile", link: "/profile" },
     { name: "Logout", link: "/login" },
