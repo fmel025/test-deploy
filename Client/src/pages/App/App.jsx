@@ -6,7 +6,6 @@ import EventDetails from '../EventDetails/EventDetails'
 import EmployeeEventDetails from '../EventDetails/EmployeeEventDetails'
 import PurchaseTicket from '../PurchaseTicket/PurchaseTicket'
 import Transactions from '../Transactions/Transactions'
-import AllTickets from '../AllTickets/AllTickets'
 import Profile from '../Profile/Profile'
 import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar'
 import EmployeeHome from '../Home/EmployeeHome'
@@ -40,7 +39,6 @@ const AppRoutes = () => {
       { path: '/purchase_list', element: <PurchaseList /> },
       { path: '/order_details', element: <OrderDetails /> },
       { path: '/transactions', element: <Transactions /> },
-      { path: '/all_tickets', element: <AllTickets /> },
       { path: '/manage_users', element: <ManageUsers /> },
       { path: '/manage_scanners', element: <ManageScanners /> },
       { path: '/manage_authorizations', element: <ManageAuthorizations /> },
