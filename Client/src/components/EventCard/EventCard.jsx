@@ -12,7 +12,7 @@ const EventCard = () => {
         <div className='m-4'>
 
           <h1 className='mt-1 text-xl font-bold'>
-            Concierto Ferxxxo
+            Concierto
           </h1>
           <div className="flex flex-row items-center gap-1">
             <IconMapPin size={15} className="mt-1"/>
