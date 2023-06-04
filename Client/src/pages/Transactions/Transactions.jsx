@@ -47,7 +47,7 @@ function Transactions() {
         <IssuedCard />
         <IssuedCard />
         <IssuedCard />
-        <IssuedCard />
+        <IssuedCard /> 
         <IssuedCard />
         <IssuedCard />
         <IssuedCard />
