@@ -2,6 +2,8 @@ import Layout from "../../components/Layout/Layout";
 import { UimGoogle } from "@iconscout/react-unicons-monochrome";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/google.svg";
+import LoginImage from "../../assets/login.jpg";
+import { useState } from "react";
 
 function Login() {
 
@@ -70,14 +72,14 @@ function Login() {
             type="button"
             onClick={handleSubmitGoogle}
           >
-            <img src={Logo} alt="logo" class="w-6 h-6 inline mr-2" />
+            <img src={Logo} alt="logo" className="w-6 h-6 inline mr-2" />
             Iniciar sesion con Google
           </button>
         </form>
 
         <div className="relative">
           <img
-            src="https://images.unsplash.com/photo-1684235424737-31c4f78e5aa2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
+            src={LoginImage}
             alt="img"
             className="w-[400px] h-full hidden rounded-r-2xl md:block object-cover"
           />
