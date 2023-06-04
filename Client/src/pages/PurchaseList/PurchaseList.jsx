@@ -7,8 +7,8 @@ function PurchaseList() {
  
     return (
         <Layout>
-          <h1 className="text-5xl font-bold text-main mt-5 mb-2">Mis ordenes</h1>
-          <div className="flex flex-col gap-4 mb-5 w-full items-center">
+          <h1 className="text-5xl font-bold text-main mt-2 mb-3">Mis ordenes</h1>
+          <div className="flex flex-col gap-4 mb-5 w-full h-full items-center">
             <OrderCard />
             <OrderCard />
             <OrderCard />
