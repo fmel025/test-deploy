@@ -62,7 +62,7 @@ function Transactions() {
     <Layout>
       <h1 className="text-5xl font-bold text-blue-600 mt-5 mb-10">Transferencias</h1>
       <Tabs value={activeTab} className="w-2/3">
-        <TabsHeader className="bg-slate-200 p-2 mx-10 text-center">
+        <TabsHeader className="bg-slate-200 p-2 mx-10 text-center flex flex-col md:flex-row">
           {data.map(({ label, value, icon }) => (
             <Tab
               key={value}
