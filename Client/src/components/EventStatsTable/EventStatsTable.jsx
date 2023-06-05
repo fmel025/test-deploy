@@ -1,6 +1,6 @@
 const EventStatsTable= () => {
     return(
-        <div className="stats stats-vertical shadow w-1/5 bg-main">
+        <div className="stats stats-horizontal lg:stats-vertical shadow w-4/5 lg:w-1/5 bg-main">
     
             <div className="stat">
                 <div className="stat-title text-white">Tickets vendidos</div>

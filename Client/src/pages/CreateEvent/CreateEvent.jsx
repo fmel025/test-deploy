@@ -11,7 +11,7 @@ function CreateEvent() {
     const navigate = useNavigate();
   return (
     <Layout>
-        <div className="rounded w-2/4 flex-col justify-center p-10 mt-32 mb-14 bg-white gap-5">
+        <div className="rounded w-11/12 sm:w-5/6 lg:w-3/5 flex-col justify-center p-10 mt-32 mb-14 bg-white gap-5">
             <h1 className='font-semibold text-3xl text-center mb-10'>Crear evento</h1>
             <p className='font-semibold'>Nombre del evento:</p>
             <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Nombre del evento'></input>
@@ -47,7 +47,7 @@ function CreateEvent() {
                     <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Localidad'></input>
                 </div>
             </div>
-            <div className='btn btn-sm bg-main hover:bg-darker-main'>
+            <div className='btn btn-sm text-slate-200 bg-main hover:bg-darker-main'>
             <IconMapPin className='mr-2'/>
             Agregar localidad</div>
             <div className="flex space-x-2 mt-2">
@@ -69,9 +69,9 @@ function CreateEvent() {
             </div>
             <div className='flex flex-row justify-start items-center my-5 gap-10'>
                 <button onClick={() => navigate('/employee_event_details')}
-                className='btn btn-md bg-main hover:bg-darker-main'><IconCircleCheck className='mr-3'/> Crear evento</button>
+                className='btn btn-md text-slate-200 bg-main hover:bg-darker-main'><IconCircleCheck className='mr-2'/> Crear evento</button>
                 <button  onClick={() => navigate('/manage_events')}
-                className='btn btn-secondary'><IconCircleX className='mr-3'/> Cancelar</button>
+                className='btn btn-secondary text-slate-200'><IconCircleX className='mr-2'/> Cancelar</button>
             </div>
 
         </div>
