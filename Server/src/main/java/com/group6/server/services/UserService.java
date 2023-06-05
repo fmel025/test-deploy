@@ -20,7 +20,7 @@ public interface UserService {
     User findByUsernameOrEmail(String identifier); // identifier is username or email
 
     //update password method
-    User updatePassword(String password, User user);
+    User changePassword(String password, User user);
 
     //get all users
     List<User> getAllUsers();
