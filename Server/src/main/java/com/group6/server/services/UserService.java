@@ -18,11 +18,11 @@ public interface UserService {
     User findByUsernameOrEmail(String identifier); // identifier is username or email
 
     //update password method
-    User updatePassword(UpdatePasswordDTO updatePasswordDTO, User user);
+    User updatePassword(String password, User user);
 
     //get all users
     List<User> getAllUsers();
 
     //change username method
-    User changeUsername(ChangeUsernameDTO changeUsernameDTO, User user);
+    User changeUsername(String username, User user);
 }
