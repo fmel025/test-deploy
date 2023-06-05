@@ -1,8 +1,10 @@
 package com.group6.server.controllers;
 
+import com.group6.server.models.dtos.ErrorsDTO;
 import com.group6.server.models.dtos.SignInDTO;
 import com.group6.server.models.dtos.SignInGoogleDTO;
 import com.group6.server.services.AuthService;
+import com.group6.server.utils.ErrorHandler;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,11 +22,18 @@ public class AuthController {
 	@Autowired
 	private AuthService userService;
 
+	@Autowired
+	private ErrorHandler errorHandler;
+
 	@PostMapping("/login")
 	public ResponseEntity<?> getLogin(@Valid @RequestBody SignInDTO data, BindingResult validations){
 
 		if(validations.hasErrors()){
-			return ResponseEntity.badRequest().body("Bad req");
+			return ResponseEntity.badRequest().body(
+					new ErrorsDTO(
+							errorHandler.mapErrors(validations.getFieldErrors())
+					)
+			);
 		}
 		return new ResponseEntity<Object>( new MessageDTO("Controller working successfully"), 
 				HttpStatus.OK);
@@ -34,7 +43,11 @@ public class AuthController {
 	public ResponseEntity<?> getGoogleLogin(@Valid @RequestBody SignInGoogleDTO data, BindingResult validations) {
 
 		if(validations.hasErrors()){
-			return ResponseEntity.badRequest().body("Bad req");
+			return ResponseEntity.badRequest().body(
+					new ErrorsDTO(
+							errorHandler.mapErrors(validations.getFieldErrors())
+					)
+			);
 		}
 
 		return new ResponseEntity<Object>( new MessageDTO("Controller working successfully"),
