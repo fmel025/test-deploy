@@ -23,6 +23,7 @@ import ManageAuthorizations from '../ManageAuthorizations/ManageAuthorizations'
 import EmployeeNavbar from '../../components/Navbar/EmployeeNavbar'
 import PurchaseList from '../PurchaseList/PurchaseList'
 import OrderDetails from '../OrderDetails/OrderDetails'
+import TransactionDetails from '../TransactionDetails/TransactionDetails'
 
 const AppRoutes = () => {
     let routes = useRoutes([
@@ -46,6 +47,7 @@ const AppRoutes = () => {
       { path: '/login', element: <Login/>},
       {path: '/change_password',element: <ChangePassword/>},
       { path: '/transaction', element: <Transaction />},
+      { path: '/transaction_details', element: <TransactionDetails />},
       { path: '/create_event', element: <CreateEvent />},
       { path: '/edit_event', element: <EditEvent />}
     ]
@@ -58,7 +60,7 @@ function App() {
   return (
     <BrowserRouter>
       <AppRoutes/>
-      <EmployeeNavbar />
+      <ImprovedNavbar />
     </BrowserRouter>
   )
 }
