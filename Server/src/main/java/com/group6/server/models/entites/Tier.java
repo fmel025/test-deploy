@@ -3,14 +3,16 @@ package com.group6.server.models.entites;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 public class Tier {
     // Event relationship
 
-    String id;
+    private UUID id;
 
-    String name;
+    private String name;
 
     // Should this contain price?
 }
