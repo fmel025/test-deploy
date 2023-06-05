@@ -4,20 +4,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 public class Event {
 
-    String id;
+    private UUID id;
 
-    String title;
+    private String title;
 
-    String organizer;
+    private String organizer;
 
-    LocalDateTime date;
+    private LocalDateTime date;
 
-    String location;
+    private String location;
 
-    String url_image;
+    private String url_image;
 }
