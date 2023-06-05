@@ -1,12 +1,14 @@
 package com.group6.server.services;
 
+import com.group6.server.models.dtos.SignInGoogleDTO;
+import com.group6.server.models.dtos.SignInDTO;
 import com.group6.server.models.entites.User;
 
 import java.util.List;
 
 public interface UserService {
     //Register method
-    User register(RegisterDTO registerDTO);
+    User register(SignInGoogleDTO registerDTO);
 
     //compare password method
     boolean comparePassword(String password, String hashedPassword);

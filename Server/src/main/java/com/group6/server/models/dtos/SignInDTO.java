@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class SigninDTO {
+public class SignInDTO {
     @NotEmpty(message = "Username or email is required")
     private String identifier ; // username or email
 
