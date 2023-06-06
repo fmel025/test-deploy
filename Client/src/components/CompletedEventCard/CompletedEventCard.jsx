@@ -1,20 +1,32 @@
+import { IconMapPin, IconCalendarEvent, IconTicket } from "@tabler/icons-react"
+
 const CompletedEventCard = () => {
-    return(
-        <div className='bg-white cursor-pointer w-64 h-92 rounded-lg shadow-lg '>
-        <figure className='relative m-3 w-90 h-2/5'>
-          <img className='w-full h-full object-cover rounded-lg' src='https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='headphones' />
-        </figure>
-        <div className='m-4'>
-          <h1 className='mt-1 text-2xl font-bold'>Titulo</h1>
-          <p className='mt-2 text-sm font-medium'>Lugar:</p>
-          <p className='ml-5 text-sm font-light'>Estadio</p>
-          <p className='mt-1 text-sm font-medium'>Fecha:</p>
-          <p className='ml-5 text-sm font-light'>23 de mayo</p>
-          <p className='mt-2 text-sm font-medium'>Localidad:</p>
-          <p className='ml-5 text-sm font-light'>VIP</p>
+  return (
+    <div className="card card-compact w-72 bg-base-100 shadow-xl">
+      <figure><img src="https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Shoes" /></figure>
+      <div className="card-body">
+        <h2 className='card-title'>
+          Concierto
+        </h2>
+        <div className="flex flex-row items-center gap-0.5">
+          <IconMapPin size={15} className="mt-1" />
+          <p className=' text-sm font-medium'>Lugar</p>
         </div>
+        <p className='ml-5 text-sm text-slate-500 truncate'>Estadio Magico Gonzales, Platea Sur</p>
+        <div className="flex flex-row items-center gap-0.5">
+          <IconCalendarEvent size={15} />
+          <p className='text-sm font-medium'>Fecha</p>
+        </div>
+
+        <p className='ml-5 text-sm  text-slate-500'>10 de mayo</p>
+        <div className="flex flex-row items-center gap-1">
+          <IconTicket size={15} className="mt-1" />
+          <p className='text-sm font-medium'>Cupos disponibles:</p>
+        </div>
+        <p className='ml-5 text-sm  text-slate-500'>50</p>
       </div>
-    )
+    </div>
+  )
 }
 
 export default CompletedEventCard
