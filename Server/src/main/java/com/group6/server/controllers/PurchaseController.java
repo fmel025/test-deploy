@@ -39,8 +39,8 @@ public class PurchaseController {
     }
 
     @GetMapping("/user/{code}")
-    public ResponseEntity<?> findByUser(@PathVariable(name = "code") String indentifier){
-        if(indentifier.isEmpty()){
+    public ResponseEntity<?> findByUser(@PathVariable(name = "code") String identifier){
+        if(identifier.isEmpty()){
             return ResponseEntity.badRequest().body(
                     new ErrorDTO("The user is required for this request")
             );
