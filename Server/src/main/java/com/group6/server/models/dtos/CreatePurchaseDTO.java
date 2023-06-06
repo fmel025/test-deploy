@@ -17,6 +17,8 @@ public class CreatePurchaseDTO {
     @NotEmpty(message = "The user id is required")
     private String userId;
 
+
+    // Maybe this two will be extracted in some array (for multiple tiers)
     @NotEmpty(message = "The tier id is required")
     private String tierId;
 
