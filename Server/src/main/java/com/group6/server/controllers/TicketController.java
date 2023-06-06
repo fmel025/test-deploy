@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(Constants.API_BASE_URL + "/ticket")
 public class TicketController {
+
+    // Here would go the QRService
     @GetMapping("/qr/{id}")
-    public ResponseEntity<?> getQRCode(@PathVariable(name = "id") String id){
+    public ResponseEntity<?> getQRCode(@PathVariable(name = "id") String ticketId){
         return ResponseEntity.ok().build();
     }
 }
