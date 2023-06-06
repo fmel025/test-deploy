@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,4 +27,6 @@ public class CreatePurchaseDTO {
     @NotEmpty(message = "The total amount of tickets is required")
     private Integer amount;
 
+    // @NotEmpty(message = "The options must have a least one item")
+    // private List<TierOption> options;
 }
