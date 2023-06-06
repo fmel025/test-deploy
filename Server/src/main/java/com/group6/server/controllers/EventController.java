@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+// This is the public controller, the one for the admin and event mod will be another one
 @RestController
 @RequestMapping(Constants.API_BASE_URL + "/event")
 public class EventController {
@@ -22,7 +23,13 @@ public class EventController {
     public ResponseEntity<?> getAllEvents(){
         return ResponseEntity.ok().build();
     }
-    
+
+    // This will search all the events that matches the event name sent
+    @GetMapping("/name/{name}")
+    public ResponseEntity<?> searchByName(@PathVariable(name = "name") String name){
+        return ResponseEntity.ok().build();
+    }
+
     @GetMapping("/{code}")
     public ResponseEntity<?> findEventById(@PathVariable(name = "code") String code){
         return ResponseEntity.ok().build();
