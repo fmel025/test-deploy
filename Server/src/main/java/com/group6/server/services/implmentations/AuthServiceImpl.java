@@ -1,6 +1,6 @@
 package com.group6.server.services.implmentations;
 
-import com.group6.server.models.dtos.SigninGoogleDTO;
+import com.group6.server.models.dtos.SignInGoogleDTO;
 import com.group6.server.models.entites.User;
 import com.group6.server.services.AuthService;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public User register(SigninGoogleDTO registerDTO) {
+    public User register(SignInGoogleDTO registerDTO) {
         return null;
     }
 }
