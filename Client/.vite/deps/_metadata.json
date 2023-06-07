@@ -1,0 +1,86 @@
+{
+  "hash": "2876db4e",
+  "browserHash": "786fcdb7",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "556aa18a",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "874b5676",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "bee28283",
+      "needsInterop": false
+    },
+    "@tabler/icons-react": {
+      "src": "../../node_modules/@tabler/icons-react/dist/esm/tabler-icons-react.js",
+      "file": "@tabler_icons-react.js",
+      "fileHash": "2f130bce",
+      "needsInterop": false
+    },
+    "@material-tailwind/react": {
+      "src": "../../node_modules/@material-tailwind/react/index.js",
+      "file": "@material-tailwind_react.js",
+      "fileHash": "2170da8a",
+      "needsInterop": true
+    },
+    "@iconscout/react-unicons-monochrome": {
+      "src": "../../node_modules/@iconscout/react-unicons-monochrome/index.js",
+      "file": "@iconscout_react-unicons-monochrome.js",
+      "fileHash": "e4a8bddd",
+      "needsInterop": false
+    },
+    "@iconscout/react-unicons": {
+      "src": "../../node_modules/@iconscout/react-unicons/index.js",
+      "file": "@iconscout_react-unicons.js",
+      "fileHash": "43ab7018",
+      "needsInterop": false
+    },
+    "react-tabs": {
+      "src": "../../node_modules/react-tabs/esm/index.js",
+      "file": "react-tabs.js",
+      "fileHash": "5357b08e",
+      "needsInterop": false
+    },
+    "react-chartjs-2": {
+      "src": "../../node_modules/react-chartjs-2/dist/index.js",
+      "file": "react-chartjs-2.js",
+      "fileHash": "284ba1fb",
+      "needsInterop": false
+    },
+    "chart.js": {
+      "src": "../../node_modules/chart.js/dist/chart.js",
+      "file": "chart__js.js",
+      "fileHash": "f59315cf",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-7D4KKQNU": {
+      "file": "chunk-7D4KKQNU.js"
+    },
+    "chunk-WBWDS4EP": {
+      "file": "chunk-WBWDS4EP.js"
+    },
+    "chunk-AMUZUIDW": {
+      "file": "chunk-AMUZUIDW.js"
+    },
+    "chunk-QGDWAF2H": {
+      "file": "chunk-QGDWAF2H.js"
+    },
+    "chunk-CT4V4BTJ": {
+      "file": "chunk-CT4V4BTJ.js"
+    },
+    "chunk-JEXKZRFY": {
+      "file": "chunk-JEXKZRFY.js"
+    }
+  }
+}
