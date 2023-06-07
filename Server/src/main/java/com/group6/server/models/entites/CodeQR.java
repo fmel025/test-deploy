@@ -2,12 +2,13 @@ package com.group6.server.models.entites;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.UUID;
 
 @Data
-@AllArgsConstructor
+@NoArgsConstructor
 public class CodeQR {
     //foreign key : private String ticketId;
     private UUID id;
