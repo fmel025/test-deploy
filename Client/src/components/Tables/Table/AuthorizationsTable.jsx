@@ -13,7 +13,7 @@ export default function AuthorizationsTable() {
               <th className="bg-main text-white" >Status</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="bg-white">
             {/* row 1 */}
             <tr>
               <th>1</th>
@@ -24,7 +24,7 @@ export default function AuthorizationsTable() {
               </td>
             </tr>
             {/* row 2 */}
-            <tr className="">
+            <tr>
               <th>2</th>
               <td>Marcos</td>
               <td>Benjamin@gmail.com</td>

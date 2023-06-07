@@ -11,7 +11,7 @@ export default function UserStatusTable() {
             <th className="bg-main text-white" >Status</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white">
           {/* row 1 */}
           <tr>
             <th>1</th>

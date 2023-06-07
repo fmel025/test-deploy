@@ -11,7 +11,7 @@ export default function ScannersTable() {
               <th className="bg-main text-white" ></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="bg-white">
             {/* row 1 */}
             <tr>
               <th>1</th>
