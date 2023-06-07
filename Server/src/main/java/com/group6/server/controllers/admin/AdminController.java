@@ -34,7 +34,7 @@ public class AdminController {
     }
 
     // This route will set the app for the normal users as blocked
-    @PatchMapping("/toggle-access")
+    @PutMapping ("/toggle-access")
     public ResponseEntity<?> toggleBlockAccess(){
         return ResponseEntity.ok().build();
     }
