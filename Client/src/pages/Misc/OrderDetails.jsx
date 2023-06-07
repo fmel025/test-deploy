@@ -1,8 +1,5 @@
-import EventStatsTable from "../../components/Tables/Table/EventStatsTable"
 import Layout from "../../components/Navigation/Layout/Layout"
 import OrderItemsTable from "../../components/Tables/Items/OrderItemsTable"
-import StatisticsChart from "../../components/Cards/Charts/StatisticsChart"
-import UserStatusTable from "../../components/Tables/Table/UserStatusTable"
 import ActiveTicket from "../../components/Cards/ActiveTicket"
 import ExpiredTicket from "../../components/Cards/ExpiredTicket"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';

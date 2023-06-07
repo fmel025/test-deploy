@@ -3,7 +3,7 @@ import { IconInfoHexagon } from "@tabler/icons-react"
 import EventStatsTable from "../../components/Tables/Table/EventStatsTable"
 import Layout from "../../components/Navigation/Layout/Layout"
 import StatisticsChart from "../../components/Cards/Charts/StatisticsChart"
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
 
 
@@ -23,7 +23,7 @@ function EventStatistics() {
              <StatisticsChart/>
           </div>
         </Layout>
-        <ImprovedNavbar/>
+        <EmployeeNavbar/>
         </>
     )
   }

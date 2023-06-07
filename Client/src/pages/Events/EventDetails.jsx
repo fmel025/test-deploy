@@ -13,7 +13,7 @@ function EventDetails() {
           <img className='object-cover w-full h-full grayscale rounded-lg' src='https://images.pexels.com/photos/154147/pexels-photo-154147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='headphones' />
         </figure>
         <div className="bg-white flex flex-col gap-1 h-auto w-10/12 rounded-lg shadow-lg p-8 m-10 ">
-          <h1 className="text-2xl font-bold ">Titulo del evento</h1>
+          <h1 className="text-2xl font-bold text-main">Titulo del evento</h1>
           <p className="font-light text-gray-500">Organizador</p>
           <p className="font-light text-gray-500">Fecha</p>
           <p className="font-bold">Categorias</p>

@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { IconMapPin } from '@tabler/icons-react';
 import { IconCircleCheck } from '@tabler/icons-react';
 import { IconCircleX } from '@tabler/icons-react';
-import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
+import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
 
 function EditEvent() {
@@ -65,14 +65,14 @@ function EditEvent() {
                         </div>
                     </div>
                     <div className='flex flex-row justify-start items-center my-5 gap-10'>
-                        <button onClick={() => navigate('/employee_event_details')}
+                        <button onClick={() => navigate('/employeeeventdetails')}
                             className='btn btn-md text-slate-200 bg-main hover:bg-darker-main'> <IconCircleCheck className='mr-2' /> Guardar cambios</button>
-                        <button onClick={() => navigate('/employee_event_details')}
+                        <button onClick={() => navigate('/employeeeventdetails')}
                             className='btn btn-secondary text-slate-200'> <IconCircleX className='mr-2' /> Cancelar</button>
                     </div>
                 </div>
             </Layout>
-            <ImprovedNavbar />
+            <EmployeeNavbar />
         </>
     )
 }
