@@ -10,7 +10,7 @@ function Transaction() {
 
   const handleCancel = (e) => {
     e.preventDefault();
-    navigate("/order_details");
+    navigate("/orderdetails");
   };
 
   return (
