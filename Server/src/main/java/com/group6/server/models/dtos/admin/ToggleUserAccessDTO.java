@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ToggleUserAccessDTO {
 
-    @NotEmpty(message = "The user id is required to bam/unban an user")
+    @NotEmpty(message = "The user id is required to ban/unban an user")
     private String userId;
 }
