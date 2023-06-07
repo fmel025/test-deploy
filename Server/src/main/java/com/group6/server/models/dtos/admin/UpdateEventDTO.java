@@ -1,10 +1,9 @@
-package com.group6.server.models.dtos;
+package com.group6.server.models.dtos.admin;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.URL;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EventDTO {
+public class UpdateEventDTO {
     // TODO: You must create the fields required for this dto
     @NotEmpty(message = "The event must have a title")
     private String title;
@@ -25,10 +24,6 @@ public class EventDTO {
 
     @NotEmpty(message = "The date and time must be sent")
     private LocalDateTime date;
-
-    @NotEmpty(message = "The url image is required")
-    @URL(message = "The url sent is invalid")
-    private String imageUrl;
 
     @NotEmpty(message = "The event categories must be sent")
     private List<String> categories;
