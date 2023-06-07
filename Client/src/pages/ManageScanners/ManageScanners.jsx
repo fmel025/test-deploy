@@ -1,8 +1,8 @@
-import Layout from "../../components/Layout/Layout"
-import SearchBar from "../../components/SearchBar/SearchBar"
-import ScannersTable from "../../components/ScannersTable/ScannersTable"
+import Layout from "../../components/Navigation/Layout/Layout"
+import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
+import ScannersTable from "../../components/Tables/Table/ScannersTable"
 import { IconAlertCircleFilled } from "@tabler/icons-react"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 function ManageScanners() {

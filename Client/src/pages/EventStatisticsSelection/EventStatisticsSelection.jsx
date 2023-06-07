@@ -1,8 +1,8 @@
 
-import Layout from "../../components/Layout/Layout"
-import SearchBar from "../../components/SearchBar/SearchBar"
-import StatsCard from "../../components/StatsCard/StatsCard"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import Layout from "../../components/Navigation/Layout/Layout"
+import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
+import StatsCard from "../../components/Cards/StatsCard"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 function EventStatisticsSelection() {

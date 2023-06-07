@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 
-import Layout from "../../components/Layout/Layout"
-import UserQRButton from '../../components/UserQRButton/UserQRButton';
-import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar';
+import Layout from "../../components/Navigation/Layout/Layout"
+import UserQRButton from '../../components/Buttons/UserQRButton';
+import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 export default function Profile() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 
-import Layout from "../../components/Layout/Layout"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
-import OrderCard from "../../components/OrderCard/OrderCard"
+import Layout from "../../components/Navigation/Layout/Layout"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import OrderCard from "../../components/Cards/OrderCard"
 
 
 function PurchaseList() {

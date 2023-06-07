@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
+import Layout from '../../components/Navigation/Layout/Layout'
 import { useNavigate } from 'react-router-dom';
-import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar';
+import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 function ChangePassword() {
 

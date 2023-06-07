@@ -1,17 +1,13 @@
-import EventStatsTable from "../../components/EventStatsTable/EventStatsTable"
-import Layout from "../../components/Layout/Layout"
-import OrderItemsTable from "../../components/OrderItemsTable/OrderItemsTable"
-import StatisticsChart from "../../components/StatisticsChart/StatisticsChart"
-import UserStatusTable from "../../components/UserStatusTable/UserStatusTable"
-import ActiveTicket from "../../components/ActiveTicket/ActiveTicket"
-import ExpiredTicket from "../../components/ExpiredTicket/ExpiredTicket"
+import EventStatsTable from "../../components/Tables/Table/EventStatsTable"
+import Layout from "../../components/Navigation/Layout/Layout"
+import OrderItemsTable from "../../components/Tables/Items/OrderItemsTable"
+import StatisticsChart from "../../components/Cards/Charts/StatisticsChart"
+import UserStatusTable from "../../components/Tables/Table/UserStatusTable"
+import ActiveTicket from "../../components/Cards/ActiveTicket"
+import ExpiredTicket from "../../components/Cards/ExpiredTicket"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState } from "react";
-import OrderDetailsTable from "../../components/OrderDetailsTable/OrderDetailsTable"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
-
-
-
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 function OrderDetails() {
     const [activeTabIndex, setActiveTabIndex] = useState(0);

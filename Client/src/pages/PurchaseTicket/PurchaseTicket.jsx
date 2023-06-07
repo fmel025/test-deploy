@@ -1,9 +1,9 @@
 
-import Layout from "../../components/Layout/Layout"
-import PurchaseTicketCard from "../../components/PurchaseTicketCard/PurchaseTicketCard"
-import AcceptButton from "../../components/AcceptButton/AcceptButton"
-import CancelButton from "../../components/CancelButton/CancelButton"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import Layout from "../../components/Navigation/Layout/Layout"
+import PurchaseTicketCard from "../../components/Cards/PurchaseTicketCard"
+import AcceptButton from "../../components/Buttons/AcceptButton"
+import CancelButton from "../../components/Buttons/CancelButton"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 function PurchaseTicket() {

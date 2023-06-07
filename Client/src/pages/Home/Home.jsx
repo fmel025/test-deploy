@@ -1,8 +1,8 @@
 
-import EventCard from "../../components/EventCard/EventCard"
-import Layout from "../../components/Layout/Layout"
-import SearchBar from "../../components/SearchBar/SearchBar"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import EventCard from "../../components/Cards/EventCard"
+import Layout from "../../components/Navigation/Layout/Layout"
+import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 

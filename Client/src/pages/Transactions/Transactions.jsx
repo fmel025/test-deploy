@@ -1,7 +1,7 @@
 
-import IssuedCard from "../../components/IssuedCard/IssuedCard"
-import ReceivedCard from "../../components/ReceivedCard/ReceivedCard"
-import Layout from "../../components/Layout/Layout"
+import IssuedCard from "../../components/Cards/IssuedCard"
+import ReceivedCard from "../../components/Cards/ReceivedCard"
+import Layout from "../../components/Navigation/Layout/Layout"
 import React from "react";
 import {
   Tabs,
@@ -10,9 +10,9 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
-import TransactionLayout from "../../components/Layout/TransactionLayout"
+import TransactionLayout from "../../components/Navigation/Layout/TransactionLayout"
 import { IconArrowAutofitUp, IconArrowAutofitDown } from "@tabler/icons-react";
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar";
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar";
 
 
 

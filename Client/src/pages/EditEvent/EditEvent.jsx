@@ -1,11 +1,11 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout'
+import Layout from '../../components/Navigation/Layout/Layout'
 import { UilTimes } from '@iconscout/react-unicons'
 import { useNavigate } from 'react-router-dom';
 import { IconMapPin } from '@tabler/icons-react';
 import { IconCircleCheck } from '@tabler/icons-react';
 import { IconCircleX } from '@tabler/icons-react';
-import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar';
+import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 
 function EditEvent() {

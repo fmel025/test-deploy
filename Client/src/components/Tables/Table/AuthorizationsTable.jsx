@@ -1,4 +1,4 @@
-import AuthorizationControl from "../AuthorizationControl/AuthorizationControl";
+import AuthorizationControl from "../Items/AuthorizationControl";
 
 export default function AuthorizationsTable() {
     return (

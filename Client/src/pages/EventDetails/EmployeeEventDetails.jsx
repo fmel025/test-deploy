@@ -1,8 +1,8 @@
 
-import TierCard from "../../components/TierCard/TierCard"
-import Layout from "../../components/Layout/Layout"
-import EventDetailControl from "../../components/EventDetailControl/EventDetailControl"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import TierCard from "../../components/Cards/TierCard"
+import Layout from "../../components/Navigation/Layout/Layout"
+import EventDetailControl from "../../components/Buttons/ButtonGroup/EventDetailControl"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 function EventDetails() {

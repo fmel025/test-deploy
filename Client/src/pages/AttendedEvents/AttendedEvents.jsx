@@ -1,7 +1,7 @@
 
-import CompletedEventCard from "../../components/CompletedEventCard/CompletedEventCard"
-import Layout from "../../components/Layout/Layout"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import CompletedEventCard from "../../components/Cards/CompletedEventCard"
+import Layout from "../../components/Navigation/Layout/Layout"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 function AttendedEvents() {

@@ -1,8 +1,8 @@
 
-import Layout from '../../components/Layout/Layout'
-import InputCodeButton from '../../components/InputCodeButton/InputCodeButton'
+import Layout from '../../components/Navigation/Layout/Layout'
+import InputCodeButton from '../../components/Buttons/InputCodeButton'
 import { useNavigate } from 'react-router'
-import ImprovedNavbar from '../../components/Navbar/ImprovedNavbar';
+import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 function Transaction() {
 

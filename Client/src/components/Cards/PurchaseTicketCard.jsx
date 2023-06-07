@@ -1,4 +1,4 @@
-import CountersButton from "../CounterButtons/CounterButtons";
+import CountersButton from "../Buttons/CounterButtons";
 
 const PurchaseTicketCard = () => {
     return(

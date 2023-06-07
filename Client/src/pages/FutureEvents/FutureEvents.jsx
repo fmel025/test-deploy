@@ -1,7 +1,7 @@
 
-import FutureEventCard from "../../components/FutureEventCard/FutureEventCard"
-import Layout from "../../components/Layout/Layout"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import FutureEventCard from "../../components/Cards/FutureEventCard"
+import Layout from "../../components/Navigation/Layout/Layout"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 function FutureEvents() {

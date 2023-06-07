@@ -1,8 +1,8 @@
 
-import Layout from "../../components/Layout/Layout"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
-import SearchBar from "../../components/SearchBar/SearchBar"
-import UserStatusTable from "../../components/UserStatusTable/UserStatusTable"
+import Layout from "../../components/Navigation/Layout/Layout"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
+import UserStatusTable from "../../components/Tables/Table/UserStatusTable"
 import { IconAlertCircleFilled } from "@tabler/icons-react"
 
 

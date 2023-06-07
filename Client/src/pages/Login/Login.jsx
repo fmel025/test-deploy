@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Navigation/Layout/Layout";
 import { UimGoogle } from "@iconscout/react-unicons-monochrome";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/google.svg";

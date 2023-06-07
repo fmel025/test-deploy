@@ -1,5 +1,5 @@
-import ScanButton from "../ScanButton/ScanButton";
-import TransferButton from "../TransferButton/TransferButton"
+import ScanButton from "../Buttons/ScanButton";
+import TransferButton from "../Buttons/TransferButton"
 
 const ActiveTicket = () => {
     return(

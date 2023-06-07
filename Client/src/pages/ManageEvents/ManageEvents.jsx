@@ -1,8 +1,8 @@
-import AddButton from "../../components/AddButton/AddButton"
-import EmployeeEventCard from "../../components/EventCard/EmployeeEventCard"
-import Layout from "../../components/Layout/Layout"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
-import SearchBar from "../../components/SearchBar/SearchBar"
+import AddButton from "../../components/Buttons/AddButton"
+import EmployeeEventCard from "../../components/Cards/EmployeeEventCard"
+import Layout from "../../components/Navigation/Layout/Layout"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
 
 
 function ManageEvents() {

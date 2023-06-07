@@ -1,9 +1,9 @@
 
 import { IconInfoHexagon } from "@tabler/icons-react"
-import EventStatsTable from "../../components/EventStatsTable/EventStatsTable"
-import Layout from "../../components/Layout/Layout"
-import StatisticsChart from "../../components/StatisticsChart/StatisticsChart"
-import ImprovedNavbar from "../../components/Navbar/ImprovedNavbar"
+import EventStatsTable from "../../components/Tables/Table/EventStatsTable"
+import Layout from "../../components/Navigation/Layout/Layout"
+import StatisticsChart from "../../components/Cards/Charts/StatisticsChart"
+import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 

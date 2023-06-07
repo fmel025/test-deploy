@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom"
-import { IconMapPin, IconCalendarEvent, IconTicket } from "@tabler/icons-react"
+import { IconMapPin } from '@tabler/icons-react';
+import { IconCalendarEvent } from '@tabler/icons-react';
+import { IconTicket } from '@tabler/icons-react';
 
-const FutureEventCard = () => {
+const EventCard = () => {
   return (
-    <Link to='/event_details' className="card card-compact w-72 bg-base-100 shadow-xl">
+    <Link to='/eventdetails' className="card card-compact w-72 bg-base-100 shadow-xl">
       <figure><img src="https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Shoes" /></figure>
       <div className="card-body">
         <h2 className='card-title'>
@@ -18,7 +20,6 @@ const FutureEventCard = () => {
           <IconCalendarEvent size={15} />
           <p className='text-sm font-medium'>Fecha</p>
         </div>
-
         <p className='ml-5 text-sm  text-slate-500'>10 de mayo</p>
         <div className="flex flex-row items-center gap-1">
           <IconTicket size={15} className="mt-1" />
@@ -30,4 +31,4 @@ const FutureEventCard = () => {
   )
 }
 
-export default FutureEventCard
+export default EventCard
