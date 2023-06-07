@@ -2,6 +2,7 @@ package com.group6.server.services;
 
 import com.group6.server.models.dtos.EventDTO;
 import com.group6.server.models.entites.Event;
+import com.group6.server.models.entites.User;
 
 import java.util.List;
 
@@ -23,4 +24,6 @@ public interface EventService {
 
     //toggle visibility of event
     Event toggleVisibility(String id);
+
+    List<Event> findEventsByValidator(User user);
 }
