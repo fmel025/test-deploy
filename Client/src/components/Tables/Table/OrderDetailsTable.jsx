@@ -11,7 +11,7 @@ export default function OrderDetailsTable() {
               <th className="bg-main text-white" >Numero de orden</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="bg-white">
             {/* row 1 */}
             <tr>
               <th></th>
