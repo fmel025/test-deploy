@@ -1,6 +1,7 @@
 package com.group6.server.services;
 
 import com.group6.server.models.dtos.EventDTO;
+import com.group6.server.models.dtos.admin.UpdateEventDTO;
 import com.group6.server.models.entites.Event;
 import com.group6.server.models.entites.User;
 
@@ -11,7 +12,7 @@ public interface EventService {
     Event createEvent(EventDTO eventDTO);
 
     //update event
-    Event updateEvent(EventDTO eventDTO); // should be the same method as createEvent
+    Event updateEvent(UpdateEventDTO eventDTO); // should be the same method as createEvent
 
     //find all events
     List<Event> findAllEvents();
