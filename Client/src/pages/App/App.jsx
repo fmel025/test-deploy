@@ -26,41 +26,40 @@ import OrderDetails from '../OrderDetails/OrderDetails'
 import TransactionDetails from '../TransactionDetails/TransactionDetails'
 
 const AppRoutes = () => {
-    let routes = useRoutes([
-      { path: '/', element: <Home /> },
-      { path: '/Home', element: <EmployeeHome /> },
-      { path: '/attended_events', element: <AssistedEvents /> },
-      { path: '/future_events', element: <FutureEvents /> },
-      { path: '/event_details', element: <EventDetails /> },
-      { path: '/employee_event_details', element: <EmployeeEventDetails /> },
-      { path: '/event_statistics_selection', element: <EventStatisticsSelection /> },
-      { path: '/event_statistics', element: <EventStatistics /> },
-      { path: '/manage_events', element: <ManageEvents /> },
-      { path: '/purchase_ticket', element: <PurchaseTicket /> },
-      { path: '/purchase_list', element: <PurchaseList /> },
-      { path: '/order_details', element: <OrderDetails /> },
-      { path: '/transactions', element: <Transactions /> },
-      { path: '/manage_users', element: <ManageUsers /> },
-      { path: '/manage_scanners', element: <ManageScanners /> },
-      { path: '/manage_authorizations', element: <ManageAuthorizations /> },
-      {path: '/profile',element: <Profile/>},
-      { path: '/login', element: <Login/>},
-      {path: '/change_password',element: <ChangePassword/>},
-      { path: '/transaction', element: <Transaction />},
-      { path: '/transaction_details', element: <TransactionDetails />},
-      { path: '/create_event', element: <CreateEvent />},
-      { path: '/edit_event', element: <EditEvent />}
-    ]
-    )
-    return routes
+  let routes = useRoutes([
+    { path: '/', element: <Home /> },
+    { path: '/Home', element: <EmployeeHome /> },
+    { path: '/attended_events', element: <AssistedEvents /> },
+    { path: '/future_events', element: <FutureEvents /> },
+    { path: '/event_details', element: <EventDetails /> },
+    { path: '/employee_event_details', element: <EmployeeEventDetails /> },
+    { path: '/event_statistics_selection', element: <EventStatisticsSelection /> },
+    { path: '/event_statistics', element: <EventStatistics /> },
+    { path: '/manage_events', element: <ManageEvents /> },
+    { path: '/purchase_ticket', element: <PurchaseTicket /> },
+    { path: '/purchase_list', element: <PurchaseList /> },
+    { path: '/order_details', element: <OrderDetails /> },
+    { path: '/transactions', element: <Transactions /> },
+    { path: '/manage_users', element: <ManageUsers /> },
+    { path: '/manage_scanners', element: <ManageScanners /> },
+    { path: '/manage_authorizations', element: <ManageAuthorizations /> },
+    { path: '/profile', element: <Profile /> },
+    { path: '/login', element: <Login /> },
+    { path: '/change_password', element: <ChangePassword /> },
+    { path: '/transaction', element: <Transaction /> },
+    { path: '/transaction_details', element: <TransactionDetails /> },
+    { path: '/create_event', element: <CreateEvent /> },
+    { path: '/edit_event', element: <EditEvent /> }
+  ]
+  )
+  return routes
 }
 
 function App() {
 
   return (
     <BrowserRouter>
-      <AppRoutes/>
-      <ImprovedNavbar />
+      <AppRoutes />
     </BrowserRouter>
   )
 }
