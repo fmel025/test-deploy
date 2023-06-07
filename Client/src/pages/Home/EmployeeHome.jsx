@@ -1,6 +1,6 @@
 
 import Layout from "../../components/Navigation/Layout/Layout"
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
 function EmployeeHome() {
  
@@ -17,7 +17,7 @@ function EmployeeHome() {
             </figure>
           </div>
         </Layout>
-          <ImprovedNavbar/>
+          <EmployeeNavbar/>
         </>
     )
   }

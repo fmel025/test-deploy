@@ -4,9 +4,9 @@ export default function EventDetailControl() {
     const navigate = useNavigate();
     return (
         <div className="btn-group btn-group-vertical lg:btn-group-horizontal gap-1">
-            <button onClick={() => navigate('/edit_event')}
+            <button onClick={() => navigate('/editevent')}
             className="btn bg-main border-none px-10 hover:bg-darker-main">Editar evento</button>
-            <button onClick={() => navigate('/manage_scanners')}
+            <button onClick={() => navigate('/managescanners')}
             className="btn bg-main border-none px-10 hover:bg-darker-main">Administrar validadores</button>
             <label className="btn swap bg-main border-none px-10 hover:bg-darker-main">
                 <input type="checkbox" />

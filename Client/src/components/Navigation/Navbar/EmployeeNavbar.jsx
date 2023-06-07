@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const EmployeeNavbar = () => {
   let Links = [
     { name: "Events", link: "/manageevents" },
-    { name: "Statistics", link: "/event_statisticsselection" },
+    { name: "Statistics", link: "/eventstatisticsselection" },
     { name: "Authorizations", link: "/manageauthorizations" },
     { name: "Manage users", link: "/manageusers" },
     { name: "Profile", link: "/profile" },

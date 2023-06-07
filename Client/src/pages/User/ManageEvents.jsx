@@ -1,7 +1,7 @@
 import AddButton from "../../components/Buttons/AddButton"
 import EmployeeEventCard from "../../components/Cards/EmployeeEventCard"
 import Layout from "../../components/Navigation/Layout/Layout"
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
 
 
@@ -24,7 +24,7 @@ function ManageEvents() {
         <EmployeeEventCard />
       </div>
       </Layout>
-      <ImprovedNavbar/>
+      <EmployeeNavbar/>
     </>
   )
 }

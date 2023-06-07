@@ -2,7 +2,7 @@
 import TierCard from "../../components/Cards/TierCard"
 import Layout from "../../components/Navigation/Layout/Layout"
 import EventDetailControl from "../../components/Buttons/ButtonGroup/EventDetailControl"
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
 
 function EventDetails() {
@@ -32,7 +32,7 @@ function EventDetails() {
         </div>
         <EventDetailControl />
       </Layout>
-      <ImprovedNavbar />
+      <EmployeeNavbar />
     </>
   )
 }
