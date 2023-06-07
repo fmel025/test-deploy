@@ -11,4 +11,7 @@ import lombok.NoArgsConstructor;
 public class UserTempCodeDTO {
     @NotEmpty(message = "The user temporary code must be sent")
     private String temporaryCode;
+
+    @NotEmpty(message = "The ticket id is required")
+    private String ticketId;
 }
