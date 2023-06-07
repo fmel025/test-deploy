@@ -13,4 +13,6 @@ public interface TransactionService {
     List<Transaction> findByUserInitiator(User user);
 
     Transaction create(Transaction transaction, User destiny, User emitter);
+
+    void save(Transaction transaction);
 }
