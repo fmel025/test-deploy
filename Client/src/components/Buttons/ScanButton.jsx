@@ -2,7 +2,7 @@
 export default function ScanButton() {
     return (
       <div>
-        <button className="btn m-1 bg-main hover:bg-darker-main text-white font-bold px-7" onClick={()=>window.my_modal_1.showModal()}>
+        <button className="btn join-item bg-main hover:bg-darker-main text-white font-bold" onClick={()=>window.my_modal_1.showModal()}>
           Validar</button>
                     <dialog id="my_modal_1" className="modal">
                     <form method="dialog" className="modal-box">

@@ -1,7 +1,7 @@
 export default function OrderItemsTable() {
     return (
         <div className="overflow-x-auto w-3/5">
-        <table className="table w-full">
+        <table className="table w-full ">
           {/* head */}
           <thead>
             <tr >
@@ -13,7 +13,7 @@ export default function OrderItemsTable() {
               <th className="bg-main text-white" >Total</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="bg-white">
             {/* row 1 */}
             <tr>
               <th>1</th>
