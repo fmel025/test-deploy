@@ -33,7 +33,7 @@ function OrderDetails() {
     return (
         <>
             <Layout>
-                <h1 className="text-5xl font-bold text-main mb-10 ">Titulo del evento</h1>
+                <h1 className="text-2xl lg:text-5xl font-bold text-main mb-10 text-center">Titulo del evento</h1>
                 <div className="flex w-full h-full justify-center  gap-5">
                     <OrderItemsTable />
                     <div className="card w-96 h-fit bg-base-100 shadow-xl">
@@ -50,7 +50,7 @@ function OrderDetails() {
                 </div>
                 <div className="divider divider-vertical w-10/12 mx-auto my-5"></div>
 
-                <div className="">
+                <div className="container">
                     <Tabs value={activeTab} className="w-11-12 flex flex-col items-center">
                         <TabsHeader className="join join-vertical md:join-horizontal my-auto">
                             {data.map(({ label, value }) => (
@@ -58,14 +58,14 @@ function OrderDetails() {
                                     key={value}
                                     value={value}
                                     onClick={() => setActiveTab(value)}
-                                    className={activeTab === value ? "btn btn-primary join-item w-64 font-bold" : "btn join-item w-64 font-bold"}>
+                                    className={activeTab === value ? "btn bg-main text-white join-item w-64 font-bold" : "btn join-item w-64 text-black font-bold"}>
                                     <div className="flex flex-row items-center">
                                         {label}
                                     </div>
                                 </Tab>
                             ))}
                         </TabsHeader>
-                        <TabsBody className="items-center my-auto">
+                        <TabsBody className="items-center my-auto overflow-y-auto">
                             {data.map(({ value, content }) => (
                                 <TabPanel key={value} value={value}>
                                     {content}

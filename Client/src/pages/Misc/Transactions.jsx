@@ -62,7 +62,7 @@ function Transactions() {
   return (
     <>
       <Layout>
-        <h1 className="text-5xl font-bold text-blue-600 mt-5 mb-10">Transferencias</h1>
+        <h1 className="text-3xl lg:text-5xl font-bold text-blue-600 text-center mt-5 mb-10">Transferencias</h1>
         <Tabs value={activeTab} className="w-2/3">
           <TabsHeader className="bg-slate-200 p-2 mx-10 text-center flex flex-col md:flex-row">
             {data.map(({ label, value, icon }) => (
@@ -70,7 +70,7 @@ function Transactions() {
                 key={value}
                 value={value}
                 onClick={() => setActiveTab(value)}
-                className={activeTab === value ? "text-blue-500" : ""}>
+                className={activeTab === value ? "text-blue-500 font-bold" : "font-bold"}>
                 <div className="flex items-center gap-2">
                   {React.createElement(icon, { className: "w-5 h-5" })}
                   {label}
@@ -86,8 +86,9 @@ function Transactions() {
             ))}
           </TabsBody>
         </Tabs>
+        <ImprovedNavbar />
       </Layout>
-      <ImprovedNavbar />
+      
     </>
   )
 }

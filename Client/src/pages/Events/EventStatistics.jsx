@@ -21,6 +21,10 @@ function EventStatistics() {
               Haga scroll horizontal sobre la tabla para mostrar toda la informacion
             </span>
              <StatisticsChart/>
+             <span className="alert alert-info lg:hidden w-5/6 m-5 text-sm">
+              <IconInfoHexagon className="text-sm"/>
+              Si la grafica no se muestra correctamente, por favor ponga su celular en modo horizontal
+            </span>
           </div>
         </Layout>
         <EmployeeNavbar/>
