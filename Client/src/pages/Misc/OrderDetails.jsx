@@ -49,7 +49,6 @@ function OrderDetails() {
                     </div>
                 </div>
                 <div className="divider divider-vertical w-10/12 mx-auto my-5"></div>
-
                 <div className="container">
                     <Tabs value={activeTab} className="w-11-12 flex flex-col items-center">
                         <TabsHeader className="join join-vertical md:join-horizontal my-auto">
