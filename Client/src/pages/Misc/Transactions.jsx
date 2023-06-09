@@ -78,7 +78,7 @@ function Transactions() {
               </Tab>
             ))}
           </TabsHeader>
-          <TabsBody className="items-center m-auto">
+          <TabsBody className="items-center m-auto overflow-y-auto">
             {data.map(({ value, content }) => (
               <TabPanel key={value} value={value}>
                 {content}
