@@ -1,4 +1,3 @@
-import React from 'react'
 import Layout from '../../components/Navigation/Layout/Layout'
 import { UilTimes } from '@iconscout/react-unicons'
 import { useNavigate } from 'react-router-dom';
