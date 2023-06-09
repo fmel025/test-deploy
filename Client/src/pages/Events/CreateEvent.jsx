@@ -1,10 +1,7 @@
-import React from 'react'
 import Layout from '../../components/Navigation/Layout/Layout'
 import { UilTimes } from '@iconscout/react-unicons'
 import { useNavigate } from 'react-router-dom';
-import { IconMapPin } from '@tabler/icons-react';
-import { IconCircleCheck } from '@tabler/icons-react';
-import { IconCircleX } from '@tabler/icons-react';
+import { IconCrosshair , IconCircleCheck, IconCircleX } from '@tabler/icons-react';
 
 import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
@@ -22,19 +19,19 @@ function CreateEvent() {
                     <input type='text' className='textarea textarea-bordered textarea-sm bg-slate-200 w-full' placeholder='Descripcion del evento'></input>
                     <p className='font-semibold mt-4'>Organizadores:</p>
                     <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Organizadores'></input>
-                    <div className="flex space-x-2 mt-2">
+                    <div className="flex flex-wrap gap-3 mt-2">
                         <div className="badge">Organizador 1 <UilTimes /></div>
                         <div className="badge">Organizador 2 <UilTimes /></div>
                         <div className="badge">Organizador 3 <UilTimes /></div>
                     </div>
                     <p className='font-semibold mt-4'>Categorias</p>
                     <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Categorias'></input>
-                    <div className="flex space-x-2 mt-2">
+                    <div className="flex flex-wrap gap-3 mt-2">
                         <div className="badge">Categoria 1 <UilTimes /></div>
                         <div className="badge">Categoria 2 <UilTimes /></div>
                         <div className="badge">Categoria 3 <UilTimes /></div>
                     </div>
-                    <div className='flex flex-row justify-center items-center my-5 gap-10'>
+                    <div className='flex flex-wrap justify-center items-center gap-2 mt-2'>
                         <div className='flex flex-col'>
                             <p className='font-semibold'>Localidad:</p>
                             <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Localidad'></input>
@@ -48,10 +45,10 @@ function CreateEvent() {
                             <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Localidad'></input>
                         </div>
                     </div>
-                    <div className='btn btn-sm text-slate-200 bg-main hover:bg-darker-main'>
-                        <IconMapPin className='mr-2' />
+                    <div className='btn btn-sm text-slate-200 bg-main hover:bg-darker-main mt-2'>
+                        <IconCrosshair className='mr-2' />
                         Agregar localidad</div>
-                    <div className="flex space-x-2 mt-2">
+                    <div className="flex flex-wrap space-x-2 mt-2">
                         <div className="badge">Localidad 1 <UilTimes /></div>
                         <div className="badge">Localidad 2 <UilTimes /></div>
                     </div>
@@ -67,11 +64,11 @@ function CreateEvent() {
                             <input type='date' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Precio'></input>
                         </div>
                     </div>
-                    <div className='flex flex-row justify-start items-center my-5 gap-10'>
+                    <div className='flex flex-wrap justify-start items-center my-5 gap-2'>
                         <button onClick={() => navigate('/employeeeventdetails')}
-                            className='btn btn-md text-slate-200 bg-main hover:bg-darker-main'><IconCircleCheck className='mr-2' /> Crear evento</button>
+                            className='btn btn-md text-slate-200 bg-main hover:bg-darker-main'><IconCircleCheck className='mr-1.5' /> Crear evento</button>
                         <button onClick={() => navigate('/manageevents')}
-                            className='btn btn-secondary text-slate-200'><IconCircleX className='mr-2' /> Cancelar</button>
+                            className='btn btn-secondary text-slate-200'><IconCircleX className='mr-1.5' /> Cancelar</button>
                     </div>
                 </div>
             </Layout>
