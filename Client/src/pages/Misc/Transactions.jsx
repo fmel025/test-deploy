@@ -63,14 +63,14 @@ function Transactions() {
     <>
       <Layout>
         <h1 className="text-3xl lg:text-5xl font-bold text-blue-600 text-center mt-5 mb-10">Transferencias</h1>
-        <Tabs value={activeTab} className="w-2/3">
-          <TabsHeader className="bg-slate-200 p-2 mx-10 text-center flex flex-col md:flex-row">
+        <Tabs value={activeTab} className="flex flex-col items-center">
+          <TabsHeader className="join join-vertical md:join-horizontal my-auto">
             {data.map(({ label, value, icon }) => (
               <Tab
                 key={value}
                 value={value}
                 onClick={() => setActiveTab(value)}
-                className={activeTab === value ? "text-blue-500 font-bold" : "font-bold"}>
+                className={activeTab === value ? "btn bg-main btn-outline text-white join-item w-64 font-bold" : "btn bg-white join-item w-64 text-black font-bold"}>
                 <div className="flex items-center gap-2">
                   {React.createElement(icon, { className: "w-5 h-5" })}
                   {label}

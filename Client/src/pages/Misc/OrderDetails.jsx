@@ -50,14 +50,14 @@ function OrderDetails() {
                 </div>
                 <div className="divider divider-vertical w-10/12 mx-auto my-5"></div>
                 <div className="container">
-                    <Tabs value={activeTab} className="w-11-12 flex flex-col items-center">
+                    <Tabs value={activeTab} className="flex flex-col items-center">
                         <TabsHeader className="join join-vertical md:join-horizontal my-auto">
                             {data.map(({ label, value }) => (
                                 <Tab
                                     key={value}
                                     value={value}
                                     onClick={() => setActiveTab(value)}
-                                    className={activeTab === value ? "btn bg-main text-white join-item w-64 font-bold" : "btn join-item w-64 text-black font-bold"}>
+                                    className={activeTab === value ? "btn bg-main text-white join-item w-64 font-bold" : "btn bg-white join-item w-64 text-black font-bold"}>
                                     <div className="flex flex-row items-center">
                                         {label}
                                     </div>
