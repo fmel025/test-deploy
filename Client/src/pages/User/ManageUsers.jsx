@@ -11,7 +11,7 @@ function ManageUsers() {
   return (
     <>
       <Layout>
-        <h1 className="text-5xl font-bold text-main mt-5 mb-10">Administrador de usuarios</h1>
+        <h1 className=" text-2xl lg:text-5xl font-bold text-main mt-5 mb-10 text-center">Administrador de usuarios</h1>
         <SearchBar />
         <UserStatusTable />
         <div className="alert alert-info md:hidden text-center items-center flex flex-row w-4/5 mt-5">

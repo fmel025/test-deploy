@@ -1,6 +1,6 @@
 const ExpiredTicket = () => {
     return(
-        <div className="mx-10 card md:card-side bg-base-100 shadow-xl">
+        <div className="mx-auto w-72 md:mx-auto md:w-2/3 card md:card-side bg-base-100 shadow-xl">
             <figure>
                 <img className="h-48 lg:h-64" src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shoes" />
             </figure>

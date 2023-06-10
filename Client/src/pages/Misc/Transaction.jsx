@@ -16,16 +16,19 @@ function Transaction() {
   return (
     <>
       <Layout>
-      <div className='flex flex-col w-full h-full align-middle justify-center mt-10 text-center'>
-        <h1 className='font-semibold text-2xl lg:text-5xl mb-10 lg:px-10'>Transferir ticket</h1>
-        <p className='font-semibold lg:text-2xl mb-10 lg:px-10'>Ingrese el codigo del usuario al que se le desea transferir:</p>
-        <div className='flex flex-col justify-center items-center my-5 gap-16'>
-          <input type='text' className='input-bordered input bg-slate-200 w-5/6 lg:w-3/6' placeholder='Codigo de usuario'></input>
-          <div className='flex flex-row gap-5'>
+      <div className='card bg-white mx-10 my-auto md:m-auto'>
+        <div className='card-body'>
+          <h1 className='card-title font-semibold text-3xl lg:text-5xl'>Transferir ticket</h1>
+          <p className='font-semibold'>Ingrese el codigo del usuario al que se le desea transferir:</p>
+          <div className='form-control mt-2'>
+            <label className='label'>
+              <span className='label-text'>Codigo de usuario</span>
+            </label>
+            <input type='text' className='input w-full input-sm bg-slate-200' placeholder='Codigo de usuario'></input>
+          </div>
+          <div className='card-actions mt-2'>
             <InputCodeButton />
-            <button className='btn btn-secondary w-5/6 lg:w-3/6 font-bold' 
-            type='button' onClick={handleCancel}
-            >Cancelar</button>
+            <button className='btn btn-secondary bg-red-500 hover:bg-red-700 text-white font-bold ' onClick={handleCancel}>Cancelar</button>
           </div>
         </div>
       </div>

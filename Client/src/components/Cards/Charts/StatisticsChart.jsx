@@ -44,7 +44,7 @@ const options = {
 
     return(
         <div className="ml-10 w-4/5 flex flex-col items-center">
-        <h1 className="font-bold text-xl text-main">Cantidad de tickets canjeados por hora</h1>
+        <h1 className="font-bold text-xl text-main text-center">Cantidad de tickets canjeados por hora</h1>
             <Line 
                 data={data} options={options}> 
             </Line>
