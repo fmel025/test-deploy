@@ -11,7 +11,7 @@ function CreateEvent() {
     return (
         <>
             <Layout>
-                <div className="rounded w-11/12 sm:w-5/6 lg:w-3/5 flex-col justify-center p-10 mt-32 mb-14 bg-white gap-5">
+                <div className="rounded w-11/12 sm:w-5/6 lg:w-3/5 flex-col justify-center p-10 my-auto bg-white gap-5">
                     <h1 className='font-semibold text-3xl text-center mb-10'>Crear evento</h1>
                     <p className='font-semibold'>Nombre del evento:</p>
                     <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Nombre del evento'></input>
