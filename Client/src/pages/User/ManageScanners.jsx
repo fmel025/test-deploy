@@ -9,7 +9,7 @@ function ManageScanners() {
   return (
     <>
       <Layout>
-      <h1 className="text-5xl font-bold text-main mt-5 mb-10">Asignar validadores</h1>
+      <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold text-main text-center mt-5 mb-10">Asignar validadores</h1>
       <SearchBar />
       <ScannersTable />
       <div className="alert alert-info md:hidden text-center items-center flex flex-row w-4/5 mt-5">
