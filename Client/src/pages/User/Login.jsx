@@ -4,11 +4,25 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/google.svg";
 import LoginImage from "../../assets/login.jpg";
 import { useState } from "react";
+import { GoogleLogin } from '@react-oauth/google';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 function Login() {
 
+  const responseMessage = (response) => {
+      console.log(response);
+      navigate("/");
+  };
+  const errorMessage = (error) => {
+      console.log(error);
+  };
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [ user, setUser ] = useState([]);
+  const [ profile, setProfile ] = useState([]);
 
   const navigate = useNavigate();
 
@@ -21,6 +35,25 @@ function Login() {
     e.preventDefault();
     navigate("/");
   };
+
+  useEffect(
+    () => {
+        if (user) {
+            axios
+                .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                    headers: {
+                        Authorization: `Bearer ${user.access_token}`,
+                        Accept: 'application/json'
+                    }
+                })
+                .then((res) => {
+                    setProfile(res.data);
+                })
+                .catch((err) => console.log(err));
+        }
+    },
+    [ user ]
+);
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-violet-100">
@@ -67,14 +100,12 @@ function Login() {
             <div className="border-t border-gray-300 w-1/3"></div>
           </div>
 
-          <button
-            className="w-full border border-gray-300 text-sm p-2 rounded-lg mb-6 hover:bg-black hover:text-white"
-            type="button"
-            onClick={handleSubmitGoogle}
-          >
-            <img src={Logo} alt="logo" className="w-6 h-6 inline mr-2" />
-            Iniciar sesion con Google
-          </button>
+          <div className="flex items-center justify-center">
+            <GoogleLogin className="w-full" onSuccess={responseMessage} onError={errorMessage} />
+
+        </div>
+
+        
         </form>
 
         <div className="relative">

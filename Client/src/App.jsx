@@ -24,6 +24,8 @@ import PurchaseList from './pages/User/PurchaseList'
 import OrderDetails from './pages/Misc/OrderDetails'
 import TransactionDetails from './pages/Misc/TransactionDetails'
 
+
+
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
@@ -55,6 +57,7 @@ const AppRoutes = () => {
 }
 
 function App() {
+
 
   return (
     <BrowserRouter>
