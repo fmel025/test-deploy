@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { QrReader } from 'react-qr-reader';
-import Layout from '../../components/Navigation/Layout/Layout';
 
 function QRScanner() {
     const [data, setData] = useState('No result');
