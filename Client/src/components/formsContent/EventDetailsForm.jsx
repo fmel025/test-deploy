@@ -6,23 +6,23 @@ function EventDetails() {
       <label className='label'>
         <span className='label-text text-md font-bold'>Nombre del evento:</span>
       </label>
-      <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder=''></input>
+      <input type='text' className='input input-bordered input-sm bg-slate-200 w-full' placeholder='Evento'></input>
       <label className='label'>
         <span className='label-text text-md font-bold'>Descripcion del evento:</span>
       </label>
-      <input type='text' className='textarea textarea-bordered textarea-sm bg-slate-200 w-full' placeholder=''></input>
+      <input type='text' className='textarea textarea-bordered textarea-sm bg-slate-200 w-full' placeholder='Descripcion detallada'></input>
       <label className='label'>
         <span className='label-text text-md font-bold'>Organizadores:</span>
       </label>
       <div className="join">
-        <input className="input input-sm bg-slate-200 w-full input-bordered join-item" placeholder="" />
+        <input className="input input-sm bg-slate-200 w-full input-bordered join-item" placeholder="Organizador" />
         <button className="btn btn-sm join-item btn-wide">Añadir organizador</button>
       </div>
       <label className='label'>
         <span className='label-text text-md font-bold'>Categorias:</span>
       </label>
       <div className="join">
-        <input className="input input-sm bg-slate-200 w-full input-bordered join-item" placeholder="" />
+        <input className="input input-sm bg-slate-200 w-full input-bordered join-item" placeholder="Categoria" />
         <button className="btn btn-sm join-item btn-wide">Añadir Categoria</button>
       </div>
     </div>
