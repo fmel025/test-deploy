@@ -13,6 +13,22 @@ function CreateEventForm() {
 
     const [page, setPage] = useState(0);
 
+    const [formData, setFormData] = useState({
+        eventName: '',
+        eventDescription: '',
+        organizers: [],
+        categories: [],
+        eventAddress: '',
+        eventPrice: '',
+        eventSeats: '',
+        eventDate: '',
+        eventTime: '',
+    })
+
+    const [organizers, setOrganizers] = useState([]);
+    const [categories, setCategories] = useState([]);
+
+
     const formTitles = ['Detalles del evento', 'Ubicacion y disponibilidad', 'Direccion y fecha/hora']
 
     const handleNext = () => {
@@ -26,9 +42,11 @@ function CreateEventForm() {
 
     const PageDisplay = () => {
         switch (page) {
-            case 0: return <EventDetailsForm />;
+            case 0: return <EventDetailsForm formData={formData} setFormData={setFormData} 
+            organizers={organizers} setOrganizers={setOrganizers} categories={categories}
+            setCategories={setCategories}/>;
             case 1: return <LocationAdAvailability />;
-            case 2: return <AddressAndDate />;
+            case 2: return <AddressAndDate formData={formData} setFormData={setFormData} />;
         }
     }
 
