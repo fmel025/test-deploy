@@ -23,6 +23,7 @@ import ManageAuthorizations from './pages/User/ManageAuthorizations'
 import PurchaseList from './pages/User/PurchaseList'
 import OrderDetails from './pages/Misc/OrderDetails'
 import TransactionDetails from './pages/Misc/TransactionDetails'
+import QRScanner from './pages/Misc/QRScanner'
 
 
 
@@ -30,6 +31,7 @@ const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
     { path: '/home', element: <EmployeeHome /> },
+    {path: '/scanner', element: <QRScanner/>},
     { path: '/attendedevents', element: <AssistedEvents /> },
     { path: '/futureevents', element: <FutureEvents /> },
     { path: '/eventdetails', element: <EventDetails /> },
