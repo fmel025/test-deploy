@@ -23,6 +23,7 @@ import ManageAuthorizations from './pages/User/ManageAuthorizations'
 import PurchaseList from './pages/User/PurchaseList'
 import OrderDetails from './pages/Misc/OrderDetails'
 import TransactionDetails from './pages/Misc/TransactionDetails'
+import CreateEventForm from './pages/Events/CreateEventForm'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -48,7 +49,8 @@ const AppRoutes = () => {
     { path: '/transaction', element: <Transaction /> },
     { path: '/transactiondetails', element: <TransactionDetails /> },
     { path: '/createevent', element: <CreateEvent /> },
-    { path: '/editevent', element: <EditEvent /> }
+    { path: '/editevent', element: <EditEvent /> },
+    {path: '/createnewevent', element: <CreateEventForm />},
   ]
   )
   return routes
