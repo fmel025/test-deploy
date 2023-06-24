@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { IconTrash } from '@tabler/icons-react';
 
-function EventDetails({ formData, setFormData }) {
+function EventDetails({ formData, setFormData, organizers, setOrganizers, categories, setCategories }) {
 
   const [organizerValue, setOrganizerValue] = useState('');
   const [categoryValue, setCategoryValue] = useState('');
@@ -76,18 +77,18 @@ function EventDetails({ formData, setFormData }) {
             value={organizerValue}
             onChange={handleOrganizerChange} />
           <button
-            className="btn btn-sm join-item btn-wide"
+            className="btn btn-sm join-item md:btn-wide"
             onClick={addOrganizer}>Añadir organizador</button>
         </div>
-        <div className="join mt-2 gap-5">
+        <div className="mt-2 gap-2 flex flex-col items-start">
           {organizers.map((organizador) => (
-            <div key={organizador} className="badge">
-              {organizador}
+            <div key={organizador} className="border bg-slate-100 flex w-72 join">
+              <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{organizador}</p>
               <button
-                className="delete-btn"
+                className="my-auto text-white text-sm btn btn-sm btn-square btn-error join-item"
                 onClick={() => removeOrganizer(organizador)}
               >
-                &times;
+                <IconTrash/>
               </button>
             </div>
           ))}
@@ -106,15 +107,15 @@ function EventDetails({ formData, setFormData }) {
           className="btn btn-sm join-item btn-wide"
           onClick={addCategory}>Añadir Categoria</button>
         </div>
-        <div className="join mt-2 gap-5">
+        <div className="mt-2 gap-2 flex flex-col items-start">
           {categories.map((category) => (
-            <div key={category} className="badge">
-              {category}
+            <div key={category} className="border bg-slate-100 flex w-72 join">
+              <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{category}</p>
               <button
-                className="delete-btn"
-                onClick={() => removeOrganizer(category)}
+                className="btn btn-sm btn-square btn-error join-item"
+                onClick={() => removeCategory(category)}
               >
-                &times;
+                <IconTrash className='my-auto text-white text-sm'/>
               </button>
             </div>
           ))}

@@ -19,6 +19,7 @@ function CreateEventForm() {
         organizers: [],
         categories: [],
         eventAddress: '',
+        eventLocation: '',
         eventPrice: '',
         eventSeats: '',
         eventDate: '',
@@ -27,6 +28,8 @@ function CreateEventForm() {
 
     const [organizers, setOrganizers] = useState([]);
     const [categories, setCategories] = useState([]);
+    // Adapt this use state for a object of three elements
+    const [locations, setLocations] = useState([]);
 
 
     const formTitles = ['Detalles del evento', 'Ubicacion y disponibilidad', 'Direccion y fecha/hora']
@@ -45,7 +48,8 @@ function CreateEventForm() {
             case 0: return <EventDetailsForm formData={formData} setFormData={setFormData} 
             organizers={organizers} setOrganizers={setOrganizers} categories={categories}
             setCategories={setCategories}/>;
-            case 1: return <LocationAdAvailability />;
+            case 1: return <LocationAdAvailability formData={formData} setFormData={setFormData}
+            locations={locations} setLocations={setLocations}/>;
             case 2: return <AddressAndDate formData={formData} setFormData={setFormData} />;
         }
     }
