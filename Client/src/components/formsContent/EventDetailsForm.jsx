@@ -71,7 +71,7 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
         <span className='label-text text-md font-bold'>Organizadores:</span>
       </label>
       <div className='flex flex-col items-start'>
-        <div className="join">
+        <div className="join join-vertical w-full md:join-horizontal">
           <input className="input input-sm bg-slate-200 w-full input-bordered join-item"
             placeholder="Organizador"
             value={organizerValue}
@@ -82,8 +82,8 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
         </div>
         <div className="mt-2 gap-2 flex flex-col items-start">
           {organizers.map((organizador) => (
-            <div key={organizador} className="border bg-slate-100 flex w-72 join">
-              <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{organizador}</p>
+            <div key={organizador} className="border bg-slate-100 flex w-48 md:w-72 join">
+              <p className='w-full truncate text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{organizador}</p>
               <button
                 className="my-auto text-white text-sm btn btn-sm btn-square btn-error join-item"
                 onClick={() => removeOrganizer(organizador)}
@@ -98,18 +98,18 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
         <label className='label'>
           <span className='label-text text-md font-bold'>Categorias:</span>
         </label>
-        <div className="join">
+        <div className="join join-vertical md:join-horizontal w-full">
           <input className="input input-sm bg-slate-200 w-full input-bordered join-item"
             placeholder="Categoria"
             value={categoryValue}
             onChange={handleCategoryChange} />
           <button 
-          className="btn btn-sm join-item btn-wide"
+          className="btn btn-sm join-item md:btn-wide"
           onClick={addCategory}>Añadir Categoria</button>
         </div>
         <div className="mt-2 gap-2 flex flex-col items-start">
           {categories.map((category) => (
-            <div key={category} className="border bg-slate-100 flex w-72 join">
+            <div key={category} className="border bg-slate-100 flex w-48 md:w-72 join">
               <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{category}</p>
               <button
                 className="btn btn-sm btn-square btn-error join-item"
