@@ -80,7 +80,7 @@ function LocationAdAvailability({ formData, setFormData, locations, setLocations
         </button>
         <div className="mt-2 gap-2 flex flex-col items-start">
           {locations?.map((location, index) => (
-            <div key={index} className="border bg-slate-100 flex w-72 join">
+            <div key={index} className="border bg-slate-100 flex w-50 md:w-72 join">
               <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{location.eventLocation} - ${location.eventPrice} -{' '}
               {location.eventSeats} asientos </p>
               <button
