@@ -27,11 +27,13 @@ import CreateEventForm from './pages/Events/CreateEventForm'
 import EditCategoriesForm from './components/formsContent/editEvent/EditCategoriesForm'
 import EditOrganizersForm from './components/formsContent/editEvent/EditOrganizersForm'
 import EditTiersForm from './components/formsContent/editEvent/EditTiersForm'
+import QRScanner from './pages/Misc/QRScanner'
 
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
     { path: '/home', element: <EmployeeHome /> },
+    {path: '/scanner', element: <QRScanner/>},
     { path: '/attendedevents', element: <AssistedEvents /> },
     { path: '/futureevents', element: <FutureEvents /> },
     { path: '/eventdetails', element: <EventDetails /> },
@@ -63,6 +65,7 @@ const AppRoutes = () => {
 }
 
 function App() {
+
 
   return (
     <BrowserRouter>
