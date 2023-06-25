@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { IconTrash } from '@tabler/icons-react';
 
 function EventDetails({ formData, setFormData, organizers, setOrganizers, categories, setCategories }) {

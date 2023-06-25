@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
-import { IconTrash, IconCircleX, IconCircleCheck } from '@tabler/icons-react';
+import { useState } from 'react';
+import { IconTrash} from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
-function LocationAdAvailability({ formData, setFormData, locations, setLocations }) {
+import Layout from '../../Navigation/Layout/Layout'
+import ImprovedNavbar from '../../Navigation/Navbar/ImprovedNavbar';
+function EditTiersForm() {
 
     const navigate = useNavigate();
+
+    const [locations, setLocations] = useState([]);
+    const [formData, setFormData] = useState({
+        eventLocation: '',
+        eventPrice: '',
+        eventSeats: '',
+    });
 
     const addLocation = () => {
         if (
@@ -36,8 +45,10 @@ function LocationAdAvailability({ formData, setFormData, locations, setLocations
     };
 
     return (
-        <div className="mt-2 rounded w-11/12 sm:w-5/6 lg:w-3/5 flex-col justify-center p-10 mx-auto bg-white gap-5">
+        <Layout>
+            <div className="mt-2 rounded w-11/12 sm:w-5/6 lg:w-3/5 flex-col justify-center p-10 mx-auto bg-white gap-5">
             <div className="flex flex-wrap justify-center item gap-2 mt-2">
+                <h1 className='text-xl font-bold'>Editar localidades</h1>
                 <div className="form-control w-36">
                     <label className="label">
                         <span className="label-text text-md font-bold">Localidad:</span>
@@ -94,10 +105,12 @@ function LocationAdAvailability({ formData, setFormData, locations, setLocations
                         </div>
                     ))}
                 </div>
-                
             </div>
         </div>
+        <ImprovedNavbar/>
+        </Layout>
+        
     );
 }
 
-export default LocationAdAvailability;
+export default EditTiersForm;

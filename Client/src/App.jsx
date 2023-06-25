@@ -24,6 +24,9 @@ import PurchaseList from './pages/User/PurchaseList'
 import OrderDetails from './pages/Misc/OrderDetails'
 import TransactionDetails from './pages/Misc/TransactionDetails'
 import CreateEventForm from './pages/Events/CreateEventForm'
+import EditCategoriesForm from './components/formsContent/editEvent/EditCategoriesForm'
+import EditOrganizersForm from './components/formsContent/editEvent/EditOrganizersForm'
+import EditTiersForm from './components/formsContent/editEvent/EditTiersForm'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -48,9 +51,12 @@ const AppRoutes = () => {
     { path: '/changepassword', element: <ChangePassword /> },
     { path: '/transaction', element: <Transaction /> },
     { path: '/transactiondetails', element: <TransactionDetails /> },
-    { path: '/createevent', element: <CreateEvent /> },
+    { path: '/createevent', element: <CreateEventForm /> },
     { path: '/editevent', element: <EditEvent /> },
     {path: '/createnewevent', element: <CreateEventForm />},
+    {path: '/editcategories', element: <EditCategoriesForm props={{}}/> },
+    {path: '/editorganizers', element: <EditOrganizersForm props={{}}/>},
+    {path: '/edittiers', element: <EditTiersForm props={{}}/>}
   ]
   )
   return routes
