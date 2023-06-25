@@ -16,7 +16,7 @@ import Login from './pages/User/Login'
 import ChangePassword from './pages/User/ChangePassword'
 import Transaction from './pages/Misc/Transaction'
 import CreateEvent from './pages/Events/CreateEvent'
-import EditEvent from './pages/Events/EditEvent'
+import EditEvent from '../src/components/formsContent/EditEvent'
 import ManageUsers from './pages/User/ManageUsers'
 import ManageScanners from './pages/User/ManageScanners'
 import ManageAuthorizations from './pages/User/ManageAuthorizations'
@@ -56,7 +56,7 @@ const AppRoutes = () => {
     {path: '/createnewevent', element: <CreateEventForm />},
     {path: '/editcategories', element: <EditCategoriesForm props={{}}/> },
     {path: '/editorganizers', element: <EditOrganizersForm props={{}}/>},
-    {path: '/edittiers', element: <EditTiersForm props={{}}/>}
+    {path: '/edittiers', element: <EditTiersForm props={{}}/>},
   ]
   )
   return routes
