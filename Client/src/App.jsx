@@ -16,16 +16,18 @@ import Login from './pages/User/Login'
 import ChangePassword from './pages/User/ChangePassword'
 import Transaction from './pages/Misc/Transaction'
 import CreateEvent from './pages/Events/CreateEvent'
-import EditEvent from './pages/Events/EditEvent'
+import EditEvent from '../src/components/formsContent/EditEvent'
 import ManageUsers from './pages/User/ManageUsers'
 import ManageScanners from './pages/User/ManageScanners'
 import ManageAuthorizations from './pages/User/ManageAuthorizations'
 import PurchaseList from './pages/User/PurchaseList'
 import OrderDetails from './pages/Misc/OrderDetails'
 import TransactionDetails from './pages/Misc/TransactionDetails'
+import CreateEventForm from './pages/Events/CreateEventForm'
+import EditCategoriesForm from './components/formsContent/editEvent/EditCategoriesForm'
+import EditOrganizersForm from './components/formsContent/editEvent/EditOrganizersForm'
+import EditTiersForm from './components/formsContent/editEvent/EditTiersForm'
 import QRScanner from './pages/Misc/QRScanner'
-
-
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -51,8 +53,12 @@ const AppRoutes = () => {
     { path: '/changepassword', element: <ChangePassword /> },
     { path: '/transaction', element: <Transaction /> },
     { path: '/transactiondetails', element: <TransactionDetails /> },
-    { path: '/createevent', element: <CreateEvent /> },
-    { path: '/editevent', element: <EditEvent /> }
+    { path: '/createevent', element: <CreateEventForm /> },
+    { path: '/editevent', element: <EditEvent /> },
+    {path: '/createnewevent', element: <CreateEventForm />},
+    {path: '/editcategories', element: <EditCategoriesForm props={{}}/> },
+    {path: '/editorganizers', element: <EditOrganizersForm props={{}}/>},
+    {path: '/edittiers', element: <EditTiersForm props={{}}/>},
   ]
   )
   return routes
