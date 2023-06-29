@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { IconTrash } from '@tabler/icons-react';
 
-function EventDetails({ formData, setFormData, organizers, setOrganizers, categories, setCategories }) {
+function EventDetails({ formData, setFormData, organizers, setOrganizers, categories, setCategories, sponsors, setSponsors }) {
 
   const [organizerValue, setOrganizerValue] = useState('');
   const [categoryValue, setCategoryValue] = useState('');
+  const [sponsorValue, setSponsorValue] = useState('');
 
   // Funciones para el manejo de multiinputs
 
@@ -14,6 +15,9 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
 
   const handleCategoryChange = (e) => {
     setCategoryValue(e.target.value);
+  }
+  const handleSponsorChange = (e) => {
+    setSponsorValue(e.target.value);
   }
 
   const addOrganizer = () => {
@@ -34,6 +38,15 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
     setCategoryValue('');
   }
 
+  const addSponsor = () => {
+    if (sponsorValue.trim() === '') return;
+    setSponsors((prevSponsors) => [
+      ...prevSponsors,
+      sponsorValue.trim(),
+    ]);
+    setSponsorValue('');
+  }
+
   const removeOrganizer = (organizerToRemove) => {
     setOrganizers((prevOrganizers) =>
       prevOrganizers.filter((organizer) => organizer !== organizerToRemove)
@@ -43,6 +56,12 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
   const removeCategory = (categoryToRemove) => {
     setCategories((prevCategories) =>
       prevCategories.filter((category) => category !== categoryToRemove)
+    );
+  }
+
+  const removeSponsor = (sponsorsToRemove) => {
+    setSponsors((prevSponsors) =>
+      prevSponsors.filter((sponsors) => sponsors !== sponsorsToRemove)
     );
   }
 
@@ -59,14 +78,15 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
         onChange={(e) => setFormData({ ...formData, eventName: e.target.value })}
       ></input>
       <label className='label'>
-        <span className='label-text text-md font-bold'>Descripcion del evento:</span>
+        <span className='label-text text-md font-bold'>Imagen del evento:</span>
       </label>
       <input
         type='text'
-        className='textarea textarea-bordered textarea-sm bg-slate-200 w-full'
-        placeholder='Descripcion detallada'
-        value={formData.eventDescription}
-        onChange={(e) => setFormData({ ...formData, eventDescription: e.target.value })}></input>
+        className='input input-bordered input-sm bg-slate-200 w-full'
+        placeholder='URL de la imagen'
+        value={formData.eventName}
+        onChange={(e) => setFormData({ ...formData, eventName: e.target.value })}
+      ></input>
       <label className='label'>
         <span className='label-text text-md font-bold'>Organizadores:</span>
       </label>
@@ -114,6 +134,33 @@ function EventDetails({ formData, setFormData, organizers, setOrganizers, catego
               <button
                 className="btn btn-sm btn-square btn-error join-item"
                 onClick={() => removeCategory(category)}
+              >
+                <IconTrash className='my-auto text-white text-sm'/>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='flex flex-col items-start'>
+        <label className='label'>
+          <span className='label-text text-md font-bold'>Patrocinadores:</span>
+        </label>
+        <div className="join join-vertical md:join-horizontal w-full">
+          <input className="input input-sm bg-slate-200 w-full input-bordered join-item"
+            placeholder="Patrocinador"
+            value={sponsorValue}
+            onChange={handleSponsorChange} />
+          <button 
+          className="btn btn-sm join-item md:btn-wide"
+          onClick={addSponsor}>Añadir patrocinador</button>
+        </div>
+        <div className="mt-2 gap-2 flex flex-col items-start">
+          {sponsors.map((sponsor) => (
+            <div key={sponsor} className="border bg-slate-100 flex w-48 md:w-72 join">
+              <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{sponsor}</p>
+              <button
+                className="btn btn-sm btn-square btn-error join-item"
+                onClick={() => removeSponsor(sponsor)}
               >
                 <IconTrash className='my-auto text-white text-sm'/>
               </button>

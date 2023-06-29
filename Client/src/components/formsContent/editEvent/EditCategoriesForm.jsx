@@ -1,5 +1,5 @@
 import React from 'react'
-import { IconTrash } from '@tabler/icons-react'
+import { IconTrash, IconEdit } from '@tabler/icons-react'
 import Layout from '../../Navigation/Layout/Layout'
 import ImprovedNavbar from '../../Navigation/Navbar/ImprovedNavbar'
 import { useNavigate } from 'react-router-dom'
@@ -8,8 +8,23 @@ function EditCategoriesForm() {
 
     const navigate = useNavigate();
 
-    const [categoryValue, setCategoryValue] = React.useState('')
-    const [categories, setCategories] = React.useState([])
+    const [categoryValue, setCategoryValue] = React.useState('');
+    const [categories, setCategories] = React.useState([]);
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
+    const [modalInputValue, setModalInputValue] = React.useState('');
+    const [categoryToEdit, setCategoryToEdit] = React.useState('');
+
+    const handleOpenEditCategoryModal = (category) => {
+        setCategoryToEdit(category);
+        setModalInputValue(category);
+        setIsModalOpen(true);
+    };
+
+    const handleModalInputChange = (e) => {
+        setModalInputValue(e.target.value);
+    }
+
+
     const handleCategoryChange = (e) => {
         setCategoryValue(e.target.value);
     }
@@ -22,6 +37,13 @@ function EditCategoriesForm() {
         ]);
         setCategoryValue('');
     }
+
+    const handleSaveCategory = () => {
+        setCategories((prevCategories) =>
+            prevCategories.map((category) => category === categoryToEdit ? modalInputValue : category)
+        );
+        setIsModalOpen(false);
+    };
 
     const removeCategory = (categoryToRemove) => {
         setCategories((prevCategories) =>
@@ -43,14 +65,20 @@ function EditCategoriesForm() {
                             onChange={handleCategoryChange} />
                         <button
                             className="btn btn-sm join-item md:btn-wide"
-                            onClick={addCategory}>Añadir Categoria</button>
+                            onClick={addCategory}>Añadir Categoria
+                        </button>
                     </div>
                     <div className="mt-2 gap-2 flex flex-col items-start">
                         {categories.map((category) => (
                             <div key={category} className="border bg-slate-100 flex w-48 md:w-72 join">
                                 <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{category}</p>
                                 <button
-                                    className="btn btn-sm btn-square btn-error join-item"
+                                    className='btn btn-sm btn-square bg-green-600 hover:bg-green-400 join-item'
+                                    onClick={() => handleOpenEditCategoryModal(category)}>
+                                    <IconEdit className='my-auto text-white text-sm' />
+                                </button>
+                                <button
+                                    className="btn btn-sm btn-square bg-red-600 hover:bg-red-400 join-item"
                                     onClick={() => removeCategory(category)}
                                 >
                                     <IconTrash className='my-auto text-white text-sm' />
@@ -58,13 +86,34 @@ function EditCategoriesForm() {
                             </div>
                         ))}
                     </div>
+                    {isModalOpen && (
+                        <dialog className="modal">
+                            <form method="dialog" className="modal-box">
+                                <h3 className="font-bold text-lg">Editar categoria:</h3>
+                                <div className="join join-vertical md:join-horizontal w-full">
+                                    <input className="input input-sm bg-slate-200 w-full input-bordered join-item"
+                                        placeholder="Categoria"
+                                        value={modalInputValue}
+                                        onChange={handleModalInputChange} />
+                                    <button
+                                        className="btn btn-sm join-item md:btn-wide"
+                                        onClick={handleSaveCategory()}>Guardar categoria</button>
+                                </div>
+                                <div className="modal-action">
+
+                                    <button className="btn" onClick={() => setIsModalOpen(false)}>Cancelar</button>
+
+                                </div>
+                            </form>
+                        </dialog>
+                    )}
                     <div className='join mt-5'>
                         <button className='btn btn-primary join-item font-bold'
-                        onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/employeeeventdetails')}>
                             Guardar
                         </button>
                         <button className='btn btn-secondary join-item font-bold'
-                        onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/employeeeventdetails')}>
                             Cancelar
                         </button>
                     </div>
