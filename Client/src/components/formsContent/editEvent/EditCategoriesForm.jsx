@@ -3,6 +3,7 @@ import { IconTrash, IconEdit } from '@tabler/icons-react'
 import Layout from '../../Navigation/Layout/Layout'
 import ImprovedNavbar from '../../Navigation/Navbar/ImprovedNavbar'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 function EditCategoriesForm() {
 
@@ -10,20 +11,22 @@ function EditCategoriesForm() {
 
     const [categoryValue, setCategoryValue] = React.useState('');
     const [categories, setCategories] = React.useState([]);
-    const [isModalOpen, setIsModalOpen] = React.useState(false);
-    const [modalInputValue, setModalInputValue] = React.useState('');
-    const [categoryToEdit, setCategoryToEdit] = React.useState('');
 
-    const handleOpenEditCategoryModal = (category) => {
-        setCategoryToEdit(category);
-        setModalInputValue(category);
-        setIsModalOpen(true);
-    };
-
-    const handleModalInputChange = (e) => {
-        setModalInputValue(e.target.value);
+    const handleEdit = (category) => {
+        Swal.fire({
+            title: 'Editar organizador:',
+            input: 'text',
+            inputValue: category,
+            showCancelButton: true,
+            showCloseButton: true,
+            showConfirmButton: true
+        }).then(result => {
+            if (result.isConfirmed && result.value !== null) {
+                const updatedCategories = categories.map(item => item === category ? result.value : item);
+                setCategories(updatedCategories);
+            }
+        });
     }
-
 
     const handleCategoryChange = (e) => {
         setCategoryValue(e.target.value);
@@ -37,13 +40,6 @@ function EditCategoriesForm() {
         ]);
         setCategoryValue('');
     }
-
-    const handleSaveCategory = () => {
-        setCategories((prevCategories) =>
-            prevCategories.map((category) => category === categoryToEdit ? modalInputValue : category)
-        );
-        setIsModalOpen(false);
-    };
 
     const removeCategory = (categoryToRemove) => {
         setCategories((prevCategories) =>
@@ -72,6 +68,11 @@ function EditCategoriesForm() {
                         {categories.map((category) => (
                             <div key={category} className="border bg-slate-100 flex w-48 md:w-72 join">
                                 <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{category}</p>
+                                <button
+                                    className='btn btn-sm btn-square btn-success join-item'
+                                    onClick={() => handleEdit(category)}>
+                                    <IconEdit className='my-auto text-white' />
+                                </button>
                                 <button
                                     className="btn btn-sm btn-square bg-red-600 hover:bg-red-400 join-item"
                                     onClick={() => removeCategory(category)}
