@@ -73,11 +73,6 @@ function EditCategoriesForm() {
                             <div key={category} className="border bg-slate-100 flex w-48 md:w-72 join">
                                 <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{category}</p>
                                 <button
-                                    className='btn btn-sm btn-square bg-green-600 hover:bg-green-400 join-item'
-                                    onClick={() => handleOpenEditCategoryModal(category)}>
-                                    <IconEdit className='my-auto text-white text-sm' />
-                                </button>
-                                <button
                                     className="btn btn-sm btn-square bg-red-600 hover:bg-red-400 join-item"
                                     onClick={() => removeCategory(category)}
                                 >
@@ -86,27 +81,6 @@ function EditCategoriesForm() {
                             </div>
                         ))}
                     </div>
-                    {isModalOpen && (
-                        <dialog className="modal">
-                            <form method="dialog" className="modal-box">
-                                <h3 className="font-bold text-lg">Editar categoria:</h3>
-                                <div className="join join-vertical md:join-horizontal w-full">
-                                    <input className="input input-sm bg-slate-200 w-full input-bordered join-item"
-                                        placeholder="Categoria"
-                                        value={modalInputValue}
-                                        onChange={handleModalInputChange} />
-                                    <button
-                                        className="btn btn-sm join-item md:btn-wide"
-                                        onClick={handleSaveCategory()}>Guardar categoria</button>
-                                </div>
-                                <div className="modal-action">
-
-                                    <button className="btn" onClick={() => setIsModalOpen(false)}>Cancelar</button>
-
-                                </div>
-                            </form>
-                        </dialog>
-                    )}
                     <div className='join mt-5'>
                         <button className='btn btn-primary join-item font-bold'
                             onClick={() => navigate('/employeeeventdetails')}>
