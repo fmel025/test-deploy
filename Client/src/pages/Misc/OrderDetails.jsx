@@ -1,34 +1,31 @@
 import Layout from "../../components/Navigation/Layout/Layout"
 import OrderItemsTable from "../../components/Tables/Items/OrderItemsTable"
-import ActiveTicket from "../../components/Cards/ActiveTicket"
-import ExpiredTicket from "../../components/Cards/ExpiredTicket"
-import {
-    Tabs,
-    TabsHeader,
-    TabsBody,
-    Tab,
-    TabPanel,
-} from "@material-tailwind/react";
 import React, { useState } from "react";
 import { IconInfoHexagon } from "@tabler/icons-react";
 import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import ActiveTickets from "../../components/Tables/Table/ActiveTickets";
+import ExpiredTickets from "../../components/Tables/Table/ExpiredTickets";
 
 function OrderDetails() {
+    
+    //State for tabs
+    const [tabPage, setTabPage] = useState(0);
 
+    const handleNext = () => {
+        if (tabPage < 1 && tabPage > -1) setTabPage(tabPage + 1)
+    }
 
-    const [activeTab, setActiveTab] = React.useState("html");
-    const data = [
-        {
-            label: "Tickets activos",
-            value: "active",
-            content: <ActiveTicket />
-        },
-        {
-            label: "Tickets expirados",
-            value: "expired",
-            content: <ExpiredTicket />
+    const handlePrev = () => {
+        if (tabPage < 2 && tabPage > 0) setTabPage(tabPage - 1)
+    }
+
+    const PageDisplay = () => {
+        switch (tabPage) {
+            //Aca le podemos setear las props que traigamos de la peticion
+            case 0: return <ActiveTickets />;
+            case 1: return <ExpiredTickets />;
         }
-    ]
+    }
 
     return (
         <>
@@ -54,30 +51,18 @@ function OrderDetails() {
                 </div>
 
                 <div className="divider divider-vertical w-10/12 mx-auto my-5"></div>
-                <div className="container">
-                    <Tabs value={activeTab} className="flex flex-col items-center">
-                        <TabsHeader className="join join-vertical md:join-horizontal my-auto">
-                            {data.map(({ label, value }) => (
-                                <Tab
-                                    key={value}
-                                    value={value}
-                                    onClick={() => setActiveTab(value)}
-                                    className={activeTab === value ? "btn bg-main text-white join-item w-64 font-bold" : "btn bg-white join-item w-64 text-black font-bold"}>
-                                    <div className="flex flex-row items-center">
-                                        {label}
-                                    </div>
-                                </Tab>
-                            ))}
-                        </TabsHeader>
-                        <TabsBody className="items-center my-auto overflow-y-auto">
-                            {data.map(({ value, content }) => (
-                                <TabPanel key={value} value={value}>
-                                    {content}
-                                </TabPanel>
-                            ))}
-                        </TabsBody>
-                    </Tabs>
+                    <div className="join gap-1">
+                        <button 
+                        className={`btn join-item ${tabPage === 0 ? 'btn-primary' : ''}`}
+                        onClick={handlePrev}>Tickets activos</button>
+                        <button 
+                        className={`btn join-item ${tabPage === 1 ? 'btn-primary' : ''}`}
+                        onClick={handleNext}>Tickets expirados</button>
+                    </div>
+                <div className="body mt-10">
+                    {PageDisplay({ tabPage })}
                 </div>
+                
             </Layout>
             <ImprovedNavbar />
         </>

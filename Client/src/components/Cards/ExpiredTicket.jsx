@@ -5,9 +5,11 @@ const ExpiredTicket = () => {
                 <img className="h-48 lg:h-64" src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Shoes" />
             </figure>
             <div className="card-body"> 
-                <h1 className="card-title">Titulo del evento</h1>
-                <p className='mt-2 text-lg font-medium text-gray-400image'>Fecha: 23 de mayo</p>
-                <p className='mt-1 text-lg font-medium text-gray-400'>Localidad: VIP</p>
+                <div className="flex flex-col gap-2">
+                    <h1 className="card-title">Titulo del evento</h1>
+                    <p className='text-lg font-medium text-gray-400'>Fecha: 23 de mayo</p>
+                    <p className='text-lg font-medium text-gray-400'>Localidad: VIP</p>
+                </div>
             </div>
         </div>
     );
