@@ -20,19 +20,16 @@ function EditTiersForm() {
         Swal.fire({
             title: 'Editar localidad:',
             html: `
+            <div class="alert alert-warning">
+                <p>Por politicas de la empresa solo se permite editar el titulo de las localidades una vez son creadas</p>
+            </div>
             <label>Tier: </label>
             <input id="swal-input1" class="swal2-input" value="${locationToEdit.eventLocation}">
-            <label>Precio: </label>
-            <input id="swal-input2" class="swal2-input" value="${locationToEdit.eventPrice}">
-            <label>Asientos: </label>
-            <input id="swal-input3" class="swal2-input" value="${locationToEdit.eventSeats}">
             `,
             focusConfirm: false,
             preConfirm: () => {
                 return [
                     document.getElementById('swal-input1').value,
-                    document.getElementById('swal-input2').value,
-                    document.getElementById('swal-input3').value,
                 ]
             },
             showCancelButton: true,
@@ -42,7 +39,7 @@ function EditTiersForm() {
             if (result.isConfirmed && result.value !== null) {
                 const updatedLocations = locations.map(location =>
                     location === locationToEdit
-                        ? { ...location, eventLocation: result.value[0], eventPrice: result.value[1], eventSeats: result.value[2] }
+                        ? { ...location, eventLocation: result.value[0] }
                         : location
                 );
                 setLocations(updatedLocations);
