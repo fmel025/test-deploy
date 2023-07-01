@@ -8,9 +8,14 @@ import { GoogleLogin } from "@react-oauth/google";
 import React, { useEffect } from "react";
 import axios from "../../utils/axios";
 import jwt_decode from "jwt-decode";
+import { useAuth } from "../../hooks/useAuth";
 
 function Login() {
+
+  const { setAuthToken, setAuthPermissions, logout } = useAuth();
+
   const responseMessage = (response) => {
+    logout();
     const decoded = jwt_decode(response.credential);
     console.log(decoded);
     console.log(decoded.email);
@@ -23,6 +28,8 @@ function Login() {
       })
       .then((response) => {
         console.log(response);
+        console.log(response.data.token);
+        setAuthToken(response.data.token);
       })
       .catch((error) => {
         console.log(error);

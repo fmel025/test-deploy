@@ -31,6 +31,8 @@ import QRScanner from "./pages/Misc/QRScanner";
 import EditSponsorsForm from "./components/formsContent/editEvent/EditSponsorsForm";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
+import AuthProvider from "../src/context/AuthContext";
+
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
@@ -71,11 +73,13 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <GoogleOAuthProvider clientId="988130177374-4rhnbeevlas2772hvnuasoq8fjgqlcbp.apps.googleusercontent.com">
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
-    </GoogleOAuthProvider>
+    <AuthProvider>
+      <GoogleOAuthProvider clientId="988130177374-4rhnbeevlas2772hvnuasoq8fjgqlcbp.apps.googleusercontent.com">
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </GoogleOAuthProvider>
+    </AuthProvider>
   );
 }
 

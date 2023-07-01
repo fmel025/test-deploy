@@ -8,14 +8,14 @@ export const useAuth = () => {
         throw new Error('useAuth must be used within an AuthProvider');
     }
 
-    const { token, setToken, permissions, setPermissions } = context;
+    const { token, setToken, permissions, setPermissions, isPasswordSet, setIsPasswordSet } = context;
 
     const setAuthToken = (newToken) => {
         window.sessionStorage.setItem('token', newToken);
         setToken(newToken);
     }
 
-    const setAuthRoles = (newRoles) => {
+    const setAuthPermissions = (newRoles) => {
         setPermissions(newRoles);
     }
 
@@ -23,6 +23,7 @@ export const useAuth = () => {
         window.sessionStorage.removeItem('token');
         setToken(null);
         setPermissions([]);
+        setIsPasswordSet(false);
     }
 
     const isLoggedIn = () => {
@@ -33,8 +34,10 @@ export const useAuth = () => {
         token,
         setAuthToken,
         permissions,
-        setAuthRoles,
+        setAuthPermissions,
         logout,
         isLoggedIn,
+        isPasswordSet,
+        setIsPasswordSet
     }
 }
