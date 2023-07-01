@@ -33,14 +33,25 @@ export default function EventDetailControl() {
             </div>
             <div className="btn-group btn-group-vertical lg:btn-group-horizontal gap-1 mt-5">
                 <button onClick={() => navigate('/editcategories')}
-                    className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">Editar categorias</button>
+                    className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
+                    Editar categorias
+                </button>
                 <button onClick={() => navigate('/editorganizers')}
-                    className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">Editar organizadores</button>
+                    className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
+                    Editar organizadores
+                </button>
                 <button onClick={() => navigate('/edittiers')}
-                    className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">Editar localidades</button>
+                    className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
+                    Editar localidades
+                </button>
+                <button onClick={() => navigate('/editsponsors')}
+                    className='btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold'>
+                    Editar patrocinadores
+                </button>
+
 
             </div>
-            
+
             {/* Modal 1 */}
         </>
     );

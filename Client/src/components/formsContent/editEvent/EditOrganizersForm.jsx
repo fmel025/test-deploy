@@ -1,8 +1,9 @@
 import React from 'react'
-import { IconTrash } from '@tabler/icons-react'
+import { IconTrash, IconEdit } from '@tabler/icons-react'
 import Layout from '../../Navigation/Layout/Layout'
 import ImprovedNavbar from '../../Navigation/Navbar/ImprovedNavbar'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 
 function EditCategoriesForm() {
@@ -11,6 +12,22 @@ function EditCategoriesForm() {
 
     const [organizerValue, setOrganizerValue] = React.useState('')
     const [organizers, setOrganizers] = React.useState([]);
+
+    const handleEdit = (organizer) => {
+        Swal.fire({
+            title: 'Editar organizador:',
+            input: 'text',
+            inputValue: organizer,
+            showCancelButton: true,
+            showCloseButton: true,
+            showConfirmButton: true
+        }).then(result => {
+            if (result.isConfirmed && result.value !== null) {
+                const updatedOrganizers = organizers.map(item => item === organizer ? result.value : item);
+                setOrganizers(updatedOrganizers);
+            }
+        });
+    }
 
     const handleOrganizerChange = (e) => {
         setOrganizerValue(e.target.value);
@@ -48,12 +65,17 @@ function EditCategoriesForm() {
                             onClick={addOrganizer}>Añadir Organizador</button>
                     </div>
                     <div className="mt-2 gap-2 flex flex-col items-start">
-                        {organizers.map((category) => (
-                            <div key={category} className="border bg-slate-100 flex w-48 md:w-72 join">
-                                <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{category}</p>
+                        {organizers.map((organizer) => (
+                            <div key={organizer} className="border bg-slate-100 flex w-48 md:w-72 join">
+                                <p className='w-full text-start ml-3 text-sm text-slate-600 font-semibold my-auto px-2 join-item'>{organizer}</p>
+                                <button
+                                    className='btn btn-sm btn-square btn-success join-item'
+                                    onClick={() => handleEdit(organizer)}>
+                                    <IconEdit className='my-auto text-white' />
+                                </button>
                                 <button
                                     className="btn btn-sm btn-square btn-error join-item"
-                                    onClick={() => removeOrganizer(category)}
+                                    onClick={() => removeOrganizer(organizer)}
                                 >
                                     <IconTrash className='my-auto text-white text-sm' />
                                 </button>
@@ -62,11 +84,11 @@ function EditCategoriesForm() {
                     </div>
                     <div className='join mt-5'>
                         <button className='btn btn-primary join-item font-bold'
-                        onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/employeeeventdetails')}>
                             Guardar
                         </button>
                         <button className='btn btn-secondary join-item font-bold'
-                        onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/employeeeventdetails')}>
                             Cancelar
                         </button>
                     </div>

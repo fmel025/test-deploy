@@ -15,7 +15,6 @@ function CreateEventForm() {
 
     const [formData, setFormData] = useState({
         eventName: '',
-        eventDescription: '',
         organizers: [],
         categories: [],
         eventAddress: '',
@@ -28,11 +27,11 @@ function CreateEventForm() {
 
     const [organizers, setOrganizers] = useState([]);
     const [categories, setCategories] = useState([]);
-    // Adapt this use state for a object of three elements
     const [locations, setLocations] = useState([]);
+    const [sponsors, setSponsors] = useState([]);
 
 
-    const formTitles = ['Detalles del evento', 'Ubicacion y disponibilidad', 'Direccion y fecha/hora']
+    const formTitles = ['Detalles del evento', 'Localidad y disponibilidad', 'Direccion, duracion y fecha/hora']
 
     const handleNext = () => {
         if (page < 2 && page > -1) setPage(page + 1)
@@ -47,7 +46,7 @@ function CreateEventForm() {
         switch (page) {
             case 0: return <EventDetailsForm formData={formData} setFormData={setFormData} 
             organizers={organizers} setOrganizers={setOrganizers} categories={categories}
-            setCategories={setCategories}/>;
+            setCategories={setCategories} sponsors={sponsors} setSponsors={setSponsors}/>;
             case 1: return <LocationAdAvailability formData={formData} setFormData={setFormData}
             locations={locations} setLocations={setLocations}/>;
             case 2: return <AddressAndDate formData={formData} setFormData={setFormData} />;

@@ -28,6 +28,7 @@ import EditCategoriesForm from './components/formsContent/editEvent/EditCategori
 import EditOrganizersForm from './components/formsContent/editEvent/EditOrganizersForm'
 import EditTiersForm from './components/formsContent/editEvent/EditTiersForm'
 import QRScanner from './pages/Misc/QRScanner'
+import EditSponsorsForm from './components/formsContent/editEvent/EditSponsorsForm'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -56,9 +57,10 @@ const AppRoutes = () => {
     { path: '/createevent', element: <CreateEventForm /> },
     { path: '/editevent', element: <EditEvent /> },
     {path: '/createnewevent', element: <CreateEventForm />},
-    {path: '/editcategories', element: <EditCategoriesForm props={{}}/> },
-    {path: '/editorganizers', element: <EditOrganizersForm props={{}}/>},
-    {path: '/edittiers', element: <EditTiersForm props={{}}/>},
+    {path: '/editcategories', element: <EditCategoriesForm/> },
+    {path: '/editorganizers', element: <EditOrganizersForm/>},
+    {path: '/edittiers', element: <EditTiersForm/>},
+    {path: '/editsponsors', element: <EditSponsorsForm/>},
   ]
   )
   return routes

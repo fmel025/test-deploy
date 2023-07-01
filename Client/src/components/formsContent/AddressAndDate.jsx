@@ -32,12 +32,18 @@ function AddressAndDate({ formData, setFormData }) {
                     </label>
                     <input type='time' className='input input-sm input-bordered bg-slate-200' placeholder='' />
                 </div>
+                <div className='form-control w-36'>
+                    <label className='label'>
+                        <span className='label-text text-md font-bold '>Duracion:</span>
+                    </label>
+                    <input type='text' className='input input-sm input-bordered bg-slate-200' placeholder='1:30 horas' />
+                </div>
             </div>
             <div className='mt-10 join'>
                 <button onClick={() => navigate('/employeeeventdetails')}
-                    className='btn btn-sm join-item text-slate-200 bg-main hover:bg-darker-main'>Crear evento</button>
+                    className='btn btn-sm btn-success join-item'>Crear evento</button>
                 <button onClick={() => navigate('/employeeeventdetails')}
-                    className='btn btn-sm join-item btn-secondary text-slate-200'>Cancelar</button>
+                    className='btn btn-sm btn-error join-item'>Cancelar</button>
             </div>
         </div>
     )
