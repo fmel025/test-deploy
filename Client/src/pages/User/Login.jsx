@@ -4,62 +4,57 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/google.svg";
 import LoginImage from "../../assets/login.jpg";
 import { useState } from "react";
-import { GoogleLogin } from '@react-oauth/google';
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import { GoogleLogin } from "@react-oauth/google";
+import React, { useEffect } from "react";
+import axios from "../../utils/axios";
+import jwt_decode from "jwt-decode";
 
 function Login() {
-
   const responseMessage = (response) => {
-      console.log(response);
-      navigate("/");
+    const decoded = jwt_decode(response.credential);
+    console.log(decoded);
+    console.log(decoded.email);
+    console.log(decoded.name);
+
+    axios
+      .post("/auth/google", {
+        fullname: decoded.name,
+        email: decoded.email,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   const errorMessage = (error) => {
-      console.log(error);
+    console.log(error);
   };
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [ user, setUser ] = useState([]);
-  const [ profile, setProfile ] = useState([]);
+  const [user, setUser] = useState([]);
+
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/");
   };
 
   const handleSubmitGoogle = (e) => {
     e.preventDefault();
-    navigate("/");
   };
-
-  useEffect(
-    () => {
-        if (user) {
-            axios
-                .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
-                    headers: {
-                        Authorization: `Bearer ${user.access_token}`,
-                        Accept: 'application/json'
-                    }
-                })
-                .then((res) => {
-                    setProfile(res.data);
-                })
-                .catch((err) => console.log(err));
-        }
-    },
-    [ user ]
-);
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-violet-100">
       <div className="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
         <form className="flex flex-col justify-center p-8 md:p-14">
-          <span className="mb-3 text-3xl md:text-4xl font-bold">Iniciar sesion</span>
+          <span className="mb-3 text-3xl md:text-4xl font-bold">
+            Iniciar sesion
+          </span>
           <span className="font-light text-gray-400 mb-4">
             Bienvenido de nuevo a EventMate
           </span>
@@ -76,7 +71,9 @@ function Login() {
             />
           </div>
           <div className="py-4">
-            <label htmlFor="password" className="mb-2 text-md">Contraseña</label>
+            <label htmlFor="password" className="mb-2 text-md">
+              Contraseña
+            </label>
             <input
               type="password"
               name="password"
@@ -101,11 +98,12 @@ function Login() {
           </div>
 
           <div className="flex items-center justify-center">
-            <GoogleLogin className="w-full" onSuccess={responseMessage} onError={errorMessage} />
-
-        </div>
-
-        
+            <GoogleLogin
+              className="w-full"
+              onSuccess={responseMessage}
+              onError={errorMessage}
+            />
+          </div>
         </form>
 
         <div className="relative">
