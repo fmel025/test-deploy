@@ -6,7 +6,6 @@ export default function OrderItemsTable() {
           <thead>
             <tr >
               <th className="bg-main"></th>
-              <th className="bg-main text-white">Estado</th>
               <th className="bg-main text-white">Localidad</th>
               <th className="bg-main text-white" >Precio</th>
               <th className="bg-main text-white" >Cantidad</th>
@@ -17,7 +16,6 @@ export default function OrderItemsTable() {
             {/* row 1 */}
             <tr>
               <th>1</th>
-              <td>Activo</td>
               <td>VIP</td>
               <td>$12</td>
               <td>3</td>
@@ -26,7 +24,6 @@ export default function OrderItemsTable() {
             {/* row 2 */}
             <tr className="">
               <th>2</th>
-              <td>Canjeado</td>
               <td>Premium</td>
               <td>$20</td>
               <td>1</td>
@@ -35,7 +32,6 @@ export default function OrderItemsTable() {
             {/* row 3 */}
             <tr>
               <th>3</th>
-              <td>Canjeado</td>
               <td>Estandar</td>
               <td>$5</td>
               <td>4</td>
@@ -44,7 +40,6 @@ export default function OrderItemsTable() {
             {/* row 5 */}
             <tr>
               <th></th>
-              <td></td>
               <td></td>
               <td></td>
               <td></td>

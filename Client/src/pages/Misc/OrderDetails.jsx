@@ -1,6 +1,6 @@
 import Layout from "../../components/Navigation/Layout/Layout"
 import OrderItemsTable from "../../components/Tables/Items/OrderItemsTable"
-import React, { useState } from "react";
+import { useState } from "react";
 import { IconInfoHexagon } from "@tabler/icons-react";
 import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 import ActiveTickets from "../../components/Tables/Table/ActiveTickets";
@@ -22,6 +22,7 @@ function OrderDetails() {
     const PageDisplay = () => {
         switch (tabPage) {
             //Aca le podemos setear las props que traigamos de la peticion
+            //A.K.A. los tickets del evento
             case 0: return <ActiveTickets />;
             case 1: return <ExpiredTickets />;
         }
@@ -41,11 +42,9 @@ function OrderDetails() {
                         <div className="p-5 ">
                             <h2 className="card-title font-bold mx-5 my-5">Detalles de la orden</h2>
                             <p className="font-semibold mx-5 mt-2">Nombre de comprador</p>
-                            <p className="font-light mx-5">Samutel Adonay</p>
+                            <p className="font-light mx-5">Samuel Adonay Ortiz</p>
                             <p className="font-semibold mx-5 mt-2">Fecha de compra</p>
-                            <p className="font-light mx-5">20 de mayo </p>
-                            <p className="font-semibold mx-5 mt-2">Numero de orden</p>
-                            <p className="font-light mx-5"> 2379129</p>
+                            <p className="font-light mx-5">lun., 3 de jul. de 2023 </p>
                         </div>
                     </div>
                 </div>
