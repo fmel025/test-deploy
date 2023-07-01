@@ -63,8 +63,8 @@ function EventDetails() {
             </div>
           </div>
         </div>
-        <h2 className="text-main text-xl font-bold">Tickets en venta</h2>
-        <div className="grid grid-cols-1 gap-16 my-5 ">
+        <h2 className="text-main text-4xl font-bold">Tickets en venta</h2>
+        <div className="flex flex-wrap gap-5 my-5 mx-24 items-center justify-center">
           <TierCard />
           <TierCard />
           <TierCard />
