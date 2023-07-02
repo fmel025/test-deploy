@@ -4,8 +4,11 @@ import EventDetailsForm from '../../components/formsContent/EventDetailsForm';
 import LocationAdAvailability from '../../components/formsContent/LocationAdAvailability';
 import AddressAndDate from '../../components/formsContent/AddressAndDate';
 import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
+import { useNavigate } from 'react-router-dom';
 
 function CreateEventForm() {
+
+    const navigate = useNavigate();
 
     const [page, setPage] = useState(0);
 
@@ -40,11 +43,11 @@ function CreateEventForm() {
 
     const PageDisplay = () => {
         switch (page) {
-            case 0: return <EventDetailsForm formData={formData} setFormData={setFormData} 
-            organizers={organizers} setOrganizers={setOrganizers} categories={categories}
-            setCategories={setCategories} sponsors={sponsors} setSponsors={setSponsors}/>;
+            case 0: return <EventDetailsForm formData={formData} setFormData={setFormData}
+                organizers={organizers} setOrganizers={setOrganizers} categories={categories}
+                setCategories={setCategories} sponsors={sponsors} setSponsors={setSponsors} />;
             case 1: return <LocationAdAvailability formData={formData} setFormData={setFormData}
-            locations={locations} setLocations={setLocations}/>;
+                locations={locations} setLocations={setLocations} />;
             case 2: return <AddressAndDate formData={formData} setFormData={setFormData} />;
         }
     }
@@ -59,6 +62,14 @@ function CreateEventForm() {
                     <div className='body'>
                         {PageDisplay({ page })}
                     </div>
+                    {page === 2 ? <div className='flex flex-col items-center'>
+                        <div className='mt-5 join'>
+                            <button onClick={() => navigate('/event/manage')}
+                                className='btn btn-sm btn-success join-item'>Crear evento</button>
+                            <button onClick={() => navigate('/event/manage')}
+                                className='btn btn-sm btn-error join-item'>Cancelar</button>
+                        </div>
+                    </div> : <></>}
                     <div className='flex flex-wrap gap-10 justify-evenly mt-2'>
                         <button className='btn btn-md text-slate-200 bg-main hover:bg-darker-main' onClick={handlePrev} disabled={page === 0}>Anterior</button>
                         <button className='btn btn-md text-slate-200 bg-main hover:bg-darker-main ' onClick={handleNext} disabled={page === 2}>Siguiente</button>
