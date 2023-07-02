@@ -37,9 +37,9 @@ function AddressAndDate({ formData, setFormData }) {
                 </div>
             </div>
             <div className='mt-10 join'>
-                <button onClick={() => navigate('/private/event/details/id')}
+                <button onClick={() => navigate('/event/manage')}
                     className='btn btn-sm btn-success join-item'>Crear evento</button>
-                <button onClick={() => navigate('/private/event/details/id')}
+                <button onClick={() => navigate('/event/manage')}
                     className='btn btn-sm btn-error join-item'>Cancelar</button>
             </div>
         </div>

@@ -30,19 +30,19 @@ export default function EventDetailControl() {
                 </label>
             </div>
             <div className="btn-group btn-group-vertical lg:btn-group-horizontal gap-1 mt-5">
-                <button onClick={() => navigate('/edit/categories')}
+                <button onClick={() => navigate('/edit/categories/id')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
                     Editar categorias
                 </button>
-                <button onClick={() => navigate('/edit/organizers')}
+                <button onClick={() => navigate('/edit/organizers/id')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
                     Editar organizadores
                 </button>
-                <button onClick={() => navigate('/edit/tiers')}
+                <button onClick={() => navigate('/edit/tiers/id')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
                     Editar localidades
                 </button>
-                <button onClick={() => navigate('/edit/sponsors')}
+                <button onClick={() => navigate('/edit/sponsors/id')}
                     className='btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold'>
                     Editar patrocinadores
                 </button>
