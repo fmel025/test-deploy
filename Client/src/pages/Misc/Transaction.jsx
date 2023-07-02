@@ -33,7 +33,6 @@ function Transaction() {
         </div>
       </div>
       </Layout>
-      <ClientNavbar/>
     </>
   )
 }

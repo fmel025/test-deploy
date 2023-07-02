@@ -1,10 +1,8 @@
 
 import Layout from "../../components/Navigation/Layout/Layout"
-import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
 import UserStatusTable from "../../components/Tables/Table/UserStatusTable"
 import { IconAlertCircleFilled } from "@tabler/icons-react"
-
 
 function ManageUsers() {
 
@@ -19,7 +17,6 @@ function ManageUsers() {
           <span className="md:hidden">Para asignar roles deslize la tabla a la izquierda</span>
         </div>
       </Layout>
-      <EmployeeNavbar />
     </>
   )
 }

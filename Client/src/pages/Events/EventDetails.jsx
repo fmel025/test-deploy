@@ -1,7 +1,6 @@
 
 import TierCard from "../../components/Cards/TierCard"
 import Layout from "../../components/Navigation/Layout/Layout"
-import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 import DateTimeCard from "../../components/Cards/DateTimeCard"
 import AddressCard from "./AddressCard"
 import { IconUserStar, IconCoin } from "@tabler/icons-react"
@@ -72,7 +71,6 @@ function EventDetails() {
           <TierCard />
         </div>
       </Layout>
-      <ClientNavbar />
     </>
   )
 }

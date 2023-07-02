@@ -1,7 +1,6 @@
 import EventCard from "../../components/Cards/EventCard"
 import Layout from "../../components/Navigation/Layout/Layout"
 import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
-import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 function Home() {
 
@@ -25,7 +24,7 @@ function Home() {
             <button className="btn btn-sm btn-primary join-item"> Next </button>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 gap-16 my-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 my-10">
           <EventCard />
           <EventCard />
           <EventCard />
@@ -38,7 +37,6 @@ function Home() {
           <EventCard />
         </div>
       </Layout>
-      <ClientNavbar />
     </>
   )
 }

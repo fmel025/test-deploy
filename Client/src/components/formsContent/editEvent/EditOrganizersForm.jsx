@@ -1,7 +1,6 @@
 import React from 'react'
 import { IconTrash, IconEdit } from '@tabler/icons-react'
 import Layout from '../../Navigation/Layout/Layout'
-import ClientNavbar from '../../Navigation/Navbar/ImprovedNavbar'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
@@ -94,7 +93,6 @@ function EditCategoriesForm() {
                     </div>
                 </div>
             </div>
-            <ClientNavbar />
         </Layout>
     )
 }

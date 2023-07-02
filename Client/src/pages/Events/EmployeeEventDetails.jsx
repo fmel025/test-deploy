@@ -2,7 +2,6 @@
 import TierCard from "../../components/Cards/TierCard"
 import Layout from "../../components/Navigation/Layout/Layout"
 import EventDetailControl from "../../components/Buttons/ButtonGroup/EventDetailControl"
-import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 import DateTimeCard from "../../components/Cards/DateTimeCard"
 import AddressCard from "./AddressCard"
 import DurationEventCard from "../../components/Cards/DurationEventCard"
@@ -75,7 +74,6 @@ function EventDetails() {
         <h1 className="text-3xl lg:text-5xl font-semibold mt-2 mb-5">Panel de control</h1>
         <EventDetailControl />
       </Layout>
-      <EmployeeNavbar />
     </>
   )
 }

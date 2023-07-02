@@ -12,8 +12,6 @@ import {
 } from "@material-tailwind/react";
 import TransactionLayout from "../../components/Navigation/Layout/TransactionLayout"
 import { IconArrowAutofitUp, IconArrowAutofitDown } from "@tabler/icons-react";
-import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar";
-
 
 
 function Transactions() {
@@ -88,8 +86,6 @@ function Transactions() {
             </TabsBody>
           </Tabs>
         </div>
-
-        <ClientNavbar />
       </Layout>
 
     </>

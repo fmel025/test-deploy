@@ -3,8 +3,6 @@ import Layout from "../../components/Navigation/Layout/Layout"
 import PurchaseTicketCard from "../../components/Cards/PurchaseTicketCard"
 import AcceptButton from "../../components/Buttons/AcceptButton"
 import CancelButton from "../../components/Buttons/CancelButton"
-import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
-
 
 function PurchaseTicket() {
 
@@ -21,7 +19,6 @@ function PurchaseTicket() {
           <CancelButton />
         </div>
       </Layout>
-      <ClientNavbar />
     </>
   )
 }

@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 
 import Layout from "../../components/Navigation/Layout/Layout"
 import UserQRButton from '../../components/Buttons/UserQRButton';
-import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -27,7 +26,7 @@ export default function Profile() {
               adonayortiz96@gmail.com
             </p>
             <div className="card-actions justify-start xs:justify-end mt-2">
-              <button onClick={() => navigate('/changepassword')}
+              <button onClick={() => navigate('/user/password')}
                 className="btn bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus:outline-none focus:ring focus:ringindigo-300 
           text-white"
               >
@@ -38,8 +37,6 @@ export default function Profile() {
           </div>
         </div>
       </Layout>
-      <ClientNavbar />
-
     </>
   );
 }

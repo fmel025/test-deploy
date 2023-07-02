@@ -5,6 +5,7 @@ const EmployeeNavbar = () => {
   let Links = [
     { name: "Events", link: "/event/manage" },
     { name: "Statistics", link: "/event/statistics" },
+    { name: "Scanner", link: "/scanner"},
     { name: "Authorizations", link: "/manage/auth" },
     { name: "Manage users", link: "/manage/users" },
     { name: "Profile", link: "/user/profile" },
@@ -17,7 +18,7 @@ const EmployeeNavbar = () => {
       <nav className="shadow-md bg-white w-full fixed top-0 left-0 mb-10 z-50">
         <div className="md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
           <Link
-            to="/home"
+            to="/private/home "
             className="font-bold text-2xl cursor-pointer flex items-center font-[Aleo] 
       text-[#605DEC]"
           >

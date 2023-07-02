@@ -1,7 +1,7 @@
 import Layout from '../../components/Navigation/Layout/Layout'
 import { useNavigate } from 'react-router-dom';
 
-function ChangePassword() {
+function SetPassword() {
 
   const navigate = useNavigate();
   return (
@@ -9,14 +9,14 @@ function ChangePassword() {
       <Layout>
         <div className='card bg-white my-auto'>
           <div className='card-body'>
-            <h1 className='card-title'>Cambiar contraseña</h1>
+            <h1 className='card-title'>Configura tu contraseña</h1>
             <div className='form-control'>
               <label className='label'>
-                <span className='label-text'>Cambiar contraseña</span>
+                <span className='label-text'>Contraseña</span>
               </label>
               <input type='password' className='input w-full input-sm bg-slate-200' placeholder='********'></input>
               <label className='label'>
-                <span className='label-text'>Cambiar contraseña</span>
+                <span className='label-text'>Contraseña</span>
               </label>
               <input type='password' className='input w-full input-sm bg-slate-200' placeholder='********'></input>
             </div>
@@ -32,4 +32,4 @@ function ChangePassword() {
   )
 }
 
-export default ChangePassword
+export default SetPassword

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Layout from '../Navigation/Layout/Layout';
 import AddressAndDate from './AddressAndDate';
-import ClientNavbar from '../Navigation/Navbar/ImprovedNavbar';
 import EditEventDetailsForm from './editEvent/EditEventDetailsForm';
 import { useNavigate } from 'react-router-dom';
 
@@ -66,7 +65,6 @@ function EditEvent() {
                     </div>
                 </div>
             </div>
-            <ClientNavbar />
         </Layout>
     )
 }

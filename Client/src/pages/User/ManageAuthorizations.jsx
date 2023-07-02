@@ -3,8 +3,6 @@ import Layout from "../../components/Navigation/Layout/Layout"
 import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
 import AuthorizationsTable from "../../components/Tables/Table/AuthorizationsTable"
 import { IconAlertCircleFilled } from "@tabler/icons-react"
-import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
-
 
 function ManageAuthorizations() {
 
@@ -19,7 +17,6 @@ function ManageAuthorizations() {
           <span className="md:hidden">Para asignar roles deslize la tabla a la izquierda</span>
         </div>
       </Layout>
-      <EmployeeNavbar />
     </>
   )
 }

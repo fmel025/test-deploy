@@ -1,10 +1,8 @@
 import React from "react"
 import Layout from "../../Navigation/Layout/Layout"
-import ClientNavbar from "../../Navigation/Navbar/ImprovedNavbar"
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { IconEdit, IconTrash } from "@tabler/icons-react";
-
 
 function EditSponsorsForm() {
 
@@ -99,7 +97,6 @@ function EditSponsorsForm() {
                     </div>
                 </div>
             </div>
-            <ClientNavbar />
         </Layout>
     )
 }

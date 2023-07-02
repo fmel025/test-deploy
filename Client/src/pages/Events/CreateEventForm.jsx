@@ -3,7 +3,6 @@ import Layout from '../../components/Navigation/Layout/Layout';
 import EventDetailsForm from '../../components/formsContent/EventDetailsForm';
 import LocationAdAvailability from '../../components/formsContent/LocationAdAvailability';
 import AddressAndDate from '../../components/formsContent/AddressAndDate';
-import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 import { useNavigate } from 'react-router-dom';
 
 function CreateEventForm() {
@@ -76,7 +75,6 @@ function CreateEventForm() {
                     </div>
                 </div>
             </div>
-            <ClientNavbar />
         </Layout>
     )
 }

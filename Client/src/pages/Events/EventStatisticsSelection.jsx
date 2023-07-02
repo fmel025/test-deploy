@@ -2,7 +2,6 @@
 import Layout from "../../components/Navigation/Layout/Layout"
 import SearchBar from "../../components/Navigation/SearchBar/SearchBar"
 import StatsCard from "../../components/Cards/StatsCard"
-import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
 
 function EventStatisticsSelection() {
@@ -25,7 +24,6 @@ function EventStatisticsSelection() {
           <StatsCard />
         </div>
       </Layout>
-      <EmployeeNavbar />
     </>
   )
 }

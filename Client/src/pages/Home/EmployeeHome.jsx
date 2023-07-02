@@ -1,6 +1,4 @@
-
 import Layout from "../../components/Navigation/Layout/Layout"
-import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
 function EmployeeHome() {
 
@@ -17,7 +15,6 @@ function EmployeeHome() {
           </figure>
         </div>
       </Layout>
-      <EmployeeNavbar />
     </>
   )
 }

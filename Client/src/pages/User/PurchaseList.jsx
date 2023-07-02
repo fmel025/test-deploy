@@ -1,8 +1,5 @@
-
 import Layout from "../../components/Navigation/Layout/Layout"
-import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 import OrderCard from "../../components/Cards/OrderCard"
-
 
 function PurchaseList() {
  
@@ -16,7 +13,6 @@ function PurchaseList() {
             <OrderCard />
           </div>
           </Layout>
-          <ClientNavbar/>
         </>
     )
   }
