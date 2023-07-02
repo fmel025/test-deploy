@@ -1,4 +1,4 @@
-import { useRoutes, BrowserRouter } from "react-router-dom";
+import { useRoutes, BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import AssistedEvents from "./pages/Events/AttendedEvents";
 import FutureEvents from "./pages/Events/FutureEvents";
@@ -29,48 +29,51 @@ import EditTiersForm from "./components/formsContent/editEvent/EditTiersForm";
 import QRScanner from "./pages/Misc/QRScanner";
 import EditSponsorsForm from "./components/formsContent/editEvent/EditSponsorsForm";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-
+import PrivateRoute from "./utils/PrivateRoute";
 import AuthProvider from "../src/context/AuthContext";
 
-const AppRoutes = () => {
-  let routes = useRoutes([
-    { path: "/", element: <Home /> },
-    { path: "/private/home", element: <EmployeeHome /> },
-    { path: "/scanner", element: <QRScanner /> },
-    { path: "/event/attended", element: <AssistedEvents /> },
-    { path: "/event/future", element: <FutureEvents /> },
-    /* Here goes one with params */
-    { path: "/event/details/id", element: <EventDetails /> },
-    /* Any suggestions? */
-    { path: "/private/event/details/id", element: <EmployeeEventDetails /> },
-    {
-      path: "/event/statistics",
-      element: <EventStatisticsSelection />,
-    },
-    /* Here goes one with params too, A.K.A with id */
-    { path: "/event/statistics/id", element: <EventStatistics /> },
-    { path: "/event/manage", element: <ManageEvents /> },
-    { path: "/event/details/id/purchase/id", element: <PurchaseTicket /> },
-    { path: "/purchase", element: <PurchaseList /> },
-    { path: "/purchase/id", element: <OrderDetails /> },
-    { path: "/transactions", element: <Transactions /> },
-    { path: "/manage/users", element: <ManageUsers /> },
-    { path: "/manage/scanners", element: <ManageScanners /> },
-    { path: "/manage/auth", element: <ManageAuthorizations /> },
-    { path: "/user/profile", element: <Profile /> },
-    { path: "/login", element: <Login /> },
-    { path: "/user/setpassword", element: <ChangePassword /> },
-    { path: "/transaction", element: <Transaction /> },
-    { path: "/transaction/id", element: <TransactionDetails /> },
-    { path: "/event/create", element: <CreateEventForm /> },
-    { path: "/edit/event/id", element: <EditEvent /> },
-    { path: "/edit/categories/id", element: <EditCategoriesForm /> },
-    { path: "/edit/organizers/id", element: <EditOrganizersForm /> },
-    { path: "/edit/tiers/id", element: <EditTiersForm /> },
-    { path: "/edit/sponsors/id", element: <EditSponsorsForm /> },
-  ]);
-  return routes;
-};
+const AppRoutes = () => (
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/private/home" element={<EmployeeHome />} />
+    <Route path="/scanner" element={<QRScanner />} />
+    <Route path="/event/attended" element={<AssistedEvents />} />
+    <Route path="/event/future" element={<FutureEvents />} />
+    <Route path="/event/details/id" element={<EventDetails />} />
+    <Route
+      path="/private/event/details/id"
+      element={<EmployeeEventDetails />}
+    />
+    <Route
+      path="/event/statistics"
+      element={
+        <PrivateRoute roles={["WORKER"]}>
+          <EventStatisticsSelection />
+        </PrivateRoute>
+      }
+    />
+    <Route path="/event/statistics/id" element={<EventStatistics />} />
+    <Route path="/event/manage" element={<ManageEvents />} />
+    <Route path="/event/details/id/purchase/id" element={<PurchaseTicket />} />
+    <Route path="/purchase" element={<PurchaseList />} />
+    <Route path="/purchase/id" element={<OrderDetails />} />
+    <Route path="/transactions" element={<Transactions />} />
+    <Route path="/manage/users" element={<ManageUsers />} />
+    <Route path="/manage/scanners" element={<ManageScanners />} />
+    <Route path="/manage/auth" element={<ManageAuthorizations />} />
+    <Route path="/user/profile" element={<Profile />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/user/setpassword" element={<ChangePassword />} />
+    <Route path="/transaction" element={<Transaction />} />
+    <Route path="/transaction/id" element={<TransactionDetails />} />
+    <Route path="/event/create" element={<CreateEventForm />} />
+    <Route path="/edit/event/id" element={<EditEvent />} />
+    <Route path="/edit/categories/id" element={<EditCategoriesForm />} />
+    <Route path="/edit/organizers/id" element={<EditOrganizersForm />} />
+    <Route path="/edit/tiers/id" element={<EditTiersForm />} />
+    <Route path="/edit/sponsors/id" element={<EditSponsorsForm />} />
+  </Routes>
+);
 
 function App() {
   return (
