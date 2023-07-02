@@ -3,7 +3,7 @@ import Layout from '../../components/Navigation/Layout/Layout';
 import EventDetailsForm from '../../components/formsContent/EventDetailsForm';
 import LocationAdAvailability from '../../components/formsContent/LocationAdAvailability';
 import AddressAndDate from '../../components/formsContent/AddressAndDate';
-import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
+import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 function CreateEventForm() {
 
@@ -65,7 +65,7 @@ function CreateEventForm() {
                     </div>
                 </div>
             </div>
-            <ImprovedNavbar />
+            <ClientNavbar />
         </Layout>
     )
 }

@@ -23,6 +23,7 @@
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-qr-code": "^2.0.11",
     "react-router-dom": "^6.11.1",
     "react-tabs": "^6.0.1",

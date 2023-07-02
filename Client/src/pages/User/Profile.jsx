@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Layout from "../../components/Navigation/Layout/Layout"
 import UserQRButton from '../../components/Buttons/UserQRButton';
-import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
+import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ export default function Profile() {
           </div>
         </div>
       </Layout>
-      <ImprovedNavbar />
+      <ClientNavbar />
 
     </>
   );

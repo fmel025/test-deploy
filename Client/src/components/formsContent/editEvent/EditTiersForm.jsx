@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { IconTrash, IconEdit } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../../Navigation/Layout/Layout'
-import ImprovedNavbar from '../../Navigation/Navbar/ImprovedNavbar';
+import ClientNavbar from '../../Navigation/Navbar/ImprovedNavbar';
 import Swal from 'sweetalert2';
 
 function EditTiersForm() {
@@ -156,7 +156,7 @@ function EditTiersForm() {
                     </div>
                 </div>
             </div>
-            <ImprovedNavbar />
+            <ClientNavbar />
         </Layout>
 
     );

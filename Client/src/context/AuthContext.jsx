@@ -21,7 +21,8 @@ const AuthProvider = ({ children }) => {
                     Authorization: `Bearer ${token}`
                 }
             }).then((response) => {
-                setPermissions(response.data);
+                setPermissions(response.data.permissions);
+                setIsPasswordSet(response.data.isPasswordSet);
             }
             ).catch((error) => {
                 console.log(error);

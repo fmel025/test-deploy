@@ -1,7 +1,7 @@
 
 import FutureEventCard from "../../components/Cards/FutureEventCard"
 import Layout from "../../components/Navigation/Layout/Layout"
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 
 
 function FutureEvents() {
@@ -20,7 +20,7 @@ function FutureEvents() {
           <FutureEventCard />
         </div>
       </Layout>
-      <ImprovedNavbar />
+      <ClientNavbar />
     </>
   )
 }

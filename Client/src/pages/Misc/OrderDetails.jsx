@@ -2,7 +2,7 @@ import Layout from "../../components/Navigation/Layout/Layout"
 import OrderItemsTable from "../../components/Tables/Items/OrderItemsTable"
 import { useState } from "react";
 import { IconInfoHexagon } from "@tabler/icons-react";
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 import ActiveTickets from "../../components/Tables/Table/ActiveTickets";
 import ExpiredTickets from "../../components/Tables/Table/ExpiredTickets";
 
@@ -63,7 +63,7 @@ function OrderDetails() {
                 </div>
                 
             </Layout>
-            <ImprovedNavbar />
+            <ClientNavbar />
         </>
     )
 }

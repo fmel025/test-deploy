@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ImprovedNavbar = () => {
+const ClientNavbar = () => {
   let Links = [
     { name: "My events", link: "/event/attended" },
     { name: "Future events", link: "/event/future" },
@@ -15,7 +15,7 @@ const ImprovedNavbar = () => {
   return (
     <>
 
-      <nav className='shadow-md bg-white w-full fixed top-0 left-0 mb-10'>
+      <nav className='shadow-md bg-white w-full fixed top-0 left-0 mb-10 z-50'>
         <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
           <Link to='/' className='font-bold text-2xl cursor-pointer flex items-center font-[Aleo] 
       text-[#605DEC]'>
@@ -42,4 +42,4 @@ const ImprovedNavbar = () => {
   );
 };
 
-export default ImprovedNavbar;
+export default ClientNavbar;

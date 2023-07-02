@@ -12,7 +12,7 @@ import {
 } from "@material-tailwind/react";
 import TransactionLayout from "../../components/Navigation/Layout/TransactionLayout"
 import { IconArrowAutofitUp, IconArrowAutofitDown } from "@tabler/icons-react";
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar";
+import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar";
 
 
 
@@ -89,7 +89,7 @@ function Transactions() {
           </Tabs>
         </div>
 
-        <ImprovedNavbar />
+        <ClientNavbar />
       </Layout>
 
     </>

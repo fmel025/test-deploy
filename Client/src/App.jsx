@@ -7,7 +7,7 @@ import EmployeeEventDetails from "./pages/Events/EmployeeEventDetails";
 import PurchaseTicket from "./pages/Misc/PurchaseTicket";
 import Transactions from "./pages/Misc/Transactions";
 import Profile from "./pages/User/Profile";
-import ImprovedNavbar from "./components/Navigation/Navbar/ImprovedNavbar";
+import ClientNavbar from "./components/Navigation/Navbar/ImprovedNavbar";
 import EmployeeHome from "./pages/Home/EmployeeHome";
 import ManageEvents from "./pages/User/ManageEvents";
 import EventStatistics from "./pages/Events/EventStatistics";
@@ -34,7 +34,7 @@ import AuthProvider from "../src/context/AuthContext";
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: "/home", element: <Home /> },
+    { path: "/", element: <Home /> },
     { path: "/private/home", element: <EmployeeHome /> },
     { path: "/scanner", element: <QRScanner /> },
     { path: "/event/attended", element: <AssistedEvents /> },

@@ -1,5 +1,5 @@
 import Layout from '../../components/Navigation/Layout/Layout';
-import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
+import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 import QRScannerCard from '../../components/Misc/QRScannerCard';
 
 function QRScanner() {
@@ -18,7 +18,7 @@ function QRScanner() {
         disableFlip={false}
         qrCodeSuccessCallback={onNewScanResult}
       />
-      <ImprovedNavbar />
+      <ClientNavbar />
     </Layout>
   );
 }

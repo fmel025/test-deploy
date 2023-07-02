@@ -9,17 +9,30 @@ import React, { useEffect } from "react";
 import axios from "../../utils/axios";
 import jwt_decode from "jwt-decode";
 import { useAuth } from "../../hooks/useAuth";
+import toast, { Toaster } from 'react-hot-toast';
+
 
 function Login() {
+  const { setAuthToken } = useAuth();
 
-  const { setAuthToken, setAuthPermissions, logout } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
+
+  const errorToast = (message) => toast.error(message);
+
+  const handleRedirect = (permissions = []) => {
+    
+    if(permissions.includes("WORKER")){
+      return navigate("/private/home");
+    }
+
+    navigate("/");
+  }
 
   const responseMessage = (response) => {
-    logout();
     const decoded = jwt_decode(response.credential);
-    console.log(decoded);
-    console.log(decoded.email);
-    console.log(decoded.name);
 
     axios
       .post("/auth/google", {
@@ -27,38 +40,55 @@ function Login() {
         email: decoded.email,
       })
       .then((response) => {
-        console.log(response);
-        console.log(response.data.token);
         setAuthToken(response.data.token);
+        handleRedirect(response.data.authorities);
       })
       .catch((error) => {
-        console.log(error);
+        errorToast("Internal server error")
       });
   };
+
   const errorMessage = (error) => {
-    console.log(error);
+    errorToast("Error al iniciar sesion con Google");
   };
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const [user, setUser] = useState([]);
-
-
-  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  };
 
-  const handleSubmitGoogle = (e) => {
-    e.preventDefault();
+    const data = {
+      identifier: email,
+      password: password,
+    };
+
+    axios
+      .post("/auth/login", data)
+      .then((response) => {
+        setAuthToken(response.data.token);
+        handleRedirect(response.data.authorities);
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.response.status === 403) {
+          errorToast("Aun no tienes contraseña, inicia sesion con Google");
+          return;
+        }
+
+        if (error.response.status === 404 || error.response.status === 401) {
+          errorToast("Usuario o contraseña incorrectos");
+          return;
+        }
+
+        errorToast("Internal server error");
+      });
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-violet-100">
       <div className="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
-        <form className="flex flex-col justify-center p-8 md:p-14">
+        <form
+          className="flex flex-col justify-center p-8 md:p-14"
+          onSubmit={handleSubmit}
+        >
           <span className="mb-3 text-3xl md:text-4xl font-bold">
             Iniciar sesion
           </span>
@@ -75,6 +105,8 @@ function Login() {
               name="email"
               id="email"
               placeholder="example@gmail.com"
+              onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="py-4">
@@ -86,14 +118,16 @@ function Login() {
               name="password"
               id="password"
               placeholder="********"
+              minLength={8}
               className="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
 
           <button
             className="w-full text-sm bg-black text-white p-2 rounded-lg mb-6 hover:bg-white hover:text-black hover:border hover:border-gray-300"
-            type="button"
-            onClick={handleSubmit}
+            type="submit"
           >
             Iniciar sesion
           </button>
@@ -121,6 +155,7 @@ function Login() {
           />
         </div>
       </div>
+      <Toaster position="bottom-left" reverseOrder={false} />
     </div>
   );
 }

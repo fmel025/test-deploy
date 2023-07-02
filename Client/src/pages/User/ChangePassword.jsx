@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Navigation/Layout/Layout'
 import { useNavigate } from 'react-router-dom';
-import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
+import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 function ChangePassword() {
 
@@ -30,7 +30,7 @@ function ChangePassword() {
 
         </div>
       </Layout>
-      <ImprovedNavbar />
+      <ClientNavbar />
     </>
   )
 }

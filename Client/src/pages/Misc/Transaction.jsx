@@ -2,7 +2,7 @@
 import Layout from '../../components/Navigation/Layout/Layout'
 import InputCodeButton from '../../components/Buttons/InputCodeButton'
 import { useNavigate } from 'react-router'
-import ImprovedNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
+import ClientNavbar from '../../components/Navigation/Navbar/ImprovedNavbar';
 
 function Transaction() {
 
@@ -33,7 +33,7 @@ function Transaction() {
         </div>
       </div>
       </Layout>
-      <ImprovedNavbar/>
+      <ClientNavbar/>
     </>
   )
 }

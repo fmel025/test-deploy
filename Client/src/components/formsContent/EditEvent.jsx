@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Layout from '../Navigation/Layout/Layout';
 import AddressAndDate from './AddressAndDate';
-import ImprovedNavbar from '../Navigation/Navbar/ImprovedNavbar';
+import ClientNavbar from '../Navigation/Navbar/ImprovedNavbar';
 import EditEventDetailsForm from './editEvent/EditEventDetailsForm';
 
 
@@ -56,7 +56,7 @@ function EditEvent() {
                     </div>
                 </div>
             </div>
-            <ImprovedNavbar />
+            <ClientNavbar />
         </Layout>
     )
 }

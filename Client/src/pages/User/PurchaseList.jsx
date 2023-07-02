@@ -1,6 +1,6 @@
 
 import Layout from "../../components/Navigation/Layout/Layout"
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
+import ClientNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 import OrderCard from "../../components/Cards/OrderCard"
 
 
@@ -16,7 +16,7 @@ function PurchaseList() {
             <OrderCard />
           </div>
           </Layout>
-          <ImprovedNavbar/>
+          <ClientNavbar/>
         </>
     )
   }
