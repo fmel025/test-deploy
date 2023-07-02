@@ -1,7 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { IconTrash, IconEdit } from '@tabler/icons-react';
-import { BrowserRouter as Link } from 'react-router-dom';
 import EditOrganizersForm from '../../formsContent/editEvent/EditOrganizersForm';
 import EditTiersForm from '../../formsContent/editEvent/EditTiersForm';
 import EditCategoriesForm from '../../formsContent/editEvent/EditCategoriesForm';
@@ -21,9 +19,9 @@ export default function EventDetailControl() {
     return (
         <>
             <div className="btn-group btn-group-vertical lg:btn-group-horizontal gap-1">
-                <button onClick={() => navigate('/editevent')}
+                <button onClick={() => navigate('/edit/event/id')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">Editar evento</button>
-                <button onClick={() => navigate('/managescanners')}
+                <button onClick={() => navigate('/manage/scanners')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">Administrar validadores</button>
                 <label className="btn swap bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
                     <input type="checkbox" />
@@ -32,19 +30,19 @@ export default function EventDetailControl() {
                 </label>
             </div>
             <div className="btn-group btn-group-vertical lg:btn-group-horizontal gap-1 mt-5">
-                <button onClick={() => navigate('/editcategories')}
+                <button onClick={() => navigate('/edit/categories')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
                     Editar categorias
                 </button>
-                <button onClick={() => navigate('/editorganizers')}
+                <button onClick={() => navigate('/edit/organizers')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
                     Editar organizadores
                 </button>
-                <button onClick={() => navigate('/edittiers')}
+                <button onClick={() => navigate('/edit/tiers')}
                     className="btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold">
                     Editar localidades
                 </button>
-                <button onClick={() => navigate('/editsponsors')}
+                <button onClick={() => navigate('/edit/sponsors')}
                     className='btn bg-main border-none px-10 hover:bg-darker-main text-white font-bold'>
                     Editar patrocinadores
                 </button>

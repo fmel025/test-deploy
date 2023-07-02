@@ -46,7 +46,7 @@ function QRScannerCard(props) {
     };
 
     html5QrcodeScanner.render(onScanSuccess, props.qrCodeErrorCallback);
-    
+
 
     return () => {
       html5QrcodeScanner.clear().catch(error => {
@@ -56,7 +56,7 @@ function QRScannerCard(props) {
   }, [props]);
 
   return (
-    <div id={qrcodeRegionId} className='w-full md:3/5'/>
+    <div id={qrcodeRegionId} className='w-full md:3/5' />
   );
 }
 

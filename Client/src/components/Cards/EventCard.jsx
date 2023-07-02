@@ -5,7 +5,7 @@ import { IconTicket } from '@tabler/icons-react';
 
 const EventCard = () => {
   return (
-    <Link to='/eventdetails' className="card card-compact w-72 bg-base-100 shadow-xl hover:shadow-2xl">
+    <Link to='/event/details/id' className="card card-compact w-72 bg-base-100 shadow-xl hover:shadow-2xl">
       <figure><img src="https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Shoes" /></figure>
       <div className="card-body">
         <h2 className='card-title'>

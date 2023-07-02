@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const ImprovedNavbar = () => {
   let Links = [
-    { name: "My events", link: "/attendedevents" },
-    { name: "Future events", link: "/futureevents" },
-    { name: "Purchases", link: "/purchaselist" },
+    { name: "My events", link: "/event/attended" },
+    { name: "Future events", link: "/event/future" },
+    { name: "Purchases", link: "/purchase" },
     { name: "Transactions", link: "/transactions" },
-    { name: "Profile", link: "/profile" },
+    { name: "Profile", link: "/user/profile" },
     { name: "Logout", link: "/login" },
   ];
 

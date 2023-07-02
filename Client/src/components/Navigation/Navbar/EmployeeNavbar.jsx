@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const EmployeeNavbar = () => {
   let Links = [
-    { name: "Events", link: "/manageevents" },
-    { name: "Statistics", link: "/eventstatisticsselection" },
-    { name: "Authorizations", link: "/manageauthorizations" },
-    { name: "Manage users", link: "/manageusers" },
-    { name: "Profile", link: "/profile" },
+    { name: "Events", link: "/manage/events" },
+    { name: "Statistics", link: "/event/statistics" },
+    { name: "Authorizations", link: "/manage/auth" },
+    { name: "Manage users", link: "/manage/users" },
+    { name: "Profile", link: "/user/profile" },
     { name: "Logout", link: "/login" },
   ];
 

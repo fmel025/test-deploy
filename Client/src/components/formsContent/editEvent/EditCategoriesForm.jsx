@@ -84,11 +84,11 @@ function EditCategoriesForm() {
                     </div>
                     <div className='join mt-5'>
                         <button className='btn btn-primary join-item font-bold'
-                            onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/private/event/details/id')}>
                             Guardar
                         </button>
                         <button className='btn btn-secondary join-item font-bold'
-                            onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/private/event/details/id')}>
                             Cancelar
                         </button>
                     </div>

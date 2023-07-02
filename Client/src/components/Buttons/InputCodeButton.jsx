@@ -12,7 +12,7 @@ function InputCodeButton() {
                    
             <div className="modal-action">
               <button className="btn bg-red-500 hover:bg-red-700 font-bold text-white">Cerrar</button>
-              <button onClick={() => navigate('/transactiondetails')} className="btn  bg-main hover:bg-darker-main font-bold text-white">Aceptar</button>
+              <button onClick={() => navigate('/transaction/id')} className="btn  bg-main hover:bg-darker-main font-bold text-white">Aceptar</button>
             </div>
           </form>
         </dialog>

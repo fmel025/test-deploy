@@ -62,9 +62,9 @@ function EditEvent() {
                         </div>
                     </div>
                     <div className='flex flex-wrap justify-start items-center my-5 gap-2'>
-                        <button onClick={() => navigate('/employeeeventdetails')}
+                        <button onClick={() => navigate('/private/event/details/id')}
                             className='btn btn-md text-slate-200 bg-main hover:bg-darker-main'> <IconCircleCheck className='mr-2' /> Guardar cambios</button>
-                        <button onClick={() => navigate('/employeeeventdetails')}
+                        <button onClick={() => navigate('/private/event/details/id')}
                             className='btn btn-secondary text-slate-200'> <IconCircleX className='mr-2' /> Cancelar</button>
                     </div>
                 </div>

@@ -1,4 +1,3 @@
-import CountersButton from "../Buttons/CounterButtons";
 import { useState } from "react";
 
 const PurchaseTicketCard = () => {

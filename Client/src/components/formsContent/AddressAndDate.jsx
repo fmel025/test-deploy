@@ -1,6 +1,3 @@
-import React from 'react'
-
-import { IconTrash, IconCircleX, IconCircleCheck } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 
 function AddressAndDate({ formData, setFormData }) {
@@ -40,9 +37,9 @@ function AddressAndDate({ formData, setFormData }) {
                 </div>
             </div>
             <div className='mt-10 join'>
-                <button onClick={() => navigate('/employeeeventdetails')}
+                <button onClick={() => navigate('/private/event/details/id')}
                     className='btn btn-sm btn-success join-item'>Crear evento</button>
-                <button onClick={() => navigate('/employeeeventdetails')}
+                <button onClick={() => navigate('/private/event/details/id')}
                     className='btn btn-sm btn-error join-item'>Cancelar</button>
             </div>
         </div>

@@ -23,8 +23,8 @@ function ChangePassword() {
               <input type='password' className='input w-full input-sm bg-slate-200' placeholder='********'></input>
             </div>
             <div className='card-actions'>
-              <button className='btn bg-main hover:bg-darker-main text-white font-bold' onClick={() => navigate('/profile')}>Confirmar</button>
-              <button className='btn btn-secondary bg-red-500 hover:bg-red-700 text-white font-bold ' onClick={() => navigate('/profile')}>Cancelar</button>
+              <button className='btn bg-main hover:bg-darker-main text-white font-bold' onClick={() => navigate('/user/profile')}>Confirmar</button>
+              <button className='btn btn-secondary bg-red-500 hover:bg-red-700 text-white font-bold ' onClick={() => navigate('/user/profile')}>Cancelar</button>
             </div>
           </div>
 

@@ -5,7 +5,7 @@ import { IconTicket } from '@tabler/icons-react';
 
 const StatsCard = () => {
     return(
-        <Link to='/eventstatistics' className='bg-white cursor-pointer w-72 h-92 rounded-lg border hover:shadow-xl'>
+        <Link to='/event/statistics/id' className='bg-white cursor-pointer w-72 h-92 rounded-lg border hover:shadow-xl'>
         <figure className='relative m-3 w-90 h-2/5'>
           <img className='w-full h-full object-cover rounded-lg' src='https://images.pexels.com/photos/976866/pexels-photo-976866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='headphones' />
         </figure>

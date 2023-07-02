@@ -1,7 +1,6 @@
 
 import CompletedEventCard from "../../components/Cards/CompletedEventCard"
 import Layout from "../../components/Navigation/Layout/Layout"
-import ImprovedNavbar from "../../components/Navigation/Navbar/ImprovedNavbar"
 import EmployeeNavbar from "../../components/Navigation/Navbar/EmployeeNavbar"
 
 

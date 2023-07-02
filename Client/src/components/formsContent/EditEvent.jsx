@@ -1,9 +1,5 @@
-import React from 'react'
-
 import { useState } from 'react'
 import Layout from '../Navigation/Layout/Layout';
-import EventDetailsForm from './EventDetailsForm';
-import LocationAdAvailability from './LocationAdAvailability';
 import AddressAndDate from './AddressAndDate';
 import ImprovedNavbar from '../Navigation/Navbar/ImprovedNavbar';
 import EditEventDetailsForm from './editEvent/EditEventDetailsForm';

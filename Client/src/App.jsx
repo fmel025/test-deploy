@@ -15,7 +15,6 @@ import EventStatisticsSelection from "./pages/Events/EventStatisticsSelection";
 import Login from "./pages/User/Login";
 import ChangePassword from "./pages/User/ChangePassword";
 import Transaction from "./pages/Misc/Transaction";
-import CreateEvent from "./pages/Events/CreateEvent";
 import EditEvent from "../src/components/formsContent/EditEvent";
 import ManageUsers from "./pages/User/ManageUsers";
 import ManageScanners from "./pages/User/ManageScanners";
@@ -35,38 +34,40 @@ import AuthProvider from "../src/context/AuthContext";
 
 const AppRoutes = () => {
   let routes = useRoutes([
-    { path: "/", element: <Home /> },
-    { path: "/home", element: <EmployeeHome /> },
+    { path: "/home", element: <Home /> },
+    { path: "/private/home", element: <EmployeeHome /> },
     { path: "/scanner", element: <QRScanner /> },
-    { path: "/attendedevents", element: <AssistedEvents /> },
-    { path: "/futureevents", element: <FutureEvents /> },
-    { path: "/eventdetails", element: <EventDetails /> },
-    { path: "/employeeeventdetails", element: <EmployeeEventDetails /> },
+    { path: "/event/attended", element: <AssistedEvents /> },
+    { path: "/event/future", element: <FutureEvents /> },
+    /* Here goes one with params */
+    { path: "/event/details/id", element: <EventDetails /> },
+    /* Any suggestions? */
+    { path: "/private/event/details/id", element: <EmployeeEventDetails /> },
     {
-      path: "/eventstatisticsselection",
+      path: "/event/statistics",
       element: <EventStatisticsSelection />,
     },
-    { path: "/eventstatistics", element: <EventStatistics /> },
-    { path: "/manageevents", element: <ManageEvents /> },
-    { path: "/purchaseticket", element: <PurchaseTicket /> },
-    { path: "/purchaselist", element: <PurchaseList /> },
-    { path: "/orderdetails", element: <OrderDetails /> },
+    /* Here goes one with params too, A.K.A with id */
+    { path: "/event/statistics/id", element: <EventStatistics /> },
+    { path: "/event/manage", element: <ManageEvents /> },
+    { path: "/event/details/id/purchase/id", element: <PurchaseTicket /> },
+    { path: "/purchase", element: <PurchaseList /> },
+    { path: "/purchase/id", element: <OrderDetails /> },
     { path: "/transactions", element: <Transactions /> },
-    { path: "/manageusers", element: <ManageUsers /> },
-    { path: "/managescanners", element: <ManageScanners /> },
-    { path: "/manageauthorizations", element: <ManageAuthorizations /> },
-    { path: "/profile", element: <Profile /> },
+    { path: "/manage/users", element: <ManageUsers /> },
+    { path: "/manage/scanners", element: <ManageScanners /> },
+    { path: "/manage/auth", element: <ManageAuthorizations /> },
+    { path: "/user/profile", element: <Profile /> },
     { path: "/login", element: <Login /> },
-    { path: "/changepassword", element: <ChangePassword /> },
+    { path: "/user/setpassword", element: <ChangePassword /> },
     { path: "/transaction", element: <Transaction /> },
-    { path: "/transactiondetails", element: <TransactionDetails /> },
-    { path: "/createevent", element: <CreateEventForm /> },
-    { path: "/editevent", element: <EditEvent /> },
-    { path: "/createnewevent", element: <CreateEventForm /> },
-    { path: "/editcategories", element: <EditCategoriesForm /> },
-    { path: "/editorganizers", element: <EditOrganizersForm /> },
-    { path: "/edittiers", element: <EditTiersForm /> },
-    { path: "/editsponsors", element: <EditSponsorsForm /> },
+    { path: "/transaction/id", element: <TransactionDetails /> },
+    { path: "/event/create", element: <CreateEventForm /> },
+    { path: "/edit/event/id", element: <EditEvent /> },
+    { path: "/edit/categories/id", element: <EditCategoriesForm /> },
+    { path: "/edit/organizers/id", element: <EditOrganizersForm /> },
+    { path: "/edit/tiers/id", element: <EditTiersForm /> },
+    { path: "/edit/sponsors/id", element: <EditSponsorsForm /> },
   ]);
   return routes;
 };

@@ -65,12 +65,12 @@ function EventDetails() {
         </div>
         <h2 className="text-main text-4xl font-bold">Tickets en venta</h2>
         <div className="flex flex-wrap gap-5 my-5 mx-24 items-center justify-center">
+          {/* Aca llenaremos dinamicamente y le pasaremos el id de las tiers correspondientes */}
           <TierCard />
           <TierCard />
           <TierCard />
           <TierCard />
         </div>
-
       </Layout>
       <ImprovedNavbar />
     </>

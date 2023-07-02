@@ -1,9 +1,5 @@
-import React, { useState } from 'react';
-import { IconTrash, IconCircleX, IconCircleCheck } from '@tabler/icons-react';
-import { useNavigate } from 'react-router-dom';
+import { IconTrash} from '@tabler/icons-react';
 function LocationAdAvailability({ formData, setFormData, locations, setLocations }) {
-
-    const navigate = useNavigate();
 
     const addLocation = () => {
         if (

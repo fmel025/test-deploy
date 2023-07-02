@@ -146,11 +146,11 @@ function EditTiersForm() {
                     </div>
                     <div className='join mt-5'>
                         <button className='btn btn-primary join-item'
-                            onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/private/event/details/id')}>
                             Guardar
                         </button>
                         <button className='btn btn-secondary join-item'
-                            onClick={() => navigate('/employeeeventdetails')}>
+                            onClick={() => navigate('/private/event/details/id')}>
                             Cancelar
                         </button>
                     </div>
