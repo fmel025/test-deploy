@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconTrash, IconEdit } from '@tabler/icons-react';
+import {  IconEdit } from '@tabler/icons-react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../../Navigation/Layout/Layout'
 import ClientNavbar from '../../Navigation/Navbar/ImprovedNavbar';
@@ -72,12 +72,6 @@ function EditTiersForm() {
         }));
     };
 
-    const removeLocation = (locationToRemove) => {
-        setLocations((prevLocations) =>
-            prevLocations.filter((location) => location !== locationToRemove)
-        );
-    };
-
     return (
         <Layout>
             <div className="mt-2 rounded w-11/12 sm:w-5/6 lg:w-3/5 flex-col justify-center p-10 mx-auto bg-white gap-5">
@@ -125,6 +119,8 @@ function EditTiersForm() {
                     <button className="btn btn-sm w-10/12 mt-2" onClick={addLocation}>
                         Añadir localidad
                     </button>
+                    {/* Se elimino remove location -> cuando ya se creo un evento solamente se puede editar el nombre
+                    de la tier y nada mas, tampoco es posible eliminarla */}
                     <div className="mt-2 gap-2 flex flex-col items-center w-full">
                         {locations?.map((location, index) => (
                             <div key={index} className="border bg-slate-100 flex w-50 md:w-72 join">
@@ -134,12 +130,6 @@ function EditTiersForm() {
                                     className='my-auto text-white text-sm btn btn-sm btn-square btn-success join-item'
                                     onClick={() => handleEdit(location)}>
                                     <IconEdit />
-                                </button>
-                                <button
-                                    className="my-auto text-white text-sm btn btn-sm btn-square btn-error join-item"
-                                    onClick={() => removeLocation(location)}
-                                >
-                                    <IconTrash />
                                 </button>
                             </div>
                         ))}

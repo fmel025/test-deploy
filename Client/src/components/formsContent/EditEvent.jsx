@@ -3,10 +3,12 @@ import Layout from '../Navigation/Layout/Layout';
 import AddressAndDate from './AddressAndDate';
 import ClientNavbar from '../Navigation/Navbar/ImprovedNavbar';
 import EditEventDetailsForm from './editEvent/EditEventDetailsForm';
-
+import { useNavigate } from 'react-router-dom';
 
 
 function EditEvent() {
+
+    const navigate = useNavigate();
 
     const [page, setPage] = useState(0);
 
@@ -50,6 +52,14 @@ function EditEvent() {
                     <div className='body'>
                         {PageDisplay({ page })}
                     </div>
+                    {page === 1 ? <div className='flex flex-col items-center'>
+                        <div className='mt-5 join'>
+                            <button onClick={() => navigate('/private/event/details/id')}
+                                className='btn btn-sm btn-success join-item'>Actualizar evento</button>
+                            <button onClick={() => navigate('/private/event/details/id')}
+                                className='btn btn-sm btn-error join-item'>Cancelar</button>
+                        </div>
+                    </div> : <></>}
                     <div className='flex flex-wrap gap-10 justify-evenly mt-2'>
                         <button className='btn btn-md text-slate-200 bg-main hover:bg-darker-main' onClick={handlePrev} disabled={page === 0}>Anterior</button>
                         <button className='btn btn-md text-slate-200 bg-main hover:bg-darker-main ' onClick={handleNext} disabled={page === 1}>Siguiente</button>
