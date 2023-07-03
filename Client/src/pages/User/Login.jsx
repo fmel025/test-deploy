@@ -13,7 +13,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 
 function Login() {
-  const { setAuthToken } = useAuth();
+  const { setAuthToken, setAuthPermissions, setAuthPasswordSet } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,6 +41,8 @@ function Login() {
       })
       .then((response) => {
         setAuthToken(response.data.token);
+        setAuthPermissions(response.data.authorities);
+        setAuthPasswordSet(response.data.isPasswordSet);
         handleRedirect(response.data.authorities);
       })
       .catch((error) => {

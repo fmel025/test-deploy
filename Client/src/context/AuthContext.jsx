@@ -13,23 +13,9 @@ const AuthProvider = ({ children }) => {
         return JSON.parse(window.sessionStorage.getItem('permissions')) || [];
     });
 
-    const [isPasswordSet, setIsPasswordSet] = useState(false);
-
-    useEffect(() => {
-        if (token) {
-            axios.get('/user/me', {
-                headers: {
-                    Authorization: `Bearer ${token}`
-                }
-            }).then((response) => {
-                window.sessionStorage.setItem('permissions', JSON.stringify(response.data.permissions));
-                setPermissions(response.data.permissions);
-                setIsPasswordSet(response.data.isPasswordSet);
-            }).catch((error) => {
-                console.log(error);
-            });
-        }
-    }, [token]);
+    const [isPasswordSet, setIsPasswordSet] = useState(() => {
+        return JSON.parse(window.sessionStorage.getItem('isPasswordSet')) || false;
+    });
 
     return (
         <AuthContext.Provider value={{ token, setToken, permissions, setPermissions, isPasswordSet, setIsPasswordSet }}>
@@ -37,5 +23,6 @@ const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 }
+
 
 export default AuthProvider;

@@ -16,11 +16,19 @@ export const useAuth = () => {
     }
 
     const setAuthPermissions = (newRoles) => {
+        window.sessionStorage.setItem('permissions', JSON.stringify(newRoles));
         setPermissions(newRoles);
+    }
+
+    const setAuthPasswordSet = (newIsPasswordSet) => {
+        window.sessionStorage.setItem('isPasswordSet', newIsPasswordSet);
+        setIsPasswordSet(newIsPasswordSet);
     }
 
     const logout = () => {
         window.sessionStorage.removeItem('token');
+        window.sessionStorage.removeItem('permissions');
+        window.sessionStorage.removeItem('isPasswordSet');
         setToken(null);
         setPermissions([]);
         setIsPasswordSet(false);
@@ -38,6 +46,6 @@ export const useAuth = () => {
         logout,
         isLoggedIn,
         isPasswordSet,
-        setIsPasswordSet
+        setAuthPasswordSet
     }
 }

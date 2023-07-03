@@ -33,27 +33,18 @@ import { useAuth } from "./hooks/useAuth";
 import ClientNavbar from "./components/Navigation/Navbar/ImprovedNavbar";
 import EmployeeNavbar from "./components/Navigation/Navbar/EmployeeNavbar";
 import SetPassword from "./pages/User/SetPassword";
+import { GlobalNavbar } from "./components/Navigation/Navbar/GlobalNavbar";
 
 const AppRoutes = () => {
 
     const location = useLocation();
     // Here you insert the paths you wanna exclude
-    const excludePaths = ['/login', '/transaction', '/user/password']; 
 
-    const { permissions, isLoggedIn } = useAuth();
-    // Determine which Navbar to render
-    let Navbar;
-    if (!isLoggedIn()) {
-        Navbar = ClientNavbar; // No navbar for unauthenticated users
-    } else if (permissions.includes("CLIENT")) {
-        Navbar = ClientNavbar;
-    } else if (permissions.includes("WORKER") || permissions.includes("ADMIN")) {
-        Navbar = EmployeeNavbar;
-    }
+    const excludedPaths = ["/login", "/set-password"];
 
     return (
         <>
-            {!excludePaths.includes(location.pathname) && <Navbar />}
+            {excludedPaths.includes(location.pathname) ? null : <GlobalNavbar />}
             <Routes>
                 <Route
                     path="/"

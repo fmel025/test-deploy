@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../../hooks/useAuth";
 
 const EmployeeNavbar = () => {
-  let Links = [
-    { name: "Events", link: "/event/manage" },
-    { name: "Statistics", link: "/event/statistics" },
-    { name: "Scanner", link: "/scanner"},
-    { name: "Authorizations", link: "/manage/auth" },
-    { name: "Manage users", link: "/manage/users" },
-    { name: "Profile", link: "/user/profile" },
-    { name: "Logout", link: "/login" },
-  ];
+  const { isLoggedIn, permissions, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+  };
 
   let [open, setOpen] = useState(false);
   return (
@@ -37,19 +34,88 @@ const EmployeeNavbar = () => {
               open ? "top-20 " : "top-[-490px]"
             }`}
           >
-            {Links.map((link) => (
-              <li
-                key={link.name}
-                className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal"
-              >
-                <a
-                  href={link.link}
+            {(permissions.includes("ADMIN") ||
+              permissions.includes("EVENT_MOD")) && (
+              <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
+                <Link
+                  to="/event/manage"
                   className="text-gray-800 hover:text-gray-400 duration-500"
                 >
-                  {link.name}
-                </a>
+                  Events
+                </Link>
               </li>
-            ))}
+            )}
+            {(permissions.includes("ADMIN") ||
+              permissions.includes("ANALYST")) && (
+              <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
+                <Link
+                  to="/event/statistics"
+                  className="text-gray-800 hover:text-gray-400 duration-500"
+                >
+                  Statistics
+                </Link>
+              </li>
+            )}
+
+            {(permissions.includes("ADMIN") ||
+              permissions.includes("VALIDATOR")) && (
+              <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
+                <Link
+                  to="/scanner"
+                  className="text-gray-800 hover:text-gray-400 duration-500"
+                >
+                  Scanner
+                </Link>
+              </li>
+            )}
+
+            {(permissions.includes("ADMIN") || permissions.includes("MOD")) && (
+              <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
+                <Link
+                  to="/manage/users"
+                  className="text-gray-800 hover:text-gray-400 duration-500"
+                >
+                  Manage users
+                </Link>
+              </li>
+            )}
+
+            {permissions.includes("ADMIN") && (
+              <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
+                <Link
+                  to="/manage/auth"
+                  className="text-gray-800 hover:text-gray-400 duration-500"
+                >
+                  Admin panel
+                </Link>
+              </li>
+            )}
+
+            {isLoggedIn() && (
+              <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
+                <Link
+                  to="/user/profile"
+                  className="text-gray-800 hover:text-gray-400 duration-500"
+                >
+                  Profile
+                </Link>
+              </li>
+            )}
+
+            {isLoggedIn() && (
+              <li
+                key="Logout"
+                className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal"
+              >
+                <Link
+                  to="/"
+                  onClick={handleLogout}
+                  className="text-gray-800 hover:text-gray-400 duration-500"
+                >
+                  Logout
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
