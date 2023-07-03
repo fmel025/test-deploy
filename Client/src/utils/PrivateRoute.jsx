@@ -18,7 +18,7 @@ const PrivateRoute = ({ roles, children }) => {
     console.log(permissions);
 
     if (permissions.map(p => p.trim().toUpperCase()).includes("WORKER")) {
-      return <Navigate to="/worker-home" />;
+      return <Navigate to="/private/home" />;
     }
     
     // Navigate to root as default

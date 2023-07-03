@@ -141,7 +141,7 @@ const AppRoutes = () => {
                 <Route
                     path="/manage/scanners"
                     element={
-                        <PrivateRoute roles={["ADMIN", "MOD"]}>
+                        <PrivateRoute roles={["ADMIN", "EVENT_MOD"]}>
                             <ManageScanners />
                         </PrivateRoute>
                     } />
