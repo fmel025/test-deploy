@@ -23,8 +23,8 @@ function Login() {
   const errorToast = (message) => toast.error(message);
 
   const handleRedirect = (permissions = []) => {
-    
-    if(permissions.includes("WORKER")){
+
+    if (permissions.includes("WORKER")) {
       return navigate("/private/home");
     }
 

@@ -34,6 +34,7 @@ import ClientNavbar from "./components/Navigation/Navbar/ImprovedNavbar";
 import EmployeeNavbar from "./components/Navigation/Navbar/EmployeeNavbar";
 import SetPassword from "./pages/User/SetPassword";
 import { GlobalNavbar } from "./components/Navigation/Navbar/GlobalNavbar";
+import CreateWorker from "./pages/User/CreateWorker";
 
 const AppRoutes = () => {
 
@@ -56,6 +57,14 @@ const AppRoutes = () => {
                             <EmployeeHome />
                         </PrivateRoute>
                     } />
+                <Route
+                    path="/private/newworker"
+                    element={
+                        <PrivateRoute roles={["ADMIN"]}>
+                            <CreateWorker/>
+                        </PrivateRoute>
+                    }
+                    />
                 <Route
                     path="/scanner"
                     element={

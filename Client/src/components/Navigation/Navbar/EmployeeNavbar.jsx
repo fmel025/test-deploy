@@ -94,6 +94,18 @@ const EmployeeNavbar = () => {
             {isLoggedIn() && (
               <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
                 <Link
+                  to="/private/newworker"
+                  className="text-gray-800 hover:text-gray-400 duration-500"
+                >
+                  Create worker
+                </Link>
+              </li>
+            )
+            }
+
+            {isLoggedIn() && (
+              <li className="md:ml-8 text-lg md:my-0 my-2 font-bold md:font-normal">
+                <Link
                   to="/user/profile"
                   className="text-gray-800 hover:text-gray-400 duration-500"
                 >

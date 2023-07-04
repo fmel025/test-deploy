@@ -25,7 +25,6 @@ function SetPassword() {
               <button className='btn btn-secondary bg-red-500 hover:bg-red-700 text-white font-bold ' onClick={() => navigate('/user/profile')}>Cancelar</button>
             </div>
           </div>
-
         </div>
       </Layout>
     </>
