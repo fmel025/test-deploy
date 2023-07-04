@@ -1,21 +1,21 @@
-
-import TierCard from "../../components/Cards/TierCard"
-import Layout from "../../components/Navigation/Layout/Layout"
-import DateTimeCard from "../../components/Cards/DateTimeCard"
-import AddressCard from "./AddressCard"
-import { IconUserStar, IconCoin } from "@tabler/icons-react"
-import DurationEventCard from "../../components/Cards/DurationEventCard"
-import AviableTickets from "../../components/Cards/AviableTickets"
-
-
+import TierCard from "../../components/Cards/TierCard";
+import Layout from "../../components/Navigation/Layout/Layout";
+import DateTimeCard from "../../components/Cards/DateTimeCard";
+import AddressCard from "./AddressCard";
+import { IconUserStar, IconCoin } from "@tabler/icons-react";
+import DurationEventCard from "../../components/Cards/DurationEventCard";
+import AviableTickets from "../../components/Cards/AviableTickets";
 
 function EventDetails() {
-
   return (
     <>
       <Layout>
-        <figure className='relative m-3 h-96 w-full'>
-          <img className='object-cover w-full h-full grayscale' src='https://images.pexels.com/photos/154147/pexels-photo-154147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='headphones' />
+        <figure className="relative m-3 h-96 w-full">
+          <img
+            className="object-cover w-full h-full grayscale"
+            src="https://images.pexels.com/photos/154147/pexels-photo-154147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="headphones"
+          />
         </figure>
         <div className="bg-white flex flex-col gap-3 h-auto w-10/12 rounded-lg shadow-lg p-8 m-10 ">
           <h1 className="text-5xl font-bold mb-2">Titulo del evento</h1>
@@ -58,7 +58,7 @@ function EventDetails() {
           <div className="flex flex-wrap gap-5">
             <div className="bg-yellow-50 p-1 rounded shadow">
               <IconCoin />
-              <p>Nayib y Layla Bukele</p>
+              <p>Eclat Solutions</p>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ function EventDetails() {
         </div>
       </Layout>
     </>
-  )
+  );
 }
 
-export default EventDetails
+export default EventDetails;

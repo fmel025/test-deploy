@@ -58,7 +58,7 @@ function EventDetails() {
           <div className="flex flex-wrap gap-5">
             <div className="bg-yellow-50 p-1 rounded shadow">
               <IconCoin />
-              <p>Nayib y Layla Bukele</p>
+              <p>Eclat Solutions</p>
             </div>
           </div>
         </div>
